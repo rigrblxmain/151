@@ -1,0 +1,25 @@
+-- Bunny
+return {[1]={decal={transparency=0;face=Enum.NormalId.Front;texture="http://www.roblox.com/asset/?id=2893617526";};
+surface={Top="Smooth";Front="Smooth";Bottom="Inlet";Right="Smooth";Left="Smooth";Back="Smooth";};
+reflectance=0;color={[1]=248.0000004172325;[2]=248.0000004172325;[3]=248.0000004172325;};
+anchored=false;mesh={offset={[1]=0;[2]=0;[3]=0;};
+meshtype=Enum.MeshType.Head;vertexcolor={[1]=1;[2]=1;[3]=1;};
+scale={[1]=1.25;[2]=1.25;[3]=1.25;};
+texture="";};
+cancollide=true;transparency=0;texture="Plastic";position={[1]=-30.542400360107422;[2]=1.4176745414733887;[3]=-134.7799072265625;};
+locked=false;cframe={[1]=-30.542400360107422;[2]=1.4176745414733887;[3]=-134.7799072265625;[4]=0.9999992847442627;[5]=0;[6]=3.020344507831396e-08;[7]=0;[8]=1;[9]=0;[10]=-3.0203466394596035e-08;[11]=0;[12]=1;};
+shape="Block";size={[1]=1.2999999523162842;[2]=1;[3]=1;};
+};
+[2]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
+reflectance=0;color={[1]=248.0000004172325;[2]=248.0000004172325;[3]=248.0000004172325;};
+anchored=false;cancollide=true;transparency=0;texture="Plastic";position={[1]=-30.892404556274414;[2]=2.36767578125;[3]=-134.62989807128906;};
+locked=false;cframe={[1]=-30.892404556274414;[2]=2.36767578125;[3]=-134.62989807128906;[4]=0.9999992847442627;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
+shape="Wedge";size={[1]=0.4000000059604645;[2]=0.9000000357627869;[3]=0.5;};
+};
+[3]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
+reflectance=0;color={[1]=248.0000004172325;[2]=248.0000004172325;[3]=248.0000004172325;};
+anchored=false;cancollide=true;transparency=0;texture="Plastic";position={[1]=-30.192411422729492;[2]=2.36767578125;[3]=-134.62991333007812;};
+locked=false;cframe={[1]=-30.192411422729492;[2]=2.36767578125;[3]=-134.62991333007812;[4]=0.9999992847442627;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
+shape="Wedge";size={[1]=0.4000000059604645;[2]=0.9000000357627869;[3]=0.5;};
+};
+}
