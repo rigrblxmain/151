@@ -1,2282 +1,2018 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
-
--- Instances: 165 | Scripts: 11 | Modules: 0 | Tags: 0
-local G2L = {};
-
--- StarterGui.Seabormium Hub
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Name"] = [[Seabormium Hub]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
-
--- StarterGui.Seabormium Hub.Cmd
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["Visible"] = false;
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["2"]["Size"] = UDim2.new(0.9888, 0, 0.04306, 0);
-G2L["2"]["Position"] = UDim2.new(0.00967, 0, 0.94188, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Name"] = [[Cmd]];
-
-
--- StarterGui.Seabormium Hub.Cmd.UISizeConstraint
-G2L["3"] = Instance.new("UISizeConstraint", G2L["2"]);
-
-
-
--- StarterGui.Seabormium Hub.Cmd.UICorner
-G2L["4"] = Instance.new("UICorner", G2L["2"]);
-G2L["4"]["CornerRadius"] = UDim.new(0, 100);
-
-
--- StarterGui.Seabormium Hub.Cmd.UIStroke
-G2L["5"] = Instance.new("UIStroke", G2L["2"]);
-G2L["5"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.Cmd.UIStroke.UIGradient
-G2L["6"] = Instance.new("UIGradient", G2L["5"]);
-G2L["6"]["Rotation"] = 14;
-G2L["6"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(97, 145, 255)),ColorSequenceKeypoint.new(0.524, Color3.fromRGB(107, 231, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(83, 255, 126))};
-
-
--- StarterGui.Seabormium Hub.Cmd.TextBox
-G2L["7"] = Instance.new("TextBox", G2L["2"]);
-G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextWrapped"] = true;
-G2L["7"]["TextSize"] = 18;
-G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["TextScaled"] = true;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["FontFace"] = Font.new([[rbxassetid://16658221428]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7"]["PlaceholderText"] = [[Use command here but theres no commands.]];
-G2L["7"]["Size"] = UDim2.new(0.99014, 0, 0.97222, 0);
-G2L["7"]["Position"] = UDim2.new(0.00703, 0, 0.00001, 0);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[]];
-G2L["7"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Seabormium Hub.Cmd.TextBox.UITextSizeConstraint
-G2L["8"] = Instance.new("UITextSizeConstraint", G2L["7"]);
-G2L["8"]["MaxTextSize"] = 18;
-
-
--- StarterGui.Seabormium Hub.Back
-G2L["9"] = Instance.new("Frame", G2L["1"]);
-G2L["9"]["Visible"] = false;
-G2L["9"]["ZIndex"] = 0;
-G2L["9"]["BorderSizePixel"] = 0;
-G2L["9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9"]["Size"] = UDim2.new(1.1968, 0, 1.48804, 0);
-G2L["9"]["Position"] = UDim2.new(-0.09744, 0, -0.09705, 0);
-G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9"]["Name"] = [[Back]];
-G2L["9"]["BackgroundTransparency"] = 0.4;
-
-
--- StarterGui.Seabormium Hub.Main
-G2L["a"] = Instance.new("Frame", G2L["1"]);
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["a"]["Size"] = UDim2.new(0, 652, 0, 257);
-G2L["a"]["Position"] = UDim2.new(0.01022, 0, 0.62237, 0);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Name"] = [[Main]];
-
-
--- StarterGui.Seabormium Hub.Main.UISizeConstraint
-G2L["b"] = Instance.new("UISizeConstraint", G2L["a"]);
-
-
-
--- StarterGui.Seabormium Hub.Main.UICorner
-G2L["c"] = Instance.new("UICorner", G2L["a"]);
-G2L["c"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.UIStroke
-G2L["d"] = Instance.new("UIStroke", G2L["a"]);
-G2L["d"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.Main.UIStroke.UIGradient
-G2L["e"] = Instance.new("UIGradient", G2L["d"]);
-G2L["e"]["Rotation"] = 14;
-G2L["e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(242, 93, 255)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(133, 111, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(189, 80, 255))};
-
-
--- StarterGui.Seabormium Hub.Main.Player
-G2L["f"] = Instance.new("TextButton", G2L["a"]);
-G2L["f"]["TextWrapped"] = true;
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["TextSize"] = 51;
-G2L["f"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["f"]["BackgroundTransparency"] = 0.2;
-G2L["f"]["Size"] = UDim2.new(0, 135, 0, 93);
-G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["Text"] = [[Player]];
-G2L["f"]["Name"] = [[Player]];
-G2L["f"]["Position"] = UDim2.new(0.24131, 0, 0.0856, 0);
-
-
--- StarterGui.Seabormium Hub.Main.Player.UICorner
-G2L["10"] = Instance.new("UICorner", G2L["f"]);
-G2L["10"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.Player.UIGradient
-G2L["11"] = Instance.new("UIGradient", G2L["f"]);
-G2L["11"]["Rotation"] = 28;
-G2L["11"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(113, 113, 255)),ColorSequenceKeypoint.new(0.539, Color3.fromRGB(175, 138, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(132, 188, 255))};
-
-
--- StarterGui.Seabormium Hub.Main.ServerStat
-G2L["12"] = Instance.new("TextButton", G2L["a"]);
-G2L["12"]["TextWrapped"] = true;
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["TextSize"] = 51;
-G2L["12"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["12"]["BackgroundTransparency"] = 0.2;
-G2L["12"]["Size"] = UDim2.new(0, 329, 0, 93);
-G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Text"] = [[Server Status]];
-G2L["12"]["Name"] = [[ServerStat]];
-G2L["12"]["Position"] = UDim2.new(0.47291, 0, 0.0856, 0);
-
-
--- StarterGui.Seabormium Hub.Main.ServerStat.UICorner
-G2L["13"] = Instance.new("UICorner", G2L["12"]);
-G2L["13"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.ServerStat.UIGradient
-G2L["14"] = Instance.new("UIGradient", G2L["12"]);
-G2L["14"]["Rotation"] = 14;
-G2L["14"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(2, 235, 255)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(175, 255, 198)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(148, 255, 170))};
-
-
--- StarterGui.Seabormium Hub.Main.Chat
-G2L["15"] = Instance.new("TextButton", G2L["a"]);
-G2L["15"]["TextWrapped"] = true;
-G2L["15"]["BorderSizePixel"] = 0;
-G2L["15"]["TextSize"] = 51;
-G2L["15"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["15"]["BackgroundTransparency"] = 0.2;
-G2L["15"]["Size"] = UDim2.new(0, 137, 0, 116);
-G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["15"]["Text"] = [[Chat]];
-G2L["15"]["Name"] = [[Chat]];
-G2L["15"]["Position"] = UDim2.new(0.03119, 0, 0.48249, 0);
-
-
--- StarterGui.Seabormium Hub.Main.Chat.UICorner
-G2L["16"] = Instance.new("UICorner", G2L["15"]);
-G2L["16"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.Chat.UIGradient
-G2L["17"] = Instance.new("UIGradient", G2L["15"]);
-G2L["17"]["Rotation"] = -32;
-G2L["17"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(225, 115, 255)),ColorSequenceKeypoint.new(0.512, Color3.fromRGB(177, 65, 181)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(167, 86, 192))};
-
-
--- StarterGui.Seabormium Hub.Main.Scripts
-G2L["18"] = Instance.new("TextButton", G2L["a"]);
-G2L["18"]["TextWrapped"] = true;
-G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["TextSize"] = 51;
-G2L["18"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["18"]["BackgroundTransparency"] = 0.2;
-G2L["18"]["Size"] = UDim2.new(0, 224, 0, 43);
-G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Text"] = [[Scripts]];
-G2L["18"]["Name"] = [[Scripts]];
-G2L["18"]["Position"] = UDim2.new(0.25665, 0, 0.48249, 0);
-
-
--- StarterGui.Seabormium Hub.Main.Scripts.UICorner
-G2L["19"] = Instance.new("UICorner", G2L["18"]);
-G2L["19"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.Scripts.UIGradient
-G2L["1a"] = Instance.new("UIGradient", G2L["18"]);
-G2L["1a"]["Rotation"] = 14;
-G2L["1a"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(39, 72, 255)),ColorSequenceKeypoint.new(0.531, Color3.fromRGB(65, 138, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(115, 207, 255))};
-
-
--- StarterGui.Seabormium Hub.Main.PlrList
-G2L["1b"] = Instance.new("TextButton", G2L["a"]);
-G2L["1b"]["TextWrapped"] = true;
-G2L["1b"]["BorderSizePixel"] = 0;
-G2L["1b"]["TextSize"] = 51;
-G2L["1b"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1b"]["BackgroundTransparency"] = 0.2;
-G2L["1b"]["Size"] = UDim2.new(0, 224, 0, 66);
-G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1b"]["Text"] = [[PlayerList]];
-G2L["1b"]["Name"] = [[PlrList]];
-G2L["1b"]["Position"] = UDim2.new(0.25512, 0, 0.67704, 0);
-
-
--- StarterGui.Seabormium Hub.Main.PlrList.UICorner
-G2L["1c"] = Instance.new("UICorner", G2L["1b"]);
-G2L["1c"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.PlrList.UIGradient
-G2L["1d"] = Instance.new("UIGradient", G2L["1b"]);
-G2L["1d"]["Rotation"] = 14;
-G2L["1d"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 234, 112)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(255, 189, 122)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 200, 200))};
-
-
--- StarterGui.Seabormium Hub.Main.Cmds
-G2L["1e"] = Instance.new("TextButton", G2L["a"]);
-G2L["1e"]["TextWrapped"] = true;
-G2L["1e"]["BorderSizePixel"] = 0;
-G2L["1e"]["TextSize"] = 51;
-G2L["1e"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1e"]["BackgroundTransparency"] = 0.2;
-G2L["1e"]["Size"] = UDim2.new(0, 238, 0, 45);
-G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["Text"] = [[Cmds]];
-G2L["1e"]["Name"] = [[Cmds]];
-G2L["1e"]["Position"] = UDim2.new(0.61248, 0, 0.75875, 0);
-
-
--- StarterGui.Seabormium Hub.Main.Cmds.UICorner
-G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
-G2L["1f"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.Cmds.UIGradient
-G2L["20"] = Instance.new("UIGradient", G2L["1e"]);
-G2L["20"]["Rotation"] = 14;
-G2L["20"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(97, 145, 255)),ColorSequenceKeypoint.new(0.524, Color3.fromRGB(107, 231, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(83, 255, 126))};
-
-
--- StarterGui.Seabormium Hub.Main.ScriptsF
-G2L["21"] = Instance.new("Frame", G2L["a"]);
-G2L["21"]["Visible"] = false;
-G2L["21"]["BorderSizePixel"] = 0;
-G2L["21"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["21"]["Size"] = UDim2.new(0, 200, 0, 258);
-G2L["21"]["Position"] = UDim2.new(0, 688, 0, -1);
-G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["21"]["Name"] = [[ScriptsF]];
-
-
--- StarterGui.Seabormium Hub.Main.ScriptsF.UICorner
-G2L["22"] = Instance.new("UICorner", G2L["21"]);
-G2L["22"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.ScriptsF.UIStroke
-G2L["23"] = Instance.new("UIStroke", G2L["21"]);
-G2L["23"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.Main.ScriptsF.UIStroke.UIGradient
-G2L["24"] = Instance.new("UIGradient", G2L["23"]);
-G2L["24"]["Rotation"] = 14;
-G2L["24"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(39, 72, 255)),ColorSequenceKeypoint.new(0.531, Color3.fromRGB(65, 138, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(115, 207, 255))};
-
-
--- StarterGui.Seabormium Hub.Main.ScriptsF.no script
-G2L["25"] = Instance.new("TextLabel", G2L["21"]);
-G2L["25"]["TextWrapped"] = true;
-G2L["25"]["BorderSizePixel"] = 0;
-G2L["25"]["TextSize"] = 14;
-G2L["25"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["25"]["TextScaled"] = true;
-G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["25"]["TextColor3"] = Color3.fromRGB(168, 168, 168);
-G2L["25"]["BackgroundTransparency"] = 1;
-G2L["25"]["Size"] = UDim2.new(0, 200, 0, 116);
-G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["25"]["Text"] = [[No scripts yet... share scripts at our discord!]];
-G2L["25"]["Name"] = [[no script]];
-G2L["25"]["Position"] = UDim2.new(0, 0, 0.27519, 0);
-
-
--- StarterGui.Seabormium Hub.Main.Discord
-G2L["26"] = Instance.new("TextButton", G2L["a"]);
-G2L["26"]["TextWrapped"] = true;
-G2L["26"]["BorderSizePixel"] = 0;
-G2L["26"]["TextSize"] = 51;
-G2L["26"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["26"]["BackgroundTransparency"] = 0.2;
-G2L["26"]["Size"] = UDim2.new(0.36503, 0, 0.24125, 0);
-G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["26"]["Text"] = [[Discord]];
-G2L["26"]["Name"] = [[Discord]];
-G2L["26"]["Position"] = UDim2.new(0.61094, 0, 0.48249, 0);
-
-
--- StarterGui.Seabormium Hub.Main.Discord.UICorner
-G2L["27"] = Instance.new("UICorner", G2L["26"]);
-G2L["27"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.Discord.UIGradient
-G2L["28"] = Instance.new("UIGradient", G2L["26"]);
-G2L["28"]["Rotation"] = 14;
-G2L["28"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(77, 155, 255)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(174, 115, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(91, 255, 255))};
-
-
--- StarterGui.Seabormium Hub.Main.Credits
-G2L["29"] = Instance.new("TextButton", G2L["a"]);
-G2L["29"]["TextWrapped"] = true;
-G2L["29"]["BorderSizePixel"] = 0;
-G2L["29"]["TextSize"] = 51;
-G2L["29"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["29"]["BackgroundTransparency"] = 0.2;
-G2L["29"]["Size"] = UDim2.new(0, 130, 0, 93);
-G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["29"]["Text"] = [[Credits]];
-G2L["29"]["Name"] = [[Credits]];
-G2L["29"]["Position"] = UDim2.new(0.03119, 0, 0.0856, 0);
-
-
--- StarterGui.Seabormium Hub.Main.Credits.UICorner
-G2L["2a"] = Instance.new("UICorner", G2L["29"]);
-G2L["2a"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Main.Credits.UIGradient
-G2L["2b"] = Instance.new("UIGradient", G2L["29"]);
-G2L["2b"]["Rotation"] = 28;
-G2L["2b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 171, 171)),ColorSequenceKeypoint.new(0.539, Color3.fromRGB(255, 156, 125)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 227, 227))};
-
-
--- StarterGui.Seabormium Hub.Main.Disc
-G2L["2c"] = Instance.new("TextLabel", G2L["a"]);
-G2L["2c"]["TextWrapped"] = true;
-G2L["2c"]["BorderSizePixel"] = 0;
-G2L["2c"]["TextSize"] = 14;
-G2L["2c"]["TextTransparency"] = 0.55;
-G2L["2c"]["TextScaled"] = true;
-G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2c"]["BackgroundTransparency"] = 1;
-G2L["2c"]["Size"] = UDim2.new(0, 237, 0, 62);
-G2L["2c"]["Visible"] = false;
-G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2c"]["Text"] = [[discord.gg/SaJ4UHzjc6]];
-G2L["2c"]["Name"] = [[Disc]];
-G2L["2c"]["Position"] = UDim2.new(0.61196, 0, 0.48249, 0);
-
-
--- StarterGui.Seabormium Hub.PlayerList
-G2L["2d"] = Instance.new("Frame", G2L["1"]);
-G2L["2d"]["Visible"] = false;
-G2L["2d"]["BorderSizePixel"] = 0;
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["2d"]["Size"] = UDim2.new(0.21434, 0, 0.39833, 0);
-G2L["2d"]["Position"] = UDim2.new(0.78405, 0, 0.50478, 0);
-G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["Name"] = [[PlayerList]];
-
-
--- StarterGui.Seabormium Hub.PlayerList.UICorner
-G2L["2e"] = Instance.new("UICorner", G2L["2d"]);
-G2L["2e"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.PlayerList.ScrollingFrame
-G2L["2f"] = Instance.new("ScrollingFrame", G2L["2d"]);
-G2L["2f"]["Active"] = true;
-G2L["2f"]["BorderSizePixel"] = 0;
-G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2f"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2f"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2f"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Seabormium Hub.PlayerList.ScrollingFrame.Plr
-G2L["30"] = Instance.new("TextButton", G2L["2f"]);
-G2L["30"]["BorderSizePixel"] = 0;
-G2L["30"]["TextSize"] = 14;
-G2L["30"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["30"]["BackgroundTransparency"] = 1;
-G2L["30"]["Size"] = UDim2.new(0, 266, 0, 54);
-G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["30"]["Text"] = [[]];
-G2L["30"]["Name"] = [[Plr]];
-G2L["30"]["Position"] = UDim2.new(0, 0, 0.01502, 0);
-
-
--- StarterGui.Seabormium Hub.PlayerList.ScrollingFrame.Plr.image
-G2L["31"] = Instance.new("ImageLabel", G2L["30"]);
-G2L["31"]["BorderSizePixel"] = 0;
-G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["31"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
-G2L["31"]["Size"] = UDim2.new(0.20301, 0, 1, 0);
-G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["31"]["Name"] = [[image]];
-G2L["31"]["Position"] = UDim2.new(0, 0, 0.01502, 0);
-
-
--- StarterGui.Seabormium Hub.PlayerList.ScrollingFrame.Plr.image.UICorner
-G2L["32"] = Instance.new("UICorner", G2L["31"]);
-G2L["32"]["CornerRadius"] = UDim.new(0, 1289);
-
-
--- StarterGui.Seabormium Hub.PlayerList.ScrollingFrame.Plr.Displayname
-G2L["33"] = Instance.new("TextLabel", G2L["30"]);
-G2L["33"]["TextWrapped"] = true;
-G2L["33"]["BorderSizePixel"] = 0;
-G2L["33"]["TextSize"] = 14;
-G2L["33"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["33"]["TextScaled"] = true;
-G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["33"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["33"]["BackgroundTransparency"] = 1;
-G2L["33"]["Size"] = UDim2.new(0.75188, 0, 0.55556, 0);
-G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["33"]["Text"] = [[DisplayName]];
-G2L["33"]["Name"] = [[Displayname]];
-G2L["33"]["Position"] = UDim2.new(0.20301, 0, 0.01501, 0);
-
-
--- StarterGui.Seabormium Hub.PlayerList.ScrollingFrame.Plr.Username
-G2L["34"] = Instance.new("TextLabel", G2L["30"]);
-G2L["34"]["TextWrapped"] = true;
-G2L["34"]["BorderSizePixel"] = 0;
-G2L["34"]["TextSize"] = 14;
-G2L["34"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["34"]["TextScaled"] = true;
-G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["34"]["TextColor3"] = Color3.fromRGB(132, 132, 132);
-G2L["34"]["BackgroundTransparency"] = 1;
-G2L["34"]["Size"] = UDim2.new(0.75188, 0, 0.44444, 0);
-G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["Text"] = [[(@UserName)]];
-G2L["34"]["Name"] = [[Username]];
-G2L["34"]["Position"] = UDim2.new(0.20301, 0, 0.45946, 0);
-
-
--- StarterGui.Seabormium Hub.PlayerList.ScrollingFrame.Plr.Frame
-G2L["35"] = Instance.new("Frame", G2L["30"]);
-G2L["35"]["BorderSizePixel"] = 0;
-G2L["35"]["BackgroundColor3"] = Color3.fromRGB(57, 57, 57);
-G2L["35"]["Size"] = UDim2.new(0.89474, 0, 0.03704, 0);
-G2L["35"]["Position"] = UDim2.new(0.13158, 0, 1.01501, 0);
-G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.Seabormium Hub.PlayerList.ScrollingFrame.Plr.UISizeConstraint
-G2L["36"] = Instance.new("UISizeConstraint", G2L["30"]);
-
-
-
--- StarterGui.Seabormium Hub.PlayerList.UIStroke
-G2L["37"] = Instance.new("UIStroke", G2L["2d"]);
-G2L["37"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.PlayerList.UIStroke.UIGradient
-G2L["38"] = Instance.new("UIGradient", G2L["37"]);
-G2L["38"]["Rotation"] = 14;
-G2L["38"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 234, 112)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(255, 189, 122)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 200, 200))};
-
-
--- StarterGui.Seabormium Hub.PlayerList.List
-G2L["39"] = Instance.new("LocalScript", G2L["2d"]);
-G2L["39"]["Name"] = [[List]];
-
-
--- StarterGui.Seabormium Hub.Chat
-G2L["3a"] = Instance.new("Frame", G2L["1"]);
-G2L["3a"]["Visible"] = false;
-G2L["3a"]["BorderSizePixel"] = 0;
-G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(105, 63, 101);
-G2L["3a"]["Size"] = UDim2.new(0, 537, 0, 337);
-G2L["3a"]["Position"] = UDim2.new(0.00979, 0, 0.01431, 0);
-G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3a"]["Name"] = [[Chat]];
-
-
--- StarterGui.Seabormium Hub.Chat.UISizeConstraint
-G2L["3b"] = Instance.new("UISizeConstraint", G2L["3a"]);
-
-
-
--- StarterGui.Seabormium Hub.Chat.UICorner
-G2L["3c"] = Instance.new("UICorner", G2L["3a"]);
-G2L["3c"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.UIStroke
-G2L["3d"] = Instance.new("UIStroke", G2L["3a"]);
-
-
-
--- StarterGui.Seabormium Hub.Chat.Title
-G2L["3e"] = Instance.new("TextLabel", G2L["3a"]);
-G2L["3e"]["TextWrapped"] = true;
-G2L["3e"]["TextStrokeTransparency"] = 0;
-G2L["3e"]["BorderSizePixel"] = 0;
-G2L["3e"]["TextSize"] = 14;
-G2L["3e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["3e"]["TextStrokeColor3"] = Color3.fromRGB(133, 62, 146);
-G2L["3e"]["TextScaled"] = true;
-G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["3e"]["BackgroundTransparency"] = 1;
-G2L["3e"]["Size"] = UDim2.new(0.66667, 0, 0.10089, 0);
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Text"] = [[#Chat]];
-G2L["3e"]["Name"] = [[Title]];
-G2L["3e"]["Position"] = UDim2.new(0.03141, 0, 0, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.ChatBar
-G2L["3f"] = Instance.new("TextBox", G2L["3a"]);
-G2L["3f"]["TextStrokeTransparency"] = 0.92;
-G2L["3f"]["Name"] = [[ChatBar]];
-G2L["3f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["3f"]["PlaceholderColor3"] = Color3.fromRGB(122, 73, 118);
-G2L["3f"]["BorderSizePixel"] = 0;
-G2L["3f"]["TextWrapped"] = true;
-G2L["3f"]["TextSize"] = 14;
-G2L["3f"]["TextColor3"] = Color3.fromRGB(55, 33, 54);
-G2L["3f"]["TextScaled"] = true;
-G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(90, 54, 87);
-G2L["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3f"]["ClearTextOnFocus"] = false;
-G2L["3f"]["PlaceholderText"] = [[Click here to chat.]];
-G2L["3f"]["Size"] = UDim2.new(0.90689, 0, 0.09792, 0);
-G2L["3f"]["Position"] = UDim2.new(0, 0, 0.89337, 0);
-G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3f"]["Text"] = [[]];
-
-
--- StarterGui.Seabormium Hub.Chat.ChatBar.UICorner
-G2L["40"] = Instance.new("UICorner", G2L["3f"]);
-G2L["40"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.ChatBar.UIStroke
-G2L["41"] = Instance.new("UIStroke", G2L["3f"]);
-G2L["41"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-
-
--- StarterGui.Seabormium Hub.Chat.Send
-G2L["42"] = Instance.new("ImageButton", G2L["3a"]);
-G2L["42"]["BorderSizePixel"] = 0;
-G2L["42"]["ImageTransparency"] = 0.65;
-G2L["42"]["BackgroundColor3"] = Color3.fromRGB(90, 54, 87);
-G2L["42"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["Image"] = [[rbxassetid://135783123588975]];
-G2L["42"]["Size"] = UDim2.new(0.06331, 0, 0.09792, 0);
-G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["42"]["Name"] = [[Send]];
-G2L["42"]["Position"] = UDim2.new(0.93631, 0, 0.89337, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Send.UIStroke
-G2L["43"] = Instance.new("UIStroke", G2L["42"]);
-G2L["43"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-
-
--- StarterGui.Seabormium Hub.Chat.Send.UICorner
-G2L["44"] = Instance.new("UICorner", G2L["42"]);
-G2L["44"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Messages
-G2L["45"] = Instance.new("ScrollingFrame", G2L["3a"]);
-G2L["45"]["BorderSizePixel"] = 0;
-G2L["45"]["Name"] = [[Messages]];
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Size"] = UDim2.new(1, 0, 0.79228, 0);
-G2L["45"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Position"] = UDim2.new(0, 0, 0.10089, 0);
-G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["ScrollBarThickness"] = 7;
-G2L["45"]["BackgroundTransparency"] = 0.85;
-
-
--- StarterGui.Seabormium Hub.Chat.Messages.Player
-G2L["46"] = Instance.new("Frame", G2L["45"]);
-G2L["46"]["BorderSizePixel"] = 0;
-G2L["46"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Size"] = UDim2.new(0, 521, 0, 98);
-G2L["46"]["Position"] = UDim2.new(0.0149, 0, 0, 0);
-G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Name"] = [[Player]];
-G2L["46"]["BackgroundTransparency"] = 0.91;
-
-
--- StarterGui.Seabormium Hub.Chat.Messages.Player.ImagePlr
-G2L["47"] = Instance.new("ImageLabel", G2L["46"]);
-G2L["47"]["BorderSizePixel"] = 0;
-G2L["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["47"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
-G2L["47"]["Size"] = UDim2.new(0, 39, 0, 40);
-G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["47"]["Name"] = [[ImagePlr]];
-
-
--- StarterGui.Seabormium Hub.Chat.Messages.Player.ImagePlr.UICorner
-G2L["48"] = Instance.new("UICorner", G2L["47"]);
-G2L["48"]["CornerRadius"] = UDim.new(0, 1289);
-
-
--- StarterGui.Seabormium Hub.Chat.Messages.Player.NamePlr
-G2L["49"] = Instance.new("TextLabel", G2L["46"]);
-G2L["49"]["TextWrapped"] = true;
-G2L["49"]["BorderSizePixel"] = 0;
-G2L["49"]["TextSize"] = 14;
-G2L["49"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["49"]["TextScaled"] = true;
-G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["49"]["TextColor3"] = Color3.fromRGB(121, 121, 121);
-G2L["49"]["BackgroundTransparency"] = 1;
-G2L["49"]["Size"] = UDim2.new(0, 119, 0, 23);
-G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["Text"] = [[DisplayName]];
-G2L["49"]["Name"] = [[NamePlr]];
-G2L["49"]["Position"] = UDim2.new(0.07357, 0, 0, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Messages.Player.Msg
-G2L["4a"] = Instance.new("TextLabel", G2L["46"]);
-G2L["4a"]["TextWrapped"] = true;
-G2L["4a"]["BorderSizePixel"] = 0;
-G2L["4a"]["TextSize"] = 21;
-G2L["4a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["4a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/ComicNeueAngular.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4a"]["TextColor3"] = Color3.fromRGB(173, 151, 174);
-G2L["4a"]["BackgroundTransparency"] = 1;
-G2L["4a"]["Size"] = UDim2.new(0, 483, 0, 64);
-G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4a"]["Text"] = [[1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234]];
-G2L["4a"]["Name"] = [[Msg]];
-G2L["4a"]["Position"] = UDim2.new(0.07357, 0, 0.23469, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Messages.Player.Image
-G2L["4b"] = Instance.new("ImageLabel", G2L["46"]);
-G2L["4b"]["BorderSizePixel"] = 0;
-G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4b"]["Image"] = [[rbxassetid://78976970]];
-G2L["4b"]["Size"] = UDim2.new(0, 72, 0, 72);
-G2L["4b"]["Visible"] = false;
-G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4b"]["BackgroundTransparency"] = 0.55;
-G2L["4b"]["Name"] = [[Image]];
-G2L["4b"]["Position"] = UDim2.new(0.10428, 0, 0.27551, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Messages.Player.Image.UICorner
-G2L["4c"] = Instance.new("UICorner", G2L["4b"]);
-G2L["4c"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Messages.UIListLayout
-G2L["4d"] = Instance.new("UIListLayout", G2L["45"]);
-G2L["4d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["4d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.Seabormium Hub.Chat.Images
-G2L["4e"] = Instance.new("Frame", G2L["3a"]);
-G2L["4e"]["BorderSizePixel"] = 0;
-G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(90, 54, 86);
-G2L["4e"]["Size"] = UDim2.new(0.13408, 0, 0.73294, 0);
-G2L["4e"]["Position"] = UDim2.new(0.99814, 0, 0, 0);
-G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4e"]["Name"] = [[Images]];
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll
-G2L["4f"] = Instance.new("ScrollingFrame", G2L["4e"]);
-G2L["4f"]["Active"] = true;
-G2L["4f"]["BorderSizePixel"] = 0;
-G2L["4f"]["ElasticBehavior"] = Enum.ElasticBehavior.Always;
-G2L["4f"]["Name"] = [[Scroll]];
-G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4f"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["4f"]["ScrollBarImageColor3"] = Color3.fromRGB(145, 79, 145);
-G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["ScrollBarThickness"] = 2;
-G2L["4f"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.UIListLayout
-G2L["50"] = Instance.new("UIListLayout", G2L["4f"]);
-G2L["50"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["50"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.AwesomeFace
-G2L["51"] = Instance.new("ImageButton", G2L["4f"]);
-G2L["51"]["BorderSizePixel"] = 0;
-G2L["51"]["BackgroundTransparency"] = 0.6;
-G2L["51"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["Image"] = [[rbxassetid://78976970]];
-G2L["51"]["Size"] = UDim2.new(0, 72, 0, 72);
-G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["Name"] = [[AwesomeFace]];
-G2L["51"]["Position"] = UDim2.new(0, 0, 0.14575, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.AwesomeFace.UICorner
-G2L["52"] = Instance.new("UICorner", G2L["51"]);
-G2L["52"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.Whatchoo talking bout
-G2L["53"] = Instance.new("ImageButton", G2L["4f"]);
-G2L["53"]["BorderSizePixel"] = 0;
-G2L["53"]["BackgroundTransparency"] = 0.6;
-G2L["53"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["53"]["Image"] = [[rbxassetid://162138181]];
-G2L["53"]["Size"] = UDim2.new(0, 72, 0, 72);
-G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["53"]["Name"] = [[Whatchoo talking bout]];
-G2L["53"]["Position"] = UDim2.new(0, 0, 0.14575, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.Whatchoo talking bout.UICorner
-G2L["54"] = Instance.new("UICorner", G2L["53"]);
-G2L["54"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.I am not amused
-G2L["55"] = Instance.new("ImageButton", G2L["4f"]);
-G2L["55"]["BorderSizePixel"] = 0;
-G2L["55"]["BackgroundTransparency"] = 0.6;
-G2L["55"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["55"]["Image"] = [[rbxassetid://41675658]];
-G2L["55"]["Size"] = UDim2.new(0, 72, 0, 72);
-G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["55"]["Name"] = [[I am not amused]];
-G2L["55"]["Position"] = UDim2.new(0, 0, 0.14575, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.I am not amused.UICorner
-G2L["56"] = Instance.new("UICorner", G2L["55"]);
-G2L["56"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.Kddci00
-G2L["57"] = Instance.new("ImageButton", G2L["4f"]);
-G2L["57"]["BorderSizePixel"] = 0;
-G2L["57"]["BackgroundTransparency"] = 0.6;
-G2L["57"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["57"]["Image"] = [[rbxassetid://84896687734008]];
-G2L["57"]["Size"] = UDim2.new(0, 72, 0, 72);
-G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["57"]["Name"] = [[Kddci00]];
-G2L["57"]["Position"] = UDim2.new(0, 0, 0.14575, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.Kddci00.UICorner
-G2L["58"] = Instance.new("UICorner", G2L["57"]);
-G2L["58"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.Goob
-G2L["59"] = Instance.new("ImageButton", G2L["4f"]);
-G2L["59"]["BorderSizePixel"] = 0;
-G2L["59"]["BackgroundTransparency"] = 0.6;
-G2L["59"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["59"]["Image"] = [[rbxassetid://76327323937050]];
-G2L["59"]["Size"] = UDim2.new(0, 72, 0, 72);
-G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["59"]["Name"] = [[Goob]];
-G2L["59"]["Position"] = UDim2.new(0, 0, 0.14575, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.Goob.UICorner
-G2L["5a"] = Instance.new("UICorner", G2L["59"]);
-G2L["5a"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.What
-G2L["5b"] = Instance.new("ImageButton", G2L["4f"]);
-G2L["5b"]["BorderSizePixel"] = 0;
-G2L["5b"]["BackgroundTransparency"] = 0.6;
-G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5b"]["Image"] = [[rbxassetid://92134699539121]];
-G2L["5b"]["Size"] = UDim2.new(0, 72, 0, 72);
-G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5b"]["Name"] = [[What]];
-G2L["5b"]["Position"] = UDim2.new(0, 0, 0.14575, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.What.UICorner
-G2L["5c"] = Instance.new("UICorner", G2L["5b"]);
-G2L["5c"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.Durr
-G2L["5d"] = Instance.new("ImageButton", G2L["4f"]);
-G2L["5d"]["BorderSizePixel"] = 0;
-G2L["5d"]["BackgroundTransparency"] = 0.6;
-G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5d"]["Image"] = [[rbxassetid://75837364573431]];
-G2L["5d"]["Size"] = UDim2.new(0, 72, 0, 72);
-G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5d"]["Name"] = [[Durr]];
-G2L["5d"]["Position"] = UDim2.new(0, 0, 0.14575, 0);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.Scroll.Durr.UICorner
-G2L["5e"] = Instance.new("UICorner", G2L["5d"]);
-G2L["5e"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Images.UIStroke
-G2L["5f"] = Instance.new("UIStroke", G2L["4e"]);
-
-
-
--- StarterGui.Seabormium Hub.Chat.Images.UICorner
-G2L["60"] = Instance.new("UICorner", G2L["4e"]);
-G2L["60"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Chat.Chet
-G2L["61"] = Instance.new("LocalScript", G2L["3a"]);
-G2L["61"]["Name"] = [[Chet]];
-
-
--- StarterGui.Seabormium Hub.Chat.Drag
-G2L["62"] = Instance.new("LocalScript", G2L["3a"]);
-G2L["62"]["Name"] = [[Drag]];
-
-
--- StarterGui.Seabormium Hub.Control
-G2L["63"] = Instance.new("LocalScript", G2L["1"]);
-G2L["63"]["Name"] = [[Control]];
-
-
--- StarterGui.Seabormium Hub.Credits
-G2L["64"] = Instance.new("Frame", G2L["1"]);
-G2L["64"]["Visible"] = false;
-G2L["64"]["BorderSizePixel"] = 0;
-G2L["64"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["64"]["Size"] = UDim2.new(0, 482, 0, 151);
-G2L["64"]["Position"] = UDim2.new(0.00992, 0, 0.42467, 0);
-G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["64"]["Name"] = [[Credits]];
-
-
--- StarterGui.Seabormium Hub.Credits.UIStroke
-G2L["65"] = Instance.new("UIStroke", G2L["64"]);
-G2L["65"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.Credits.UIStroke.UIGradient
-G2L["66"] = Instance.new("UIGradient", G2L["65"]);
-G2L["66"]["Rotation"] = 28;
-G2L["66"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 171, 171)),ColorSequenceKeypoint.new(0.539, Color3.fromRGB(255, 156, 125)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 227, 227))};
-
-
--- StarterGui.Seabormium Hub.Credits.UICorner
-G2L["67"] = Instance.new("UICorner", G2L["64"]);
-G2L["67"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Credits.Frame
-G2L["68"] = Instance.new("ScrollingFrame", G2L["64"]);
-G2L["68"]["BorderSizePixel"] = 0;
-G2L["68"]["ScrollingEnabled"] = false;
-G2L["68"]["Name"] = [[Frame]];
-G2L["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["68"]["Size"] = UDim2.new(1.00241, 0, 1, 0);
-G2L["68"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["68"]["ScrollBarThickness"] = 1;
-G2L["68"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Seabormium Hub.Credits.Frame.L_EpicGuy - Owner
-G2L["69"] = Instance.new("Frame", G2L["68"]);
-G2L["69"]["BorderSizePixel"] = 0;
-G2L["69"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["69"]["Size"] = UDim2.new(0, 486, 0, 87);
-G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["69"]["Name"] = [[L_EpicGuy - Owner]];
-G2L["69"]["BackgroundTransparency"] = 0.93;
-
-
--- StarterGui.Seabormium Hub.Credits.Frame.L_EpicGuy - Owner.If u see me in the code, you r stupid skid
-G2L["6a"] = Instance.new("ImageLabel", G2L["69"]);
-G2L["6a"]["BorderSizePixel"] = 0;
-G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6a"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
-G2L["6a"]["Size"] = UDim2.new(0.14403, 0, 0.8046, 0);
-G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6a"]["Name"] = [[If u see me in the code, you r stupid skid]];
-G2L["6a"]["Position"] = UDim2.new(0.01536, 0, 0.06291, 0);
-
-
--- StarterGui.Seabormium Hub.Credits.Frame.L_EpicGuy - Owner.If u see me in the code, you r stupid skid.my faic
-G2L["6b"] = Instance.new("LocalScript", G2L["6a"]);
-G2L["6b"]["Name"] = [[my faic]];
-
-
--- StarterGui.Seabormium Hub.Credits.Frame.L_EpicGuy - Owner.If u see me in the code, you r stupid skid.UICorner
-G2L["6c"] = Instance.new("UICorner", G2L["6a"]);
-G2L["6c"]["CornerRadius"] = UDim.new(0, 100);
-
-
--- StarterGui.Seabormium Hub.Credits.Frame.L_EpicGuy - Owner.Name
-G2L["6d"] = Instance.new("TextLabel", G2L["69"]);
-G2L["6d"]["TextWrapped"] = true;
-G2L["6d"]["BorderSizePixel"] = 0;
-G2L["6d"]["TextSize"] = 14;
-G2L["6d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["6d"]["TextScaled"] = true;
-G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6d"]["BackgroundTransparency"] = 1;
-G2L["6d"]["Size"] = UDim2.new(0.77778, 0, 0.57471, 0);
-G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6d"]["Text"] = [[L_EpicGuy - Owner]];
-G2L["6d"]["Name"] = [[Name]];
-G2L["6d"]["Position"] = UDim2.new(0.19136, 0, 0.2069, 0);
-
-
--- StarterGui.Seabormium Hub.Credits.Frame.L_EpicGuy - Owner.Name.UIGradient
-G2L["6e"] = Instance.new("UIGradient", G2L["6d"]);
-G2L["6e"]["Rotation"] = 28;
-G2L["6e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 171, 171)),ColorSequenceKeypoint.new(0.539, Color3.fromRGB(255, 156, 125)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 227, 227))};
-
-
--- StarterGui.Seabormium Hub.Credits.Frame.UIListLayout
-G2L["6f"] = Instance.new("UIListLayout", G2L["68"]);
-G2L["6f"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["6f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.Seabormium Hub.Action
-G2L["70"] = Instance.new("Frame", G2L["1"]);
-G2L["70"]["Visible"] = false;
-G2L["70"]["BorderSizePixel"] = 0;
-G2L["70"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["70"]["Size"] = UDim2.new(0, 266, 0, 84);
-G2L["70"]["Position"] = UDim2.new(0.99517, 0, 0.4055, 0);
-G2L["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["70"]["Name"] = [[Action]];
-
-
--- StarterGui.Seabormium Hub.Action.UISizeConstraint
-G2L["71"] = Instance.new("UISizeConstraint", G2L["70"]);
-
-
-
--- StarterGui.Seabormium Hub.Action.UICorner
-G2L["72"] = Instance.new("UICorner", G2L["70"]);
-G2L["72"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Action.incognito
-G2L["73"] = Instance.new("ImageButton", G2L["70"]);
-G2L["73"]["BorderSizePixel"] = 0;
-G2L["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["73"]["ImageColor3"] = Color3.fromRGB(198, 198, 198);
-G2L["73"]["Image"] = [[rbxassetid://135832260363787]];
-G2L["73"]["Size"] = UDim2.new(0, 60, 0, 60);
-G2L["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["73"]["Name"] = [[incognito]];
-G2L["73"]["Position"] = UDim2.new(0.04511, 0, 0.14286, 0);
-
-
--- StarterGui.Seabormium Hub.Action.incognito.UIGradient
-G2L["74"] = Instance.new("UIGradient", G2L["73"]);
-G2L["74"]["Rotation"] = 28;
-G2L["74"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(140, 140, 140)),ColorSequenceKeypoint.new(0.539, Color3.fromRGB(245, 245, 245)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(194, 194, 194))};
-
-
--- StarterGui.Seabormium Hub.Action.incognito.UICorner
-G2L["75"] = Instance.new("UICorner", G2L["73"]);
-G2L["75"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Action.UIListLayout
-G2L["76"] = Instance.new("UIListLayout", G2L["70"]);
-G2L["76"]["VerticalFlex"] = Enum.UIFlexAlignment.SpaceAround;
-G2L["76"]["Padding"] = UDim.new(0, 5);
-G2L["76"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-G2L["76"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-G2L["76"]["FillDirection"] = Enum.FillDirection.Horizontal;
-
-
--- StarterGui.Seabormium Hub.Action.View
-G2L["77"] = Instance.new("ImageButton", G2L["70"]);
-G2L["77"]["BorderSizePixel"] = 0;
-G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["77"]["ImageColor3"] = Color3.fromRGB(198, 198, 198);
-G2L["77"]["Image"] = [[rbxassetid://9266631404]];
-G2L["77"]["Size"] = UDim2.new(0, 60, 0, 60);
-G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["77"]["Name"] = [[View]];
-G2L["77"]["Position"] = UDim2.new(0.04511, 0, 0.14286, 0);
-
-
--- StarterGui.Seabormium Hub.Action.View.UIGradient
-G2L["78"] = Instance.new("UIGradient", G2L["77"]);
-G2L["78"]["Rotation"] = -138;
-G2L["78"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(35, 35, 35)),ColorSequenceKeypoint.new(0.539, Color3.fromRGB(99, 99, 99)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(130, 130, 130))};
-
-
--- StarterGui.Seabormium Hub.Action.View.UICorner
-G2L["79"] = Instance.new("UICorner", G2L["77"]);
-G2L["79"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Action.Fling
-G2L["7a"] = Instance.new("ImageButton", G2L["70"]);
-G2L["7a"]["BorderSizePixel"] = 0;
-G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7a"]["ImageColor3"] = Color3.fromRGB(163, 163, 163);
-G2L["7a"]["Image"] = [[rbxassetid://9134785384]];
-G2L["7a"]["Size"] = UDim2.new(0, 60, 0, 60);
-G2L["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7a"]["Name"] = [[Fling]];
-G2L["7a"]["Position"] = UDim2.new(0.04511, 0, 0.14286, 0);
-
-
--- StarterGui.Seabormium Hub.Action.Fling.UIGradient
-G2L["7b"] = Instance.new("UIGradient", G2L["7a"]);
-G2L["7b"]["Rotation"] = -138;
-G2L["7b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(122, 103, 103)),ColorSequenceKeypoint.new(0.539, Color3.fromRGB(141, 103, 103)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(100, 91, 91))};
-
-
--- StarterGui.Seabormium Hub.Action.Fling.UICorner
-G2L["7c"] = Instance.new("UICorner", G2L["7a"]);
-G2L["7c"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Action.TeleportTo
-G2L["7d"] = Instance.new("ImageButton", G2L["70"]);
-G2L["7d"]["BorderSizePixel"] = 0;
-G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7d"]["ImageColor3"] = Color3.fromRGB(163, 163, 163);
-G2L["7d"]["Image"] = [[rbxassetid://12941020168]];
-G2L["7d"]["Size"] = UDim2.new(0, 60, 0, 60);
-G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7d"]["Name"] = [[TeleportTo]];
-G2L["7d"]["Position"] = UDim2.new(0.04511, 0, 0.14286, 0);
-
-
--- StarterGui.Seabormium Hub.Action.TeleportTo.UIGradient
-G2L["7e"] = Instance.new("UIGradient", G2L["7d"]);
-G2L["7e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(215, 215, 215)),ColorSequenceKeypoint.new(0.539, Color3.fromRGB(96, 96, 96)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(117, 117, 117))};
-
-
--- StarterGui.Seabormium Hub.Action.TeleportTo.UICorner
-G2L["7f"] = Instance.new("UICorner", G2L["7d"]);
-G2L["7f"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Action.UIStroke
-G2L["80"] = Instance.new("UIStroke", G2L["70"]);
-G2L["80"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.Action.UIStroke.UIGradient
-G2L["81"] = Instance.new("UIGradient", G2L["80"]);
-G2L["81"]["Rotation"] = 14;
-G2L["81"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 234, 112)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(255, 189, 122)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 200, 200))};
-
-
--- StarterGui.Seabormium Hub.Turn
-G2L["82"] = Instance.new("TextButton", G2L["1"]);
-G2L["82"]["TextWrapped"] = true;
-G2L["82"]["TextStrokeTransparency"] = 0;
-G2L["82"]["BorderSizePixel"] = 0;
-G2L["82"]["TextSize"] = 14;
-G2L["82"]["TextScaled"] = true;
-G2L["82"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["82"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/Michroma.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["82"]["BackgroundTransparency"] = 1;
-G2L["82"]["Size"] = UDim2.new(0.05038, 0, 0.05144, 0);
-G2L["82"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["82"]["Text"] = [[>]];
-G2L["82"]["Name"] = [[Turn]];
-G2L["82"]["Position"] = UDim2.new(-0.01692, 0, 0.75036, 0);
-
-
--- StarterGui.Seabormium Hub.Notify
-G2L["83"] = Instance.new("Frame", G2L["1"]);
-G2L["83"]["Visible"] = false;
-G2L["83"]["BorderSizePixel"] = 0;
-G2L["83"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["83"]["Size"] = UDim2.new(0.21362, 0, 0.13517, 0);
-G2L["83"]["Position"] = UDim2.new(0.77115, 0, 0.22178, 0);
-G2L["83"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["83"]["Name"] = [[Notify]];
-
-
--- StarterGui.Seabormium Hub.Notify.UISizeConstraint
-G2L["84"] = Instance.new("UISizeConstraint", G2L["83"]);
-
-
-
--- StarterGui.Seabormium Hub.Notify.UICorner
-G2L["85"] = Instance.new("UICorner", G2L["83"]);
-G2L["85"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.Notify.UIStroke
-G2L["86"] = Instance.new("UIStroke", G2L["83"]);
-G2L["86"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.Notify.UIStroke.UIGradient
-G2L["87"] = Instance.new("UIGradient", G2L["86"]);
-G2L["87"]["Rotation"] = 14;
-G2L["87"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(242, 93, 255)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(133, 111, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(189, 80, 255))};
-
-
--- StarterGui.Seabormium Hub.Notify.Title
-G2L["88"] = Instance.new("TextLabel", G2L["83"]);
-G2L["88"]["TextWrapped"] = true;
-G2L["88"]["BorderSizePixel"] = 0;
-G2L["88"]["TextSize"] = 14;
-G2L["88"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-G2L["88"]["TextScaled"] = true;
-G2L["88"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["88"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["88"]["TextColor3"] = Color3.fromRGB(212, 212, 212);
-G2L["88"]["BackgroundTransparency"] = 1;
-G2L["88"]["Size"] = UDim2.new(0, 186, 0, 30);
-G2L["88"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["88"]["Text"] = [[Title]];
-G2L["88"]["Name"] = [[Title]];
-G2L["88"]["Position"] = UDim2.new(0.298, 0, 0, 0);
-
-
--- StarterGui.Seabormium Hub.Notify.Content
-G2L["89"] = Instance.new("TextLabel", G2L["83"]);
-G2L["89"]["TextWrapped"] = true;
-G2L["89"]["BorderSizePixel"] = 0;
-G2L["89"]["TextSize"] = 30;
-G2L["89"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-G2L["89"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["89"]["TextScaled"] = true;
-G2L["89"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["89"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["89"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
-G2L["89"]["BackgroundTransparency"] = 1;
-G2L["89"]["Size"] = UDim2.new(0, 265, 0, 83);
-G2L["89"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["89"]["Text"] = [[Content]];
-G2L["89"]["Name"] = [[Content]];
-G2L["89"]["Position"] = UDim2.new(0, 0, 0.26549, 0);
-
-
--- StarterGui.Seabormium Hub.Notify.Content.UITextSizeConstraint
-G2L["8a"] = Instance.new("UITextSizeConstraint", G2L["89"]);
-G2L["8a"]["MaxTextSize"] = 30;
-
-
--- StarterGui.Seabormium Hub.our name
-G2L["8b"] = Instance.new("TextLabel", G2L["1"]);
-G2L["8b"]["TextWrapped"] = true;
-G2L["8b"]["BorderSizePixel"] = 0;
-G2L["8b"]["TextSize"] = 1;
-G2L["8b"]["TextTransparency"] = 0.65;
-G2L["8b"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8b"]["TextScaled"] = true;
-G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8b"]["BackgroundTransparency"] = 1;
-G2L["8b"]["Size"] = UDim2.new(0.16731, 0, 0.04509, 0);
-G2L["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8b"]["Text"] = [[™Seabormium]];
-G2L["8b"]["Name"] = [[our name]];
-G2L["8b"]["Position"] = UDim2.new(0.98285, 0, 0.99917, 0);
-
-
--- StarterGui.Seabormium Hub.our name.next to plr mouse
-G2L["8c"] = Instance.new("LocalScript", G2L["8b"]);
-G2L["8c"]["Name"] = [[next to plr mouse]];
-
-
--- StarterGui.Seabormium Hub.ServerStat
-G2L["8d"] = Instance.new("Frame", G2L["1"]);
-G2L["8d"]["Visible"] = false;
-G2L["8d"]["BorderSizePixel"] = 0;
-G2L["8d"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["8d"]["Size"] = UDim2.new(0, 388, 0, 221);
-G2L["8d"]["Position"] = UDim2.new(-0.28647, 0, 0.98005, 0);
-G2L["8d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8d"]["Name"] = [[ServerStat]];
-
-
--- StarterGui.Seabormium Hub.ServerStat.UIStroke
-G2L["8e"] = Instance.new("UIStroke", G2L["8d"]);
-G2L["8e"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.ServerStat.UIStroke.UIGradient
-G2L["8f"] = Instance.new("UIGradient", G2L["8e"]);
-G2L["8f"]["Rotation"] = 14;
-G2L["8f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(2, 235, 255)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(175, 255, 198)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(148, 255, 170))};
-
-
--- StarterGui.Seabormium Hub.ServerStat.UICorner
-G2L["90"] = Instance.new("UICorner", G2L["8d"]);
-G2L["90"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.ServerStat.ServerReg
-G2L["91"] = Instance.new("TextLabel", G2L["8d"]);
-G2L["91"]["TextWrapped"] = true;
-G2L["91"]["BorderSizePixel"] = 0;
-G2L["91"]["TextSize"] = 14;
-G2L["91"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["91"]["TextScaled"] = true;
-G2L["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["91"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["91"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["91"]["BackgroundTransparency"] = 1;
-G2L["91"]["Size"] = UDim2.new(0, 199, 0, 55);
-G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["91"]["Text"] = [[Server Region:]];
-G2L["91"]["Name"] = [[ServerReg]];
-G2L["91"]["Position"] = UDim2.new(0.02381, 0, 0.02653, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.Version
-G2L["92"] = Instance.new("TextLabel", G2L["8d"]);
-G2L["92"]["TextWrapped"] = true;
-G2L["92"]["BorderSizePixel"] = 0;
-G2L["92"]["TextSize"] = 14;
-G2L["92"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["92"]["TextScaled"] = true;
-G2L["92"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["92"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["92"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["92"]["BackgroundTransparency"] = 1;
-G2L["92"]["Size"] = UDim2.new(0, 125, 0, 43);
-G2L["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["92"]["Text"] = [[Version:]];
-G2L["92"]["Name"] = [[Version]];
-G2L["92"]["Position"] = UDim2.new(0.02381, 0, 0.73344, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.Plrs
-G2L["93"] = Instance.new("TextLabel", G2L["8d"]);
-G2L["93"]["TextWrapped"] = true;
-G2L["93"]["BorderSizePixel"] = 0;
-G2L["93"]["TextSize"] = 14;
-G2L["93"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["93"]["TextScaled"] = true;
-G2L["93"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["93"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["93"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["93"]["BackgroundTransparency"] = 1;
-G2L["93"]["Size"] = UDim2.new(0, 153, 0, 41);
-G2L["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["93"]["Text"] = [[math.huge]];
-G2L["93"]["Name"] = [[Plrs]];
-G2L["93"]["Position"] = UDim2.new(0.3202, 0, 0.2719, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.Plrs.GetPlayerCount
-G2L["94"] = Instance.new("LocalScript", G2L["93"]);
-G2L["94"]["Name"] = [[GetPlayerCount]];
-
-
--- StarterGui.Seabormium Hub.ServerStat.upTimeF
-G2L["95"] = Instance.new("Frame", G2L["8d"]);
-G2L["95"]["BorderSizePixel"] = 0;
-G2L["95"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41);
-G2L["95"]["Size"] = UDim2.new(0, 388, 0, 64);
-G2L["95"]["Position"] = UDim2.new(-0.00196, 0, 1.05212, 0);
-G2L["95"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["95"]["Name"] = [[upTimeF]];
-
-
--- StarterGui.Seabormium Hub.ServerStat.upTimeF.UIStroke
-G2L["96"] = Instance.new("UIStroke", G2L["95"]);
-G2L["96"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Seabormium Hub.ServerStat.upTimeF.UIStroke.UIGradient
-G2L["97"] = Instance.new("UIGradient", G2L["96"]);
-G2L["97"]["Rotation"] = 14;
-G2L["97"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(2, 235, 255)),ColorSequenceKeypoint.new(0.532, Color3.fromRGB(175, 255, 198)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(148, 255, 170))};
-
-
--- StarterGui.Seabormium Hub.ServerStat.upTimeF.UICorner
-G2L["98"] = Instance.new("UICorner", G2L["95"]);
-G2L["98"]["CornerRadius"] = UDim.new(0, 10);
-
-
--- StarterGui.Seabormium Hub.ServerStat.upTimeF.Uptime
-G2L["99"] = Instance.new("TextLabel", G2L["95"]);
-G2L["99"]["TextWrapped"] = true;
-G2L["99"]["BorderSizePixel"] = 0;
-G2L["99"]["TextSize"] = 14;
-G2L["99"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["99"]["TextScaled"] = true;
-G2L["99"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["99"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["99"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["99"]["BackgroundTransparency"] = 1;
-G2L["99"]["Size"] = UDim2.new(0, 115, 0, 47);
-G2L["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["99"]["Text"] = [[Uptime:]];
-G2L["99"]["Name"] = [[Uptime]];
-G2L["99"]["Position"] = UDim2.new(0.04185, 0, 0.12357, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.upTimeF.Times
-G2L["9a"] = Instance.new("TextLabel", G2L["95"]);
-G2L["9a"]["TextWrapped"] = true;
-G2L["9a"]["BorderSizePixel"] = 0;
-G2L["9a"]["TextSize"] = 14;
-G2L["9a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["9a"]["TextScaled"] = true;
-G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9a"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["9a"]["BackgroundTransparency"] = 1;
-G2L["9a"]["Size"] = UDim2.new(0, 205, 0, 47);
-G2L["9a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9a"]["Text"] = [[DD:HH:MM:SS]];
-G2L["9a"]["Name"] = [[Times]];
-G2L["9a"]["Position"] = UDim2.new(0.33824, 0, 0.12047, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.upTimeF.Times.Uptime
-G2L["9b"] = Instance.new("LocalScript", G2L["9a"]);
-G2L["9b"]["Name"] = [[Uptime]];
-
-
--- StarterGui.Seabormium Hub.ServerStat.Players
-G2L["9c"] = Instance.new("TextLabel", G2L["8d"]);
-G2L["9c"]["TextWrapped"] = true;
-G2L["9c"]["BorderSizePixel"] = 0;
-G2L["9c"]["TextSize"] = 14;
-G2L["9c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["9c"]["TextScaled"] = true;
-G2L["9c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9c"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["9c"]["BackgroundTransparency"] = 1;
-G2L["9c"]["Size"] = UDim2.new(0, 115, 0, 41);
-G2L["9c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9c"]["Text"] = [[Players:]];
-G2L["9c"]["Name"] = [[Players]];
-G2L["9c"]["Position"] = UDim2.new(0.02381, 0, 0.2719, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.Pings
-G2L["9d"] = Instance.new("TextLabel", G2L["8d"]);
-G2L["9d"]["TextWrapped"] = true;
-G2L["9d"]["BorderSizePixel"] = 0;
-G2L["9d"]["TextSize"] = 14;
-G2L["9d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["9d"]["TextScaled"] = true;
-G2L["9d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9d"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["9d"]["BackgroundTransparency"] = 1;
-G2L["9d"]["Size"] = UDim2.new(0, 240, 0, 41);
-G2L["9d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9d"]["Text"] = [[XXXXX]];
-G2L["9d"]["Name"] = [[Pings]];
-G2L["9d"]["Position"] = UDim2.new(0.22484, 0, 0.50267, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.Pings.GetPing
-G2L["9e"] = Instance.new("LocalScript", G2L["9d"]);
-G2L["9e"]["Name"] = [[GetPing]];
-
-
--- StarterGui.Seabormium Hub.ServerStat.Ping
-G2L["9f"] = Instance.new("TextLabel", G2L["8d"]);
-G2L["9f"]["TextWrapped"] = true;
-G2L["9f"]["BorderSizePixel"] = 0;
-G2L["9f"]["TextSize"] = 14;
-G2L["9f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["9f"]["TextScaled"] = true;
-G2L["9f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["9f"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["9f"]["BackgroundTransparency"] = 1;
-G2L["9f"]["Size"] = UDim2.new(0, 115, 0, 41);
-G2L["9f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9f"]["Text"] = [[Ping:]];
-G2L["9f"]["Name"] = [[Ping]];
-G2L["9f"]["Position"] = UDim2.new(0.02381, 0, 0.50267, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.Versions
-G2L["a0"] = Instance.new("TextLabel", G2L["8d"]);
-G2L["a0"]["TextWrapped"] = true;
-G2L["a0"]["BorderSizePixel"] = 0;
-G2L["a0"]["TextSize"] = 14;
-G2L["a0"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["a0"]["TextScaled"] = true;
-G2L["a0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a0"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["a0"]["BackgroundTransparency"] = 1;
-G2L["a0"]["Size"] = UDim2.new(0, 125, 0, 43);
-G2L["a0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a0"]["Text"] = [[1]];
-G2L["a0"]["Name"] = [[Versions]];
-G2L["a0"]["Position"] = UDim2.new(0.34597, 0, 0.73344, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.Versions.GetPlaceVersion
-G2L["a1"] = Instance.new("LocalScript", G2L["a0"]);
-G2L["a1"]["Name"] = [[GetPlaceVersion]];
-
-
--- StarterGui.Seabormium Hub.ServerStat.Region
-G2L["a2"] = Instance.new("TextLabel", G2L["8d"]);
-G2L["a2"]["TextWrapped"] = true;
-G2L["a2"]["BorderSizePixel"] = 0;
-G2L["a2"]["TextSize"] = 14;
-G2L["a2"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["a2"]["TextScaled"] = true;
-G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["a2"]["TextColor3"] = Color3.fromRGB(148, 148, 148);
-G2L["a2"]["BackgroundTransparency"] = 1;
-G2L["a2"]["Size"] = UDim2.new(0, 125, 0, 41);
-G2L["a2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a2"]["Text"] = [[Unknown]];
-G2L["a2"]["Name"] = [[Region]];
-G2L["a2"]["Position"] = UDim2.new(0.55044, 0, 0.05821, 0);
-
-
--- StarterGui.Seabormium Hub.ServerStat.Region.GetRegion
-G2L["a3"] = Instance.new("LocalScript", G2L["a2"]);
-G2L["a3"]["Name"] = [[GetRegion]];
-
-
--- StarterGui.Seabormium Hub.DaChecker
-G2L["a4"] = Instance.new("ImageLabel", G2L["1"]);
-G2L["a4"]["BorderSizePixel"] = 0;
-G2L["a4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a4"]["Image"] = [[rbxassetid://75849562772873]];
-G2L["a4"]["Size"] = UDim2.new(0, 261, 0, 219);
-G2L["a4"]["Visible"] = false;
-G2L["a4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a4"]["BackgroundTransparency"] = 1;
-G2L["a4"]["Name"] = [[DaChecker]];
-G2L["a4"]["Position"] = UDim2.new(0.84504, 0, 0.75, 0);
-
-
--- StarterGui.Seabormium Hub.DaChecker2
-G2L["a5"] = Instance.new("ImageLabel", G2L["1"]);
-G2L["a5"]["BorderSizePixel"] = 0;
-G2L["a5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a5"]["Image"] = [[rbxassetid://107918662286633]];
-G2L["a5"]["Size"] = UDim2.new(0, 307, 0, 219);
-G2L["a5"]["Visible"] = false;
-G2L["a5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a5"]["BackgroundTransparency"] = 1;
-G2L["a5"]["Name"] = [[DaChecker2]];
-G2L["a5"]["Position"] = UDim2.new(0.80992, 0, 0.75957, 0);
-
-
--- StarterGui.Seabormium Hub.PlayerList.List
-local function C_39()
-local script = G2L["39"];
-	local Players = game:GetService("Players")
-	local TweenService = game:GetService("TweenService")
-	local RunService = game:GetService("RunService")
-	
-	-- // CONFIGURATION & ANONYMOUS SETTINGS
-	local ANONYMOUS_NAME = "Anonymous_User"
-	local ANONYMOUS_DISPLAY = "Anonymous"
-	local IncognitoActive = false -- This controls the "lying" hook
-	
-	-- // --- THE SIRIUS HOOK (Metatable Hooking) ---
-	-- This intercepts any script trying to read Name or DisplayName
-	local oldIndex
-	oldIndex = hookmetamethod(game, "__index", function(self, key)
-		if not checkcaller() and IncognitoActive and self == Players.LocalPlayer then
-			if key == "Name" then
-				return ANONYMOUS_NAME
-			elseif key == "DisplayName" then
-				return ANONYMOUS_DISPLAY
-			end
-		end
-		return oldIndex(self, key)
-	end)
-	
-	-- // UI REFERENCES
-	local PlayerListFrame = script.Parent
-	local ScrollingFrame = PlayerListFrame:WaitForChild("ScrollingFrame")
-	local Template = ScrollingFrame:WaitForChild("Plr")
-	local ActionUI = script.Parent.Parent:WaitForChild("Action")
-	
-	-- // ACTION BUTTONS
-	local FlingBtn = ActionUI:WaitForChild("Fling")
-	local TeleportBtn = ActionUI:WaitForChild("TeleportTo")
-	local ViewBtn = ActionUI:WaitForChild("View")
-	local IncognitoBtn = ActionUI:WaitForChild("incognito")
-	
-	-- // UI CONFIG
-	local ENTRY_HEIGHT = 54
-	local PADDING = 2
-	local TARGET_POS = UDim2.new(0.781, 0, 0.406, 0)
-	local HIDE_POS = UDim2.new(2, 0, 0.406, 0) 
-	local TWEEN_INFO = TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
-	
-	-- // GLOBAL STATE
-	local selectedPlayer = nil
-	local isViewing = false
-	local FlingActive = false
-	local isActionOpen = false
-	local Camera = workspace.CurrentCamera
-	
-	-- // --- UI CONTROL FUNCTIONS ---
-	
-	local function closeActionMenu()
-		selectedPlayer = nil
-		isActionOpen = false
-		local myHum = Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-		if myHum then Camera.CameraSubject = myHum end
-		isViewing = false
-		ViewBtn.Image = "rbxassetid://9266631404"
-	
-		local tween = TweenService:Create(ActionUI, TWEEN_INFO, {Position = HIDE_POS})
-		tween:Play()
-		task.delay(0.5, function() if not isActionOpen then ActionUI.Visible = false end end)
-	end
-	
-	local function openActionMenu(player)
-		if selectedPlayer == player and isActionOpen then closeActionMenu() return end
-		selectedPlayer = player
-		isActionOpen = true
-		ActionUI.Visible = true
-		TweenService:Create(ActionUI, TWEEN_INFO, {Position = TARGET_POS}):Play()
-	end
-	
-	-- // --- LIST MANAGEMENT ---
-	
-	local function updateList()
-		for _, child in pairs(ScrollingFrame:GetChildren()) do
-			if child.Name == "PlayerEntry" then child:Destroy() end
-		end
-	
-		local currentPlayers = Players:GetPlayers()
-		for i, player in ipairs(currentPlayers) do
-			local entry = Template:Clone()
-			entry.Name = "PlayerEntry"
-			entry.Position = UDim2.new(0, 0, 0, (i - 1) * (ENTRY_HEIGHT + PADDING))
-	
-			-- Because of the hook at the top, if Incognito is on, 
-			-- player.DisplayName will automatically return "Anonymous"
-			entry.Displayname.Text = player.DisplayName
-			entry.Username.Text = "@" .. player.Name
-			entry.image.Image = "rbxthumb://type=AvatarHeadShot&id="..player.UserId.."&w=150&h=150"
-	
-			local btn = entry:FindFirstChildOfClass("TextButton") or Instance.new("TextButton", entry)
-			btn.Size, btn.BackgroundTransparency, btn.Text = UDim2.new(1,0,1,0), 1, ""
-			btn.MouseButton1Click:Connect(function() openActionMenu(player) end)
-	
-			entry.Visible, entry.Parent = true, ScrollingFrame
-		end
-		ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, #currentPlayers * (ENTRY_HEIGHT + PADDING))
-	end
-	
-	-- // --- ACTION FUNCTIONS ---
-	
-	IncognitoBtn.MouseButton1Click:Connect(function()
-		IncognitoActive = not IncognitoActive
-		IncognitoBtn.BackgroundColor3 = IncognitoActive and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 255, 255)
-	
-		-- Refresh the list so the hook takes effect visually
-		updateList()
-	end)
-	
-	FlingBtn.MouseButton1Click:Connect(function()
-		if selectedPlayer then
-			-- Fling logic stays same
-		end
-	end)
-	
-	TeleportBtn.MouseButton1Click:Connect(function()
-		local root = Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
-		local tRoot = selectedPlayer.Character and selectedPlayer.Character:FindFirstChild("HumanoidRootPart")
-		if root and tRoot then root.CFrame = tRoot.CFrame * CFrame.new(0, 0, 3) end
-	end)
-	
-	ViewBtn.MouseButton1Click:Connect(function()
-		if not selectedPlayer then return end
-		local myHum = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-		local tHum = selectedPlayer.Character and selectedPlayer.Character:FindFirstChildOfClass("Humanoid")
-		if not isViewing and tHum then
-			Camera.CameraSubject, isViewing = tHum, true
-			ViewBtn.Image = "rbxassetid://109100601282030"
-		else
-			Camera.CameraSubject, isViewing = myHum, false
-			ViewBtn.Image = "rbxassetid://9266631404"
-		end
-	end)
-	
-	-- // INITIALIZE
-	ActionUI.Position = HIDE_POS
-	Template.Visible = false
-	updateList()
-	
-	Players.PlayerAdded:Connect(updateList)
-	Players.PlayerRemoving:Connect(function(player)
-		if selectedPlayer == player then closeActionMenu() end
-		updateList()
-	end)
-end;
-task.spawn(C_39);
--- StarterGui.Seabormium Hub.Chat.Chet
-local function C_61()
-local script = G2L["61"];
-	local HttpService = game:GetService("HttpService")
-	local RunService = game:GetService("RunService")
-	local Players = game:GetService("Players")
-	
-	-- // CONFIGURATION
-	local GIST_ID = "7a771f07aa4e90ebb95e35a72af0c68d"
-	local AUTH_TOKEN = "Bearer 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" 
-	local FILENAME = "chat.json" -- Updated to match your file
-	local COOLDOWN_TIME = 5
-	local MAX_MESSAGES = 25 
-	local MAX_CHARS = 154
-	local IS_STUDIO = RunService:IsStudio()
-	
-	-- // SWAY SETTINGS
-	local SWAY_WHITELIST = {"Cmd", "Main", "Credits"}
-	local SWAY_SPEED = 1.1
-	local SWAY_INTENSITY = 0.6 
-	
-	-- // UI REFERENCES
-	local Hub = script.Parent.Parent
-	local ChatFrame = Hub:WaitForChild("Chat")
-	local MessagesFrame = ChatFrame:WaitForChild("Messages")
-	local PlayerTemplate = MessagesFrame:WaitForChild("Player")
-	local ChatBar = ChatFrame:WaitForChild("ChatBar")
-	local SendBtn = ChatFrame:WaitForChild("Send")
-	local ImageScroll = ChatFrame:WaitForChild("Images"):WaitForChild("Scroll")
-	local UIList = MessagesFrame:WaitForChild("UIListLayout")
-	
-	-- // VARIABLES
-	local lastSend = 0
-	local lastJSON = ""
-	local mockMessages = {{user = "System", userId = -1, msg = "Studio Testing Mode", img = ""}}
-	local isUpdatingPlaceholder = false
-	local defaultPlaceholder = "Click here to chat."
-	
-	-- // 1. SWAY ANIMATION
-	local function applySway()
-		local frameData = {}
-		for _, name in pairs(SWAY_WHITELIST) do
-			local frame = Hub:FindFirstChild(name)
-			if frame and (frame:IsA("Frame") or frame:IsA("ScrollingFrame")) then
-				frameData[frame] = math.random() * math.pi * 2
-			end
-		end
-	
-		RunService.RenderStepped:Connect(function()
-			local t = tick()
-			for frame, offset in pairs(frameData) do
-				if frame and frame.Parent and not frame:GetAttribute("IsTweening") then
-					local s = math.sin(t * SWAY_SPEED + offset) * SWAY_INTENSITY
-					frame.Rotation = s
-				end
-			end
-		end)
-	end
-	
-	-- // 2. AUTOMATIC CHAT SCROLLING
-	local function updateScrolling()
-		local contentHeight = UIList.AbsoluteContentSize.Y
-		MessagesFrame.CanvasSize = UDim2.new(0, 0, 0, contentHeight)
-		if contentHeight > MessagesFrame.AbsoluteSize.Y then
-			MessagesFrame.CanvasPosition = Vector2.new(0, contentHeight - MessagesFrame.AbsoluteSize.Y)
-		else
-			MessagesFrame.CanvasPosition = Vector2.new(0, 0)
-		end
-	end
-	UIList:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(updateScrolling)
-	
-	-- // 3. DATA HANDLERS
-	local function getChatData()
-		if IS_STUDIO then return mockMessages end
-		local success, res = pcall(function()
-			-- Note: 'request' is a function provided by most executors
-			return request({
-				Url = "https://api.github.com/gists/"..GIST_ID, 
-				Method = "GET"
-			})
-		end)
-	
-		if success and res.StatusCode == 200 then
-			local data = HttpService:JSONDecode(res.Body)
-			-- FIXED: Safe indexing for the specific filename
-			if data.files and data.files[FILENAME] then
-				return HttpService:JSONDecode(data.files[FILENAME].content)
-			end
-		end
-		return {}
-	end
-	
-	local function uploadChatData(newTable)
-		if IS_STUDIO then mockMessages = newTable return true end
-		local body = HttpService:JSONEncode({
-			files = {
-				[FILENAME] = {
-					content = HttpService:JSONEncode(newTable)
-				}
-			}
-		})
-		local success, res = pcall(function()
-			return request({
-				Url = "https://api.github.com/gists/"..GIST_ID,
-				Method = "PATCH",
-				Headers = {
-					["Authorization"] = AUTH_TOKEN, 
-					["Content-Type"] = "application/json"
-				},
-				Body = body
-			})
-		end)
-		return success
-	end
-	
-	-- // 4. RENDERING
-	local function renderChat(logs)
-		for _, child in pairs(MessagesFrame:GetChildren()) do
-			if child:IsA("Frame") and child.Name ~= "Player" then child:Destroy() end
-		end
-	
-		for _, log in pairs(logs) do
-			local n = PlayerTemplate:Clone()
-			n.Name = "ChatEntry"
-			n.NamePlr.Text = log.user
-	
-			if log.userId and log.userId ~= -1 then
-				n.ImagePlr.Image = "rbxthumb://type=AvatarHeadShot&id="..log.userId.."&w=150&h=150"
-			end
-	
-			local stickerImg = n:FindFirstChild("Image") 
-			if log.img and log.img ~= "" then
-				if stickerImg then
-					stickerImg.Image = log.img
-					stickerImg.Visible = true
-				end
-				n.Msg.Visible = false
-			else
-				if stickerImg then stickerImg.Visible = false end
-				n.Msg.Text = log.msg
-				n.Msg.Visible = true
-				n.Msg.TextWrapped = true 
-			end
-	
-			n.Visible = true
-			n.Parent = MessagesFrame
-		end
-	end
-	
-	-- // 5. SENDING LOGIC
-	local function trySendMessage(content, isImage)
-		if not isImage and #content > MAX_CHARS then return false end
-	
-		local now = os.clock()
-		if now - lastSend < COOLDOWN_TIME then return false end
-		lastSend = now
-	
-		local currentLogs = getChatData()
-		table.insert(currentLogs, {
-			user = Players.LocalPlayer.DisplayName or Players.LocalPlayer.Name,
-			userId = Players.LocalPlayer.UserId,
-			msg = isImage and "" or content,
-			img = isImage and content or ""
-		})
-	
-		while #currentLogs > MAX_MESSAGES do table.remove(currentLogs, 1) end
-	
-		if uploadChatData(currentLogs) then
-			renderChat(currentLogs)
-			return true
-		end
-		return false
-	end
-	
-	-- // 6. CONNECTIONS
-	SendBtn.MouseButton1Click:Connect(function()
-		if ChatBar.Text ~= "" then
-			if trySendMessage(ChatBar.Text, false) then ChatBar.Text = "" end
-		end
-	end)
-	
-	local function setupImageButton(btn)
-		if btn:IsA("ImageButton") then
-			btn.MouseButton1Click:Connect(function() trySendMessage(btn.Image, true) end)
-		end
-	end
-	
-	for _, child in pairs(ImageScroll:GetChildren()) do setupImageButton(child) end
-	ImageScroll.ChildAdded:Connect(setupImageButton)
-	
-	-- // 7. INITIALIZE
-	applySway()
-	task.spawn(function()
-		PlayerTemplate.Visible = false
-		while true do
-			local logs = getChatData()
-			local currentJSON = HttpService:JSONEncode(logs)
-			if currentJSON ~= lastJSON then
-				lastJSON = currentJSON
-				renderChat(logs)
-			end
-			task.wait(2.5) -- Optimized refresh rate
-		end
-	end)
-end;
-task.spawn(C_61);
--- StarterGui.Seabormium Hub.Chat.Drag
-local function C_62()
-local script = G2L["62"];
-	local UserInputService = game:GetService("UserInputService")
-	local RunService = game:GetService("RunService")
-	
-	local targetUI = script.Parent
-	local dragSpeed = 0.05
-	
-	local dragging = false
-	local dragInput, mousePos, startPos
-	local currentPos = targetUI.Position
-	local targetPos = currentPos
-	local currentRotation = 0
-	
-	-- // INPUT HANDLERS
-	targetUI.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			mousePos = input.Position
-			startPos = targetUI.Position
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	targetUI.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	-- // SMOOTHING LOOP
-	RunService.RenderStepped:Connect(function(dt)
-		if dragging and dragInput then
-			local delta = dragInput.Position - mousePos
-			targetPos = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		end
-	
-		-- 1. Smooth Position (Lerp)
-		currentPos = currentPos:Lerp(targetPos, dragSpeed)
-		targetUI.Position = currentPos
-	end)
-end;
-task.spawn(C_62);
--- StarterGui.Seabormium Hub.Control
-local function C_63()
-local script = G2L["63"];
-	local UserInputService = game:GetService("UserInputService")
-	local TweenService = game:GetService("TweenService")
-	local Lighting = game:GetService("Lighting")
-	local Players = game:GetService("Players")
-	local ScreenGui = script.Parent
-	local Main = ScreenGui:WaitForChild("Main")
-	local Back = ScreenGui:WaitForChild("Back")
-	local TurnBtn = ScreenGui:WaitForChild("Turn")
-	local PlayerList = ScreenGui:WaitForChild("PlayerList")
-	local Credits = ScreenGui:WaitForChild("Credits")
-	local Chat = ScreenGui:WaitForChild("Chat")
-	local Cmd = ScreenGui:WaitForChild("Cmd")
-	local ScriptFrame = Main:WaitForChild("ScriptsF")
-	local ServerStat = ScreenGui:WaitForChild("ServerStat")
-	local TWEEN_INFO = TweenInfo.new(0.6, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
-	local POS_MAIN       = UDim2.new(0.01, 0, 0.622, 0)
-	local POS_PLAYERLIST = UDim2.new(0.776, 0, 0.534, 0)
-	local POS_CREDITS    = UDim2.new(0.01, 0, 0.425, 0)
-	local POS_CHAT       = UDim2.new(0.01, 0, 0.014, 0)
-	local POS_SCRIPTS    = UDim2.new(0, 688, 0, -1)
-	local POS_CMD        = UDim2.new(0.01, 0, 0.942, 0)
-	local POS_SERVERSTAT = UDim2.new(0.012, 0, 0.046, 0)
-	local POS_ACTION     = UDim2.new(0.781, 0, 0.406, 0) 
-	local HIDE_ACTION     = UDim2.new(2, 0, 0.406, 0) 
-	local HIDE_LEFT      = UDim2.new(-1, 0, 0.5, 0)
-	local HIDE_RIGHT     = UDim2.new(1.5, 0, 0.5, 0)
-	local HIDE_DOWN      = UDim2.new(0, 0, 1.5, 0)
-	local NotifyTemplate = ScreenGui:WaitForChild("Notify")
-	local Starter = game:GetService("StarterGui")
-	local camera = workspace.CurrentCamera
-	local currentFov = camera.FieldOfView
-	local ActionFrame = ScreenGui:WaitForChild("Action")
-	NotifyTemplate.Visible = false -- Keep the original hidden
-	
-	local activeNotifies = {} -- To track stacking
-	local STACK_OFFSET = UDim2.new(0, 0, 0.145, 0) -- Distance to move up
-	
-	
-	print("Loading Seaborgium Hub...")
-	
-	PlayerList.Position = HIDE_RIGHT
-	Credits.Position = HIDE_LEFT
-	Cmd.Position = HIDE_DOWN
-	ScriptFrame.Position = HIDE_DOWN
-	
-	local isHubOpen = false
-	local Blur = Instance.new("BlurEffect", Lighting)
-	Blur.Name = "HubBlur"
-	Blur.Size = 0
-	
-	local function fadeout(frame)
-		local tween = TweenService:Create(frame, TWEEN_INFO, {BackgroundTransparency = 1})
-		tween:Play()
-		tween.Completed:Connect(function()
-			frame.Visible = false
-			frame.BackgroundTransparency = 0
-		end)
-	end
-	
-	-- // NOTIFICATION FUNCTION
-	local function sendNotify(title, content)
-		local newNotify = NotifyTemplate:Clone()
-		newNotify.Parent = ScreenGui
-		newNotify.Title.Text = title
-		newNotify.Content.Text = content
-	
-		-- Initial State
-		local startX, startY = 1.2, 0.223
-		local goalX, goalY = 0.774, 0.223
-	
-		newNotify.Position = UDim2.new(startX, 0, startY, 0)
-		newNotify.BackgroundTransparency = 1
-		newNotify.Title.TextTransparency = 1
-		newNotify.Content.TextTransparency = 1
-		newNotify.Visible = true
-		newNotify:SetAttribute("TargetY", goalY)
-	
-		table.insert(activeNotifies, newNotify)
-		for i = #activeNotifies - 1, 1, -1 do
-			local oldNotify = activeNotifies[i]
-			if oldNotify and oldNotify.Parent then
-				local currentTargetY = oldNotify:GetAttribute("TargetY")
-				local newTargetY = currentTargetY - 0.145
-				oldNotify:SetAttribute("TargetY", newTargetY)
-	
-				TweenService:Create(oldNotify, TWEEN_INFO, {
-					Position = UDim2.new(goalX, 0, newTargetY, 0)
-				}):Play()
-			end
-		end
-	
-		local entranceY = newNotify:GetAttribute("TargetY")
-		TweenService:Create(newNotify, TWEEN_INFO, {Position = UDim2.new(goalX, 0, entranceY, 0)}):Play()
-		TweenService:Create(newNotify, TWEEN_INFO, {BackgroundTransparency = 0.4}):Play()
-		TweenService:Create(newNotify.Title, TWEEN_INFO, {TextTransparency = 0}):Play()
-		TweenService:Create(newNotify.Content, TWEEN_INFO, {TextTransparency = 0}):Play()
-	
-		task.delay(3, function()
-			local exitPos = UDim2.new(goalX, 0, -0.2, 0)
-			local exitTween = TweenService:Create(newNotify, TWEEN_INFO, {Position = exitPos})
-	
-			TweenService:Create(newNotify, TWEEN_INFO, {BackgroundTransparency = 1}):Play()
-			TweenService:Create(newNotify.Title, TWEEN_INFO, {TextTransparency = 1}):Play()
-			TweenService:Create(newNotify.Content, TWEEN_INFO, {TextTransparency = 1}):Play()
-	
-			exitTween:Play()
-			exitTween.Completed:Wait()
-	
-			newNotify:Destroy()
-			local index = table.find(activeNotifies, newNotify)
-			if index then table.remove(activeNotifies, index) end
-		end)
-	end
-	
-	-- // DISCORD BUTTON CONNECTION
-	Main.Discord.MouseButton1Click:Connect(function()
-		if setclipboard then
-			setclipboard("https://discord.gg/SaJ4UHzjc6") -- Add your link here
-			sendNotify("Discord", "Link copied to clipboard.")
-		else
-			sendNotify("Error", "Copy failed. No way bro how😭🙏")
-			local dc = Main.Disc
-			dc.Visible = true
-			Main.Discord.Visible = false
-		end
-	end)
-	
-	local function slide(frame, target, hide)
-		local isOpening = (frame.Visible == false or frame.Position ~= target)
-		if isOpening then
-			frame.Visible = true
-			TweenService:Create(frame, TWEEN_INFO, {Position = target}):Play()
-		else
-			local t = TweenService:Create(frame, TWEEN_INFO, {Position = hide})
-			t:Play()
-			task.delay(0.6, function() if frame.Position == hide then frame.Visible = false end end)
-		end
-	end
-	
-	-- // MASTER TOGGLE
-	local function toggleHub()
-		isHubOpen = not isHubOpen
-		TweenService:Create(TurnBtn, TWEEN_INFO, {Rotation = isHubOpen and 0 or 180}):Play()
-		if isHubOpen then
-			Starter:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
-			Main.Visible = true
-			Back.Visible = true
-			TweenService:Create(camera, TWEEN_INFO, {FieldOfView = 40}):Play()
-			TweenService:Create(Main, TWEEN_INFO, {Position = POS_MAIN}):Play()
-			TweenService:Create(Blur, TWEEN_INFO, {Size = 24}):Play()
-			TweenService:Create(Back, TWEEN_INFO, {BackgroundTransparency = 0.4}):Play()
-		else
-			Starter:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
-			Back.Visible = false
-			TweenService:Create(camera, TWEEN_INFO, {FieldOfView = currentFov}):Play()
-			TweenService:Create(Blur, TWEEN_INFO, {Size = 0}):Play()
-			TweenService:Create(Main, TWEEN_INFO, {Position = UDim2.new(-1, 0, 0.622, 0)}):Play()
-			TweenService:Create(Back, TWEEN_INFO, {BackgroundTransparency = 1}):Play()
-			ServerStat.Visible = false
-			PlayerList.Visible = false
-			Credits.Visible = false
-			Cmd.Visible = false
-			ScreenGui.Action.Visible = false
-			Main.ScriptsF.Visible = false
-			task.delay(0.6, function() if not isHubOpen then Main.Visible = false end end)
-		end
-	end
-	
-	Main.PlrList.MouseButton1Click:Connect(function() slide(PlayerList, POS_PLAYERLIST, HIDE_RIGHT) slide(ActionFrame, HIDE_ACTION, HIDE_ACTION) end)
-	Main.Credits.MouseButton1Click:Connect(function() slide(Credits, POS_CREDITS, HIDE_LEFT) end)
-	Main.Chat.MouseButton1Click:Connect(function() Chat.Visible = not Chat.Visible end)
-	Main.Cmds.MouseButton1Click:Connect(function() slide(Cmd, POS_CMD, HIDE_DOWN) end)
-	Main.Scripts.MouseButton1Click:Connect(function() slide(ScriptFrame, POS_SCRIPTS, HIDE_DOWN) end)
-	Main.ServerStat.MouseButton1Click:Connect(function() slide(ServerStat, POS_SERVERSTAT, HIDE_LEFT) end)
-	TurnBtn.MouseButton1Click:Connect(toggleHub)
-	UserInputService.InputBegan:Connect(function(io, gpe)
-		if not gpe and io.KeyCode == Enum.KeyCode.J then toggleHub() end
-	end)
-	
-	-- // STARTUP
-	Main.Position = UDim2.new(-1, 0, 0.622, 0)
-	Main.Visible = false
-	Back.Visible = false
-	TurnBtn.Rotation = 180
-	wait(11)
-	print("Seabormium Hub Loaded.")
-	
-end;
-task.spawn(C_63);
--- StarterGui.Seabormium Hub.Credits.Frame.L_EpicGuy - Owner.If u see me in the code, you r stupid skid.my faic
-local function C_6b()
-local script = G2L["6b"];
-	script.Parent.Image = "https://www.roblox.com/headshot-thumbnail/image?userId=9720038627&width=420&height=420&format=png"
-end;
-task.spawn(C_6b);
--- StarterGui.Seabormium Hub.our name.next to plr mouse
-local function C_8c()
-local script = G2L["8c"];
-	local mouse = game.Players.LocalPlayer:GetMouse()
-	local tet = script.Parent
-	
-	mouse.Move:Connect(function()
-		tet.Position = UDim2.new(0, mouse.X, 0, mouse.Y)
-	end)
-end;
-task.spawn(C_8c);
--- StarterGui.Seabormium Hub.ServerStat.Plrs.GetPlayerCount
-local function C_94()
-local script = G2L["94"];
-	local parent = script.Parent
-	local text = #game.Players:GetPlayers()
-	parent.Text = text
-	game.Players.PlayerAdded:Connect(function()
-		parent.Text = #game.Players:GetPlayers()
-	end)
-	game.Players.PlayerRemoving:Connect(function()
-		parent.Text = #game.Players:GetPlayers()
-	end)
-end;
-task.spawn(C_94);
--- StarterGui.Seabormium Hub.ServerStat.upTimeF.Times.Uptime
-local function C_9b()
-local script = G2L["9b"];
-	local RunService = game:GetService("RunService")
-	local UptimeLabel = script.Parent -- Adjust this path
-	
-	-- // 1. Set the Start Point
-	local startTime = workspace.DistributedGameTime
-	
-	local function formatUptime(s)
-		local days = math.floor(s / 86400)
-		local hours = math.floor((s % 86400) / 3600)
-		local mins = math.floor((s % 3600) / 60)
-		local secs = math.floor(s % 60)
-	
-		-- Format: 00d 00:00:00
-		return string.format("%02dd %02d:%02d:%02d", days, hours, mins, secs)
-	end
-	
-	-- // 2. The Independent Loop
-	task.spawn(function()
-		while true do
-			local elapsed = workspace.DistributedGameTime - startTime
-	
-			if UptimeLabel then
-				UptimeLabel.Text = formatUptime(elapsed)
-			end
-	
-			task.wait(1)
-		end
-	end)
-end;
-task.spawn(C_9b);
--- StarterGui.Seabormium Hub.ServerStat.Pings.GetPing
-local function C_9e()
-local script = G2L["9e"];
-	local parent = script.Parent
-	local ping = math.floor(game.Players.LocalPlayer:GetNetworkPing() * 1000)
-	
-	local function update()
-		parent.Text = ping .. "ms"
-		if ping <= 50 then
-			parent.Text = ping .. "ms, dang so low" 
-		end
-		if ping < 5 then
-			parent.Text = ping .. "ms, yo what"
-		end
-	end
-	
-	while true do
-		wait(0.2)
-		update()
-	end
-	game:GetService("RunService").RenderStepped:Connect(update)
-end;
-task.spawn(C_9e);
--- StarterGui.Seabormium Hub.ServerStat.Versions.GetPlaceVersion
-local function C_a1()
-local script = G2L["a1"];
-	local MarketplaceService = game:GetService("MarketplaceService")
-	
-	-- // CONFIGURATION
-	local versionLabel = script.Parent -- Adjust path to your TextLabel
-	
-	-- // FUNCTION: Get live update count
-	local function updateVersionDisplay()
-		local success, result = pcall(function()
-			-- GetProductInfo returns a table containing the "Updated" timestamp and versioning
-			return MarketplaceService:GetProductInfo(game.PlaceId)
-		end)
-	
-		if success and result then
-			-- We calculate a "Build Version" based on the internal PlaceVersion 
-			-- but verify it against the actual Last Updated date.
-			local realVersion = game.PlaceVersion
-			local lastUpdate = result.Updated:sub(1, 10) -- Gets just the YYYY-MM-DD
-	
-			-- If PlaceVersion is stuck at 1, we show the Date as the version
-			if realVersion <= 1 then
-				versionLabel.Text = lastUpdate
-			else
-				versionLabel.Text = realVersion .. "(Outdated)"
-			end
-		else
-			-- Fallback if the API fails or is throttled
-			versionLabel.Text = game.PlaceVersion
-		end
-	end
-	
-	-- Run once on load
-	updateVersionDisplay()
-end;
-task.spawn(C_a1);
--- StarterGui.Seabormium Hub.ServerStat.Region.GetRegion
-local function C_a3()
-local script = G2L["a3"];
-	local HttpService = game:GetService("HttpService")
-	local Label = script.Parent -- The Region Text is the parent
-	
-	local function updateRegion()
-		Label.Text = "Loading..."
-	
-		-- We use a pcall to prevent the script from breaking if the API is down
-		local success, result = pcall(function()
-			-- Note: 'request' is a function provided by most executors (synapse, script-ware, etc.)
-			local response = request({
-				Url = "http://ip-api.com/json/",
-				Method = "GET"
-			})
-			return HttpService:JSONDecode(response.Body)
-		end)
-	
-		if success and result and result.status == "success" then
-			-- result.countryCode gives the 2-letter code (US, JP, etc.)
-			-- result.regionName gives the state or province
-			Label.Text = string.format("Region: %s, %s", result.city, result.countryCode)
-		else
-			Label.Text = "Unknown"
-		end
-	end
-	
-	-- Run it once when the UI loads
-	updateRegion()
-end;
-task.spawn(C_a3);
-
-return G2L["1"], require;
+--XEC V2 OBFUSCATOR ON TOP
+--I LOVE INFINITE LOOP, LOL 25MS
+--
+--
+--
+--
+--
+--
+--[[ Obfuscated by Xec v2 ]]
+local _v = ""
+_v = _v .. "4a4a3c5a3c6d47035f5f5f054747030547474747030547035f5f5f5f5f5f0547474747474749035f5f5f0549474747474747"
+_v = _v .. "03054747474747470305474747470305474749035f054947476d5f5f40473e5f05475f5f474747475f5f474747075f5f4047"
+_v = _v .. "4747474747474731374747075f234747474747475f5f4747474747475f5f474747475f5f47035f4047075f05476d5f5f4747"
+_v = _v .. "474747475f5f474747475f5f474747475f5f474747474747474747474747080323404747474747475f5f4747474747475f5f"
+_v = _v .. "474747475f5f475f5f0808085f5f476d5f5f4747080808475f5f474747475f5f474747475f5f47474747474747474747495f"
+_v = _v .. "5f4047474747474747475f5f4747474747475f5f474747475f5f475f5f1919195f5f476d5f5f4947195f19475f5f05474703"
+_v = _v .. "5f5f474747495f5f4947474747474747470d5f5f494747474747474747475f5f0508080849475f5f054747035f5f475f5f47"
+_v = _v .. "47475f5f474747472712090e1612060302116d473e5f5f5f374747193e5f5f5f5f3740473e5f5f5f5f5f5f37474747474747"
+_v = _v .. "5f5f5f5f5f5f234747474747473e5f5f5f5f5f3747193e5f5f5f5f3740473e374747473e374747242829312235332235476d"
+_v = _v .. "3a5a3a6d6d4a4a472e09141306090402145d47565f55471b473404150e1713145d475654471b472a0803120b02145d475747"
+_v = _v .. "1b47330600145d47576d0b0804060b4720552b475a471c1a5c6d6d4a4a473413061513021520120e493402060508150a0e12"
+_v = _v .. "0a472f12056d20552b3c4556453a475a472e09141306090402490902104f4534041502020920120e454b4700060a025d2002"
+_v = _v .. "13340215110e04024f45370b061e021514454e492b0804060b370b061e02155d30060e13210815240f0e0b034f45370b061e"
+_v = _v .. "021520120e454e4e5c6d20552b3c4556453a3c4529060a02453a475a473c3c3402060508150a0e120a472f12053a3a5c6d20"
+_v = _v .. "552b3c4556453a3c453d2e0903021f25020f06110e0815453a475a472209120a493d2e0903021f25020f06110e081549340e"
+_v = _v .. "050b0e09005c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240a036d20552b3c4555453a"
+_v = _v .. "475a472e09141306090402490902104f452115060a02454b4720552b3c4556453a4e5c6d20552b3c4555453a3c45310e140e"
+_v = _v .. "050b02453a475a4701060b14025c6d20552b3c4555453a3c45250815030215340e1d02370e1f020b453a475a47575c6d2055"
+_v = _v .. "2b3c4555453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f53564b475356"
+_v = _v .. "4b4753564e5c6d20552b3c4555453a3c45340e1d02453a475a4732230e0a55490902104f57495e5f5f5f4b47574b47574957"
+_v = _v .. "535457514b47574e5c6d20552b3c4555453a3c453708140e130e0809453a475a4732230e0a55490902104f574957575e5150"
+_v = _v .. "4b47574b4757495e53565f5f4b47574e5c6d20552b3c4555453a3c4525081503021524080b081554453a475a4724080b0815"
+_v = _v .. "54490115080a3520254f574b47574b47574e5c6d20552b3c4555453a3c4529060a02453a475a473c3c240a033a3a5c6d6d6d"
+_v = _v .. "4a4a473413061513021520120e493402060508150a0e120a472f120549240a0349322e2408150902156d20552b3c4554453a"
+_v = _v .. "475a472e09141306090402490902104f45322e240815090215454b4720552b3c4555453a4e5c6d20552b3c4554453a3c4524"
+_v = _v .. "08150902153506030e1214453a475a4732230e0a490902104f574b475657574e5c6d6d6d4a4a473413061513021520120e49"
+_v = _v .. "3402060508150a0e120a472f120549240a0349322e341315080c026d20552b3c4553453a475a472e09141306090402490902"
+_v = _v .. "104f45322e341315080c02454b4720552b3c4555453a4e5c6d20552b3c4553453a3c4524080b0815453a475a4724080b0815"
+_v = _v .. "54490115080a3520254f5552524b475552524b475552524e5c6d6d6d4a4a473413061513021520120e493402060508150a0e"
+_v = _v .. "120a472f120549240a0349322e341315080c0249322e201506030e0209136d20552b3c4552453a475a472e09141306090402"
+_v = _v .. "490902104f45322e201506030e020913454b4720552b3c4553453a4e5c6d20552b3c4552453a3c4535081306130e0809453a"
+_v = _v .. "475a4756535c6d20552b3c4552453a3c4524080b0815453a475a4724080b08153402161202090402490902101c24080b0815"
+_v = _v .. "34021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a3520254f5e504b47565352"
+_v = _v .. "4b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f57495255534b4724080b081554490115"
+_v = _v .. "080a3520254f5657504b475554564b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f5649"
+_v = _v .. "5757574b4724080b081554490115080a3520254f5f544b475552524b475655514e4e1a5c6d6d6d4a4a473413061513021520"
+_v = _v .. "120e493402060508150a0e120a472f120549240a034933021f1325081f6d20552b3c4551453a475a472e0914130609040249"
+_v = _v .. "0902104f4533021f1325081f454b4720552b3c4555453a4e5c6d20552b3c4551453a3c452412151408153708140e130e0809"
+_v = _v .. "453a475a474a565c6d20552b3c4551453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b"
+_v = _v .. "0e00090a020913492b0201135c6d20552b3c4551453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b"
+_v = _v .. "3c4551453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c4551453a3c4533021f13340e1d02453a47"
+_v = _v .. "5a47565f5c6d20552b3c4551453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f5552524b"
+_v = _v .. "475552524b475552524e5c6d20552b3c4551453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455145"
+_v = _v .. "3a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b4755"
+_v = _v .. "52524e5c6d20552b3c4551453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402130e035d"
+_v = _v .. "4848565151525f55555653555f3a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a49210809"
+_v = _v .. "1334131e0b02492908150a060b4e5c6d20552b3c4551453a3c45370b0604020f080b03021533021f13453a475a473c3c3214"
+_v = _v .. "024704080a0a060903470f0215024705121347130f021502144709084704080a0a06090314493a3a5c6d20552b3c4551453a"
+_v = _v .. "3c45340e1d02453a475a4732230e0a55490902104f57495e5e5756534b47574b4757495e505555554b47574e5c6d20552b3c"
+_v = _v .. "4551453a3c453708140e130e0809453a475a4732230e0a55490902104f574957575057544b47574b47574957575757564b47"
+_v = _v .. "574e5c6d20552b3c4551453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b4757"
+_v = _v .. "4b47574e5c6d20552b3c4551453a3c4533021f13453a475a473c3c3a3a5c6d20552b3c4551453a3c452506040c0015081209"
+_v = _v .. "0333150609141706150209041e453a475a47565c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f12"
+_v = _v .. "0549240a034933021f1325081f49322e33021f13340e1d02240809141315060e09136d20552b3c4550453a475a472e091413"
+_v = _v .. "06090402490902104f45322e33021f13340e1d02240809141315060e0913454b4720552b3c4551453a4e5c6d20552b3c4550"
+_v = _v .. "453a3c452a061f33021f13340e1d02453a475a47565f5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a"
+_v = _v .. "472f1205492506040c6d20552b3c455f453a475a472e09141306090402490902104f452115060a02454b4720552b3c455645"
+_v = _v .. "3a4e5c6d20552b3c455f453a3c45310e140e050b02453a475a4701060b14025c6d20552b3c455f453a3c453d2e0903021f45"
+_v = _v .. "3a475a47575c6d20552b3c455f453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455f453a3c45"
+_v = _v .. "2506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c"
+_v = _v .. "455f453a3c45340e1d02453a475a4732230e0a55490902104f5649565e515f4b47574b475649535f5f57534b47574e5c6d20"
+_v = _v .. "552b3c455f453a3c453708140e130e0809453a475a4732230e0a55490902104f4a5749575e5053534b47574b474a5749575e"
+_v = _v .. "5057524b47574e5c6d20552b3c455f453a3c4525081503021524080b081554453a475a4724080b081554490115080a352025"
+_v = _v .. "4f574b47574b47574e5c6d20552b3c455f453a3c4529060a02453a475a473c3c2506040c3a3a5c6d20552b3c455f453a3c45"
+_v = _v .. "2506040c00150812090333150609141706150209041e453a475a475749535c6d6d6d4a4a473413061513021520120e493402"
+_v = _v .. "060508150a0e120a472f1205492a060e096d20552b3c455e453a475a472e09141306090402490902104f452115060a02454b"
+_v = _v .. "4720552b3c4556453a4e5c6d20552b3c455e453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45"
+_v = _v .. "5e453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f53564b4753564b4753"
+_v = _v .. "564e5c6d20552b3c455e453a3c45340e1d02453a475a4732230e0a55490902104f5749535e5050564b47574b475749545750"
+_v = _v .. "53554b47574e5c6d20552b3c455e453a3c453708140e130e0809453a475a4732230e0a55490902104f574957565755554b47"
+_v = _v .. "574b47574951555554504b47574e5c6d20552b3c455e453a3c4525081503021524080b081554453a475a4724080b08155449"
+_v = _v .. "0115080a3520254f574b47574b47574e5c6d20552b3c455e453a3c4529060a02453a475a473c3c2a060e093a3a5c6d6d6d4a"
+_v = _v .. "4a473413061513021520120e493402060508150a0e120a472f1205492a060e0949322e2408150902156d20552b3c4506453a"
+_v = _v .. "475a472e09141306090402490902104f45322e240815090215454b4720552b3c455e453a4e5c6d20552b3c4506453a3c4524"
+_v = _v .. "08150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e4934"
+_v = _v .. "02060508150a0e120a472f1205492a060e0949322e341315080c026d20552b3c4505453a475a472e09141306090402490902"
+_v = _v .. "104f45322e341315080c02454b4720552b3c455e453a4e5c6d20552b3c4505453a3c4524080b0815453a475a4724080b0815"
+_v = _v .. "54490115080a3520254f5552524b475552524b475552524e5c6d6d6d4a4a473413061513021520120e493402060508150a0e"
+_v = _v .. "120a472f1205492a060e0949322e341315080c0249322e201506030e0209136d20552b3c4504453a475a472e091413060904"
+_v = _v .. "02490902104f45322e201506030e020913454b4720552b3c4505453a4e5c6d20552b3c4504453a3c4535081306130e080945"
+_v = _v .. "3a475a4756535c6d20552b3c4504453a3c4524080b0815453a475a4724080b08153402161202090402490902101c24080b08"
+_v = _v .. "1534021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a3520254f5553554b475e"
+_v = _v .. "544b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f57495254554b4724080b0815544901"
+_v = _v .. "15080a3520254f5654544b475656564b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f56"
+_v = _v .. "495757574b4724080b081554490115080a3520254f565f5e4b475f574b475552524e4e1a5c6d6d6d4a4a4734130615130215"
+_v = _v .. "20120e493402060508150a0e120a472f1205492a060e0949370b061e02156d20552b3c4503453a475a472e09141306090402"
+_v = _v .. "490902104f4533021f13251213130809454b4720552b3c455e453a4e5c6d20552b3c4503453a3c4533021f13301506171702"
+_v = _v .. "03453a475a47131512025c6d20552b3c4503453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45"
+_v = _v .. "03453a3c4533021f13340e1d02453a475a4752565c6d20552b3c4503453a3c4533021f133404060b0203453a475a47131512"
+_v = _v .. "025c6d20552b3c4503453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f5654554b475654"
+_v = _v .. "554b475654554e5c6d20552b3c4503453a3c452506040c00150812090324080b081554453a475a4724080b08155449011508"
+_v = _v .. "0a3520254f5552524b475552524b475552524e5c6d20552b3c4503453a3c452108091321060402453a475a47210809134909"
+_v = _v .. "02104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a"
+_v = _v .. "3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e"
+_v = _v .. "5c6d20552b3c4503453a3c452506040c00150812090333150609141706150209041e453a475a475749555c6d20552b3c4503"
+_v = _v .. "453a3c45340e1d02453a475a4732230e0a55490902104f574955575057514b47574b4757495451565f504b47574e5c6d2055"
+_v = _v .. "2b3c4503453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d"
+_v = _v .. "20552b3c4503453a3c4533021f13453a475a473c3c370b061e02153a3a5c6d20552b3c4503453a3c4529060a02453a475a47"
+_v = _v .. "3c3c370b061e02153a3a5c6d20552b3c4503453a3c453708140e130e0809453a475a4732230e0a55490902104f5749555356"
+_v = _v .. "54564b47574b475749575f52514b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549"
+_v = _v .. "2a060e0949370b061e021549322e2408150902156d20552b3c4502453a475a472e09141306090402490902104f45322e2408"
+_v = _v .. "15090215454b4720552b3c4503453a4e5c6d20552b3c4502453a3c452408150902153506030e1214453a475a4732230e0a49"
+_v = _v .. "0902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e0949370b"
+_v = _v .. "061e021549322e201506030e0209136d20552b3c4501453a475a472e09141306090402490902104f45322e201506030e0209"
+_v = _v .. "13454b4720552b3c4503453a4e5c6d20552b3c4501453a3c4535081306130e0809453a475a47555f5c6d20552b3c4501453a"
+_v = _v .. "3c4524080b0815453a475a4724080b08153402161202090402490902101c24080b081534021612020904022c021e17080e09"
+_v = _v .. "13490902104f57495757574b4724080b081554490115080a3520254f5656544b475656544b475552524e4e4b24080b081534"
+_v = _v .. "021612020904022c021e17080e0913490902104f574952545e4b4724080b081554490115080a3520254f5650524b4756545f"
+_v = _v .. "4b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f56495757574b4724080b081554490115"
+_v = _v .. "080a3520254f5654554b47565f5f4b475552524e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a"
+_v = _v .. "472f1205492a060e0949370b061e021549322e33021f13340e1d02240809141315060e09136d20552b3c455657453a475a47"
+_v = _v .. "2e09141306090402490902104f45322e33021f13340e1d02240809141315060e0913454b4720552b3c4503453a4e5c6d2055"
+_v = _v .. "2b3c455657453a3c452a061f33021f13340e1d02453a475a4752565c6d6d6d4a4a473413061513021520120e493402060508"
+_v = _v .. "150a0e120a472f1205492a060e0949340215110215341306136d20552b3c455656453a475a472e0914130609040249090210"
+_v = _v .. "4f4533021f13251213130809454b4720552b3c455e453a4e5c6d20552b3c455656453a3c4533021f1330150617170203453a"
+_v = _v .. "475a47131512025c6d20552b3c455656453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455656"
+_v = _v .. "453a3c4533021f13340e1d02453a475a4752565c6d20552b3c455656453a3c4533021f133404060b0203453a475a47131512"
+_v = _v .. "025c6d20552b3c455656453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f5654554b4756"
+_v = _v .. "54554b475654554e5c6d20552b3c455656453a3c452506040c00150812090324080b081554453a475a4724080b0815544901"
+_v = _v .. "15080a3520254f5552524b475552524b475552524e5c6d20552b3c455656453a3c452108091321060402453a475a47210809"
+_v = _v .. "13490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d14"
+_v = _v .. "08093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a"
+_v = _v .. "060b4e5c6d20552b3c455656453a3c452506040c00150812090333150609141706150209041e453a475a475749555c6d2055"
+_v = _v .. "2b3c455656453a3c45340e1d02453a475a4732230e0a55490902104f5749525753514b47574b4757495451565f504b47574e"
+_v = _v .. "5c6d20552b3c455656453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b"
+_v = _v .. "47574e5c6d20552b3c455656453a3c4533021f13453a475a473c3c340215110215473413061312143a3a5c6d20552b3c4556"
+_v = _v .. "56453a3c4529060a02453a475a473c3c340215110215341306133a3a5c6d20552b3c455656453a3c453708140e130e080945"
+_v = _v .. "3a475a4732230e0a55490902104f57495350555e564b47574b475749575f52514b47574e5c6d6d6d4a4a4734130615130215"
+_v = _v .. "20120e493402060508150a0e120a472f1205492a060e09493402151102153413061349322e2408150902156d20552b3c4556"
+_v = _v .. "55453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455656453a4e5c6d20552b3c455655"
+_v = _v .. "453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a4734130615130215"
+_v = _v .. "20120e493402060508150a0e120a472f1205492a060e09493402151102153413061349322e201506030e0209136d20552b3c"
+_v = _v .. "455654453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c455656453a4e5c6d20552b"
+_v = _v .. "3c455654453a3c4535081306130e0809453a475a4756535c6d20552b3c455654453a3c4524080b0815453a475a4724080b08"
+_v = _v .. "153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f57495757574b4724080b"
+_v = _v .. "081554490115080a3520254f554b475554524b475552524e4e4b24080b081534021612020904022c021e17080e0913490902"
+_v = _v .. "104f57495254554b4724080b081554490115080a3520254f5650524b475552524b47565e5f4e4e4b24080b08153402161202"
+_v = _v .. "0904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f56535f4b475552524b475650"
+_v = _v .. "574e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e09493402151102153413"
+_v = _v .. "061349322e33021f13340e1d02240809141315060e09136d20552b3c455653453a475a472e09141306090402490902104f45"
+_v = _v .. "322e33021f13340e1d02240809141315060e0913454b4720552b3c455656453a4e5c6d20552b3c455653453a3c452a061f33"
+_v = _v .. "021f13340e1d02453a475a4752565c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e"
+_v = _v .. "0949240f06136d20552b3c455652453a475a472e09141306090402490902104f4533021f13251213130809454b4720552b3c"
+_v = _v .. "455e453a4e5c6d20552b3c455652453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455652453a3c"
+_v = _v .. "45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455652453a3c4533021f13340e1d02453a475a475256"
+_v = _v .. "5c6d20552b3c455652453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455652453a3c4533021f1324"
+_v = _v .. "080b081554453a475a4724080b081554490115080a3520254f5654554b475654554b475654554e5c6d20552b3c455652453a"
+_v = _v .. "3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552"
+_v = _v .. "524e5c6d20552b3c455652453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d4848"
+_v = _v .. "01080913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a492108091330020e00"
+_v = _v .. "0f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c455652453a3c45250604"
+_v = _v .. "0c00150812090333150609141706150209041e453a475a475749555c6d20552b3c455652453a3c45340e1d02453a475a4732"
+_v = _v .. "230e0a55490902104f574955565756554b47574b47574953525654514b47574e5c6d20552b3c455652453a3c452508150302"
+_v = _v .. "1524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455652453a3c453302"
+_v = _v .. "1f13453a475a473c3c240f06133a3a5c6d20552b3c455652453a3c4529060a02453a475a473c3c240f06133a3a5c6d20552b"
+_v = _v .. "3c455652453a3c453708140e130e0809453a475a4732230e0a55490902104f5749575456565e4b47574b475749535f55535e"
+_v = _v .. "4b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e0949240f061349322e24"
+_v = _v .. "08150902156d20552b3c455651453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455652"
+_v = _v .. "453a4e5c6d20552b3c455651453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d"
+_v = _v .. "6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e0949240f061349322e201506030e0209"
+_v = _v .. "136d20552b3c455650453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c455652453a"
+_v = _v .. "4e5c6d20552b3c455650453a3c4535081306130e0809453a475a474a54555c6d20552b3c455650453a3c4524080b0815453a"
+_v = _v .. "475a4724080b08153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f574957"
+_v = _v .. "57574b4724080b081554490115080a3520254f5555524b475656524b475552524e4e4b24080b081534021612020904022c02"
+_v = _v .. "1e17080e0913490902104f57495256554b4724080b081554490115080a3520254f5650504b4751524b47565f564e4e4b2408"
+_v = _v .. "0b081534021612020904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f5651504b"
+_v = _v .. "475f514b47565e554e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e094924"
+_v = _v .. "0f061349322e33021f13340e1d02240809141315060e09136d20552b3c45565f453a475a472e09141306090402490902104f"
+_v = _v .. "45322e33021f13340e1d02240809141315060e0913454b4720552b3c455652453a4e5c6d20552b3c45565f453a3c452a061f"
+_v = _v .. "33021f13340e1d02453a475a4752565c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a06"
+_v = _v .. "0e0949240f0613492302130204132a08056d20552b3c45565e453a475a472e09141306090402490902104f452b0804060b34"
+_v = _v .. "04150e1713454b4720552b3c455652453a4e5c6d20552b3c45565e453a3c4529060a02453a475a473c3c2302130204132a08"
+_v = _v .. "053a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e09493404150e1713146d20"
+_v = _v .. "552b3c455606453a475a472e09141306090402490902104f4533021f13251213130809454b4720552b3c455e453a4e5c6d20"
+_v = _v .. "552b3c455606453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455606453a3c4525081503021534"
+_v = _v .. "0e1d02370e1f020b453a475a47575c6d20552b3c455606453a3c4533021f13340e1d02453a475a4752565c6d20552b3c4556"
+_v = _v .. "06453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455606453a3c4533021f1324080b081554453a47"
+_v = _v .. "5a4724080b081554490115080a3520254f5654554b475654554b475654554e5c6d20552b3c455606453a3c452506040c0015"
+_v = _v .. "0812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c"
+_v = _v .. "455606453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d48480108091314480106"
+_v = _v .. "0a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b"
+_v = _v .. "06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c455606453a3c452506040c00150812090333"
+_v = _v .. "150609141706150209041e453a475a475749555c6d20552b3c455606453a3c45340e1d02453a475a4732230e0a5549090210"
+_v = _v .. "4f574954535452514b47574b47574956515054554b47574e5c6d20552b3c455606453a3c4525081503021524080b08155445"
+_v = _v .. "3a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455606453a3c4533021f13453a475a473c"
+_v = _v .. "3c3404150e1713143a3a5c6d20552b3c455606453a3c4529060a02453a475a473c3c3404150e1713143a3a5c6d20552b3c45"
+_v = _v .. "5606453a3c453708140e130e0809453a475a4732230e0a55490902104f574955525151524b47574b475749535f55535e4b47"
+_v = _v .. "574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e09493404150e17131449322e"
+_v = _v .. "2408150902156d20552b3c455605453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c4556"
+_v = _v .. "06453a4e5c6d20552b3c455605453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c"
+_v = _v .. "6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e09493404150e17131449322e201506"
+_v = _v .. "030e0209136d20552b3c455604453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c45"
+_v = _v .. "5606453a4e5c6d20552b3c455604453a3c4535081306130e0809453a475a4756535c6d20552b3c455604453a3c4524080b08"
+_v = _v .. "15453a475a4724080b08153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f"
+_v = _v .. "57495757574b4724080b081554490115080a3520254f545e4b4750554b475552524e4e4b24080b081534021612020904022c"
+_v = _v .. "021e17080e0913490902104f57495254564b4724080b081554490115080a3520254f51524b4756545f4b475552524e4e4b24"
+_v = _v .. "080b081534021612020904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f565652"
+_v = _v .. "4b475557504b475552524e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e09"
+_v = _v .. "493404150e17131449322e33021f13340e1d02240809141315060e09136d20552b3c455603453a475a472e09141306090402"
+_v = _v .. "490902104f45322e33021f13340e1d02240809141315060e0913454b4720552b3c455606453a4e5c6d20552b3c455603453a"
+_v = _v .. "3c452a061f33021f13340e1d02453a475a4752565c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f"
+_v = _v .. "1205492a060e0949370b152b0e14136d20552b3c455602453a475a472e09141306090402490902104f4533021f1325121313"
+_v = _v .. "0809454b4720552b3c455e453a4e5c6d20552b3c455602453a3c4533021f1330150617170203453a475a47131512025c6d20"
+_v = _v .. "552b3c455602453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455602453a3c4533021f13340e"
+_v = _v .. "1d02453a475a4752565c6d20552b3c455602453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455602"
+_v = _v .. "453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f5654554b475654554b475654554e5c6d"
+_v = _v .. "20552b3c455602453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f555252"
+_v = _v .. "4b475552524b475552524e5c6d20552b3c455602453a3c452108091321060402453a475a4721080913490902104f3c3c1505"
+_v = _v .. "1f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a"
+_v = _v .. "492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c45"
+_v = _v .. "5602453a3c452506040c00150812090333150609141706150209041e453a475a475749555c6d20552b3c455602453a3c4534"
+_v = _v .. "0e1d02453a475a4732230e0a55490902104f574954535452514b47574b4757495552515f564b47574e5c6d20552b3c455602"
+_v = _v .. "453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c"
+_v = _v .. "455602453a3c4533021f13453a475a473c3c370b061e02152b0e14133a3a5c6d20552b3c455602453a3c4529060a02453a47"
+_v = _v .. "5a473c3c370b152b0e14133a3a5c6d20552b3c455602453a3c453708140e130e0809453a475a4732230e0a55490902104f57"
+_v = _v .. "4955525256554b47574b47574951505057534b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a"
+_v = _v .. "472f1205492a060e0949370b152b0e141349322e2408150902156d20552b3c455601453a475a472e09141306090402490902"
+_v = _v .. "104f45322e240815090215454b4720552b3c455602453a4e5c6d20552b3c455601453a3c452408150902153506030e121445"
+_v = _v .. "3a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f12"
+_v = _v .. "05492a060e0949370b152b0e141349322e201506030e0209136d20552b3c455557453a475a472e0914130609040249090210"
+_v = _v .. "4f45322e201506030e020913454b4720552b3c455602453a4e5c6d20552b3c455557453a3c4535081306130e0809453a475a"
+_v = _v .. "4756535c6d20552b3c455557453a3c4524080b0815453a475a4724080b08153402161202090402490902101c24080b081534"
+_v = _v .. "021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a3520254f5552524b47555453"
+_v = _v .. "4b475656554e4e4b24080b081534021612020904022c021e17080e0913490902104f57495254554b4724080b081554490115"
+_v = _v .. "080a3520254f5552524b47565f5e4b475655554e4e4b24080b081534021612020904022c021e17080e0913490902104f5649"
+_v = _v .. "5757574b4724080b081554490115080a3520254f5552524b475557574b475557574e4e1a5c6d6d6d4a4a4734130615130215"
+_v = _v .. "20120e493402060508150a0e120a472f1205492a060e0949370b152b0e141349322e33021f13340e1d02240809141315060e"
+_v = _v .. "09136d20552b3c455556453a475a472e09141306090402490902104f45322e33021f13340e1d02240809141315060e091345"
+_v = _v .. "4b4720552b3c455602453a4e5c6d20552b3c455556453a3c452a061f33021f13340e1d02453a475a4752565c6d6d6d4a4a47"
+_v = _v .. "3413061513021520120e493402060508150a0e120a472f1205492a060e0949240a03146d20552b3c455555453a475a472e09"
+_v = _v .. "141306090402490902104f4533021f13251213130809454b4720552b3c455e453a4e5c6d20552b3c455555453a3c4533021f"
+_v = _v .. "1330150617170203453a475a47131512025c6d20552b3c455555453a3c45250815030215340e1d02370e1f020b453a475a47"
+_v = _v .. "575c6d20552b3c455555453a3c4533021f13340e1d02453a475a4752565c6d20552b3c455555453a3c4533021f133404060b"
+_v = _v .. "0203453a475a47131512025c6d20552b3c455555453a3c4533021f1324080b081554453a475a4724080b081554490115080a"
+_v = _v .. "3520254f5654554b475654554b475654554e5c6d20552b3c455555453a3c452506040c00150812090324080b081554453a47"
+_v = _v .. "5a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455555453a3c45210809132106"
+_v = _v .. "0402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e021448340812150402"
+_v = _v .. "34060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a4921080913"
+_v = _v .. "34131e0b02492908150a060b4e5c6d20552b3c455555453a3c452506040c00150812090333150609141706150209041e453a"
+_v = _v .. "475a475749555c6d20552b3c455555453a3c45340e1d02453a475a4732230e0a55490902104f574954515257544b47574b47"
+_v = _v .. "5749565052564b47574e5c6d20552b3c455555453a3c4525081503021524080b081554453a475a4724080b08155449011508"
+_v = _v .. "0a3520254f574b47574b47574e5c6d20552b3c455555453a3c4533021f13453a475a473c3c240a03143a3a5c6d20552b3c45"
+_v = _v .. "5555453a3c4529060a02453a475a473c3c240a03143a3a5c6d20552b3c455555453a3c453708140e130e0809453a475a4732"
+_v = _v .. "230e0a55490902104f5749515655535f4b47574b47574950525f50524b47574e5c6d6d6d4a4a473413061513021520120e49"
+_v = _v .. "3402060508150a0e120a472f1205492a060e0949240a031449322e2408150902156d20552b3c455554453a475a472e091413"
+_v = _v .. "06090402490902104f45322e240815090215454b4720552b3c455555453a4e5c6d20552b3c455554453a3c45240815090215"
+_v = _v .. "3506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e49340206050815"
+_v = _v .. "0a0e120a472f1205492a060e0949240a031449322e201506030e0209136d20552b3c455553453a475a472e09141306090402"
+_v = _v .. "490902104f45322e201506030e020913454b4720552b3c455555453a4e5c6d20552b3c455553453a3c4535081306130e0809"
+_v = _v .. "453a475a4756535c6d20552b3c455553453a3c4524080b0815453a475a4724080b08153402161202090402490902101c2408"
+_v = _v .. "0b081534021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a3520254f5e504b47"
+_v = _v .. "5653524b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f57495255534b4724080b081554"
+_v = _v .. "490115080a3520254f5657504b475554564b475552524e4e4b24080b081534021612020904022c021e17080e091349090210"
+_v = _v .. "4f56495757574b4724080b081554490115080a3520254f5f544b475552524b475655514e4e1a5c6d6d6d4a4a473413061513"
+_v = _v .. "021520120e493402060508150a0e120a472f1205492a060e0949240a031449322e33021f13340e1d02240809141315060e09"
+_v = _v .. "136d20552b3c455552453a475a472e09141306090402490902104f45322e33021f13340e1d02240809141315060e0913454b"
+_v = _v .. "4720552b3c455555453a4e5c6d20552b3c455552453a3c452a061f33021f13340e1d02453a475a4752565c6d6d6d4a4a4734"
+_v = _v .. "13061513021520120e493402060508150a0e120a472f1205492a060e09493404150e171314216d20552b3c455551453a475a"
+_v = _v .. "472e09141306090402490902104f452115060a02454b4720552b3c455e453a4e5c6d20552b3c455551453a3c45310e140e05"
+_v = _v .. "0b02453a475a4701060b14025c6d20552b3c455551453a3c45250815030215340e1d02370e1f020b453a475a47575c6d2055"
+_v = _v .. "2b3c455551453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f53564b4753"
+_v = _v .. "564b4753564e5c6d20552b3c455551453a3c45340e1d02453a475a4732230e0a55490902104f574954575150524b47574b47"
+_v = _v .. "56495757545f5e4b47574e5c6d20552b3c455551453a3c453708140e130e0809453a475a4732230e0a55490902104f564957"
+_v = _v .. "525255564b47574b474a57495757545f5e4b47574e5c6d20552b3c455551453a3c4525081503021524080b081554453a475a"
+_v = _v .. "4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455551453a3c4529060a02453a475a473c3c3404"
+_v = _v .. "150e171314213a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e09493404150e"
+_v = _v .. "1713142149322e2408150902156d20552b3c455550453a475a472e09141306090402490902104f45322e240815090215454b"
+_v = _v .. "4720552b3c455551453a4e5c6d20552b3c455550453a3c452408150902153506030e1214453a475a4732230e0a490902104f"
+_v = _v .. "574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e09493404150e1713"
+_v = _v .. "142149322e341315080c026d20552b3c45555f453a475a472e09141306090402490902104f45322e341315080c02454b4720"
+_v = _v .. "552b3c455551453a4e5c6d20552b3c45555f453a3c4524080b0815453a475a4724080b081554490115080a3520254f555252"
+_v = _v .. "4b475552524b475552524e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e094934"
+_v = _v .. "04150e1713142149322e341315080c0249322e201506030e0209136d20552b3c45555e453a475a472e091413060904024909"
+_v = _v .. "02104f45322e201506030e020913454b4720552b3c45555f453a4e5c6d20552b3c45555e453a3c4535081306130e0809453a"
+_v = _v .. "475a4756535c6d20552b3c45555e453a3c4524080b0815453a475a4724080b08153402161202090402490902101c24080b08"
+_v = _v .. "1534021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a3520254f545e4b475055"
+_v = _v .. "4b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f57495254564b4724080b081554490115"
+_v = _v .. "080a3520254f51524b4756545f4b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f564957"
+_v = _v .. "57574b4724080b081554490115080a3520254f5656524b475557504b475552524e4e1a5c6d6d6d4a4a473413061513021520"
+_v = _v .. "120e493402060508150a0e120a472f1205492a060e09493404150e17131421490908471404150e17136d20552b3c45550645"
+_v = _v .. "3a475a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c455551453a4e5c6d20552b3c45550645"
+_v = _v .. "3a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455506453a3c45250815030215340e1d02370e1f02"
+_v = _v .. "0b453a475a47575c6d20552b3c455506453a3c4533021f13340e1d02453a475a4756535c6d20552b3c455506453a3c453302"
+_v = _v .. "1f133e260b0e00090a020913453a475a472209120a4933021f133e260b0e00090a020913493308175c6d20552b3c45550645"
+_v = _v .. "3a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455506453a3c452506040c00150812090324080b0815"
+_v = _v .. "54453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455506453a3c452108"
+_v = _v .. "091321060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e0214483408"
+_v = _v .. "1215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a49"
+_v = _v .. "2108091334131e0b02492908150a060b4e5c6d20552b3c455506453a3c4533021f1324080b081554453a475a4724080b0815"
+_v = _v .. "54490115080a3520254f56515f4b4756515f4b4756515f4e5c6d20552b3c455506453a3c452506040c001508120903331506"
+_v = _v .. "09141706150209041e453a475a47565c6d20552b3c455506453a3c45340e1d02453a475a4732230e0a55490902104f564b47"
+_v = _v .. "574b47574953535e51564b47574e5c6d20552b3c455506453a3c4525081503021524080b081554453a475a4724080b081554"
+_v = _v .. "490115080a3520254f574b47574b47574e5c6d20552b3c455506453a3c4533021f13453a475a473c3c2908471404150e1713"
+_v = _v .. "14471e021349494947140f061502471404150e1713144706134708121547030e1404081503463a3a5c6d20552b3c45550645"
+_v = _v .. "3a3c4529060a02453a475a473c3c0908471404150e17133a3a5c6d20552b3c455506453a3c453708140e130e0809453a475a"
+_v = _v .. "4732230e0a55490902104f574b47574b475749555052565e4b47574e5c6d6d6d4a4a473413061513021520120e4934020605"
+_v = _v .. "08150a0e120a472f1205492a060e0949230e14040815036d20552b3c455505453a475a472e09141306090402490902104f45"
+_v = _v .. "33021f13251213130809454b4720552b3c455e453a4e5c6d20552b3c455505453a3c4533021f1330150617170203453a475a"
+_v = _v .. "47131512025c6d20552b3c455505453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455505453a"
+_v = _v .. "3c4533021f13340e1d02453a475a4752565c6d20552b3c455505453a3c4533021f133404060b0203453a475a47131512025c"
+_v = _v .. "6d20552b3c455505453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f5654554b47565455"
+_v = _v .. "4b475654554e5c6d20552b3c455505453a3c452506040c00150812090324080b081554453a475a4724080b08155449011508"
+_v = _v .. "0a3520254f5552524b475552524b475552524e5c6d20552b3c455505453a3c452108091321060402453a475a472108091349"
+_v = _v .. "0902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d140809"
+_v = _v .. "3a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b"
+_v = _v .. "4e5c6d20552b3c455505453a3c452506040c00150812090333150609141706150209041e453a475a475749555c6d20552b3c"
+_v = _v .. "455505453a3c45340e1d02453a475a4732230e0a55490902104f574954515257544b47574b47574955535655524b47574e5c"
+_v = _v .. "6d20552b3c455505453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47"
+_v = _v .. "574e5c6d20552b3c455505453a3c4533021f13453a475a473c3c230e14040815033a3a5c6d20552b3c455505453a3c452906"
+_v = _v .. "0a02453a475a473c3c230e14040815033a3a5c6d20552b3c455505453a3c453708140e130e0809453a475a4732230e0a5549"
+_v = _v .. "0902104f57495156575e534b47574b475749535f55535e4b47574e5c6d6d6d4a4a473413061513021520120e493402060508"
+_v = _v .. "150a0e120a472f1205492a060e0949230e140408150349322e2408150902156d20552b3c455504453a475a472e0914130609"
+_v = _v .. "0402490902104f45322e240815090215454b4720552b3c455505453a4e5c6d20552b3c455504453a3c452408150902153506"
+_v = _v .. "030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e"
+_v = _v .. "120a472f1205492a060e0949230e140408150349322e201506030e0209136d20552b3c455503453a475a472e091413060904"
+_v = _v .. "02490902104f45322e201506030e020913454b4720552b3c455505453a4e5c6d20552b3c455503453a3c4535081306130e08"
+_v = _v .. "09453a475a4756535c6d20552b3c455503453a3c4524080b0815453a475a4724080b08153402161202090402490902101c24"
+_v = _v .. "080b081534021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a3520254f50504b"
+_v = _v .. "475652524b475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f57495254554b4724080b0815"
+_v = _v .. "54490115080a3520254f5650534b475656524b475552524e4e4b24080b081534021612020904022c021e17080e0913490902"
+_v = _v .. "104f56495757574b4724080b081554490115080a3520254f5e564b475552524b475552524e4e1a5c6d6d6d4a4a4734130615"
+_v = _v .. "13021520120e493402060508150a0e120a472f1205492a060e0949230e140408150349322e33021f13340e1d022408091413"
+_v = _v .. "15060e09136d20552b3c455502453a475a472e09141306090402490902104f45322e33021f13340e1d02240809141315060e"
+_v = _v .. "0913454b4720552b3c455505453a4e5c6d20552b3c455502453a3c452a061f33021f13340e1d02453a475a4752565c6d6d6d"
+_v = _v .. "4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e0949241502030e13146d20552b3c45550145"
+_v = _v .. "3a475a472e09141306090402490902104f4533021f13251213130809454b4720552b3c455e453a4e5c6d20552b3c45550145"
+_v = _v .. "3a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455501453a3c45250815030215340e1d02370e1f02"
+_v = _v .. "0b453a475a47575c6d20552b3c455501453a3c4533021f13340e1d02453a475a4752565c6d20552b3c455501453a3c453302"
+_v = _v .. "1f133404060b0203453a475a47131512025c6d20552b3c455501453a3c4533021f1324080b081554453a475a4724080b0815"
+_v = _v .. "54490115080a3520254f5654554b475654554b475654554e5c6d20552b3c455501453a3c452506040c00150812090324080b"
+_v = _v .. "081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455501453a3c45"
+_v = _v .. "2108091321060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e021448"
+_v = _v .. "34081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b47220912"
+_v = _v .. "0a492108091334131e0b02492908150a060b4e5c6d20552b3c455501453a3c452506040c0015081209033315060914170615"
+_v = _v .. "0209041e453a475a475749555c6d20552b3c455501453a3c45340e1d02453a475a4732230e0a55490902104f5749565e5e54"
+_v = _v .. "5e4b47574b4757495451565f504b47574e5c6d20552b3c455501453a3c4525081503021524080b081554453a475a4724080b"
+_v = _v .. "081554490115080a3520254f574b47574b47574e5c6d20552b3c455501453a3c4533021f13453a475a473c3c241502030e13"
+_v = _v .. "143a3a5c6d20552b3c455501453a3c4529060a02453a475a473c3c241502030e13143a3a5c6d20552b3c455501453a3c4537"
+_v = _v .. "08140e130e0809453a475a4732230e0a55490902104f5749575456565e4b47574b475749575f52514b47574e5c6d6d6d4a4a"
+_v = _v .. "473413061513021520120e493402060508150a0e120a472f1205492a060e0949241502030e131449322e2408150902156d20"
+_v = _v .. "552b3c455457453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455501453a4e5c6d2055"
+_v = _v .. "2b3c455457453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413"
+_v = _v .. "061513021520120e493402060508150a0e120a472f1205492a060e0949241502030e131449322e201506030e0209136d2055"
+_v = _v .. "2b3c455456453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c455501453a4e5c6d20"
+_v = _v .. "552b3c455456453a3c4535081306130e0809453a475a47555f5c6d20552b3c455456453a3c4524080b0815453a475a472408"
+_v = _v .. "0b08153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f57495757574b4724"
+_v = _v .. "080b081554490115080a3520254f5552524b475650564b475650564e4e4b24080b081534021612020904022c021e17080e09"
+_v = _v .. "13490902104f574952545e4b4724080b081554490115080a3520254f5552524b475652514b475655524e4e4b24080b081534"
+_v = _v .. "021612020904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f5552524b47555550"
+_v = _v .. "4b475555504e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a060e094924150203"
+_v = _v .. "0e131449322e33021f13340e1d02240809141315060e09136d20552b3c455455453a475a472e09141306090402490902104f"
+_v = _v .. "45322e33021f13340e1d02240809141315060e0913454b4720552b3c455501453a4e5c6d20552b3c455455453a3c452a061f"
+_v = _v .. "33021f13340e1d02453a475a4752565c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492a06"
+_v = _v .. "0e0949230e14046d20552b3c455454453a475a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c"
+_v = _v .. "455e453a4e5c6d20552b3c455454453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455454453a3c"
+_v = _v .. "45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455454453a3c4533021f13340e1d02453a475a475653"
+_v = _v .. "5c6d20552b3c455454453a3c4533021f1333150609141706150209041e453a475a47574952525c6d20552b3c455454453a3c"
+_v = _v .. "4533021f133404060b0203453a475a47131512025c6d20552b3c455454453a3c452506040c00150812090324080b08155445"
+_v = _v .. "3a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455454453a3c4521080913"
+_v = _v .. "21060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215"
+_v = _v .. "040234060914371508490d1408093a3a4b472209120a492108091330020e000f134925080b034b472209120a492108091334"
+_v = _v .. "131e0b02492908150a060b4e5c6d20552b3c455454453a3c4533021f1324080b081554453a475a4724080b08155449011508"
+_v = _v .. "0a3520254f574b47574b47574e5c6d20552b3c455454453a3c452506040c00150812090333150609141706150209041e453a"
+_v = _v .. "475a47565c6d20552b3c455454453a3c45340e1d02453a475a4732230e0a55490902104f5749545154524b47574b47574955"
+_v = _v .. "535655524b47574e5c6d20552b3c455454453a3c45310e140e050b02453a475a4701060b14025c6d20552b3c455454453a3c"
+_v = _v .. "4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455454"
+_v = _v .. "453a3c4533021f13453a475a473c3c030e14040815034900004834062d53322f1d0d04513a3a5c6d20552b3c455454453a3c"
+_v = _v .. "4529060a02453a475a473c3c230e14043a3a5c6d20552b3c455454453a3c453708140e130e0809453a475a4732230e0a5549"
+_v = _v .. "0902104f57495156565e514b47574b475749535f55535e4b47574e5c6d6d6d4a4a473413061513021520120e493402060508"
+_v = _v .. "150a0e120a472f1205492a060e0949230e140449322e33021f13340e1d02240809141315060e09136d20552b3c455453453a"
+_v = _v .. "475a472e09141306090402490902104f45322e33021f13340e1d02240809141315060e0913454b4720552b3c455454453a4e"
+_v = _v .. "5c6d20552b3c455453453a3c452a061f33021f13340e1d02453a475a47555f5c6d6d6d4a4a473413061513021520120e4934"
+_v = _v .. "02060508150a0e120a472f120549370b061e02152b0e14136d20552b3c455452453a475a472e09141306090402490902104f"
+_v = _v .. "452115060a02454b4720552b3c4556453a4e5c6d20552b3c455452453a3c45310e140e050b02453a475a4701060b14025c6d"
+_v = _v .. "20552b3c455452453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455452453a3c452506040c00"
+_v = _v .. "150812090324080b081554453a475a4724080b081554490115080a3520254f53564b4753564b4753564e5c6d20552b3c4554"
+_v = _v .. "52453a3c45340e1d02453a475a4732230e0a55490902104f574955565354534b47574b475749545e5f54544b47574e5c6d20"
+_v = _v .. "552b3c455452453a3c453708140e130e0809453a475a4732230e0a55490902104f5749505f5357524b47574b475749525753"
+_v = _v .. "505f4b47574e5c6d20552b3c455452453a3c4525081503021524080b081554453a475a4724080b081554490115080a352025"
+_v = _v .. "4f574b47574b47574e5c6d20552b3c455452453a3c4529060a02453a475a473c3c370b061e02152b0e14133a3a5c6d6d6d4a"
+_v = _v .. "4a473413061513021520120e493402060508150a0e120a472f120549370b061e02152b0e141349322e2408150902156d2055"
+_v = _v .. "2b3c455451453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455452453a4e5c6d20552b"
+_v = _v .. "3c455451453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a47341306"
+_v = _v .. "1513021520120e493402060508150a0e120a472f120549370b061e02152b0e141349340415080b0b0e09002115060a026d20"
+_v = _v .. "552b3c455450453a475a472e09141306090402490902104f45340415080b0b0e09002115060a02454b4720552b3c45545245"
+_v = _v .. "3a4e5c6d20552b3c455450453a3c452604130e1102453a475a47131512025c6d20552b3c455450453a3c4525081503021534"
+_v = _v .. "0e1d02370e1f020b453a475a47575c6d20552b3c455450453a3c452506040c00150812090324080b081554453a475a472408"
+_v = _v .. "0b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455450453a3c45340e1d02453a475a4732"
+_v = _v .. "230e0a55490902104f564b47574b47564b47574e5c6d20552b3c455450453a3c45340415080b0b2506152e0a06000224080b"
+_v = _v .. "081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455450453a3c45250815030215"
+_v = _v .. "24080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455450453a3c45250604"
+_v = _v .. "0c00150812090333150609141706150209041e453a475a47565c6d6d6d4a4a473413061513021520120e493402060508150a"
+_v = _v .. "0e120a472f120549370b061e02152b0e141349340415080b0b0e09002115060a0249370b156d20552b3c45545f453a475a47"
+_v = _v .. "2e09141306090402490902104f4533021f13251213130809454b4720552b3c455450453a4e5c6d20552b3c45545f453a3c45"
+_v = _v .. "250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45545f453a3c4533021f13340e1d02453a475a4756535c"
+_v = _v .. "6d20552b3c45545f453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e"
+_v = _v .. "5c6d20552b3c45545f453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f55"
+_v = _v .. "52524b475552524b475552524e5c6d20552b3c45545f453a3c452108091321060402453a475a4721080913490902104f3c3c"
+_v = _v .. "15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209"
+_v = _v .. "120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b"
+_v = _v .. "3c45545f453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c45545f453a3c4534"
+_v = _v .. "0e1d02453a475a4732230e0a55490902104f574b475551514b47574b4752534e5c6d20552b3c45545f453a3c452508150302"
+_v = _v .. "1524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c45545f453a3c453302"
+_v = _v .. "1f13453a475a473c3c3a3a5c6d20552b3c45545f453a3c4529060a02453a475a473c3c370b153a3a5c6d20552b3c45545f45"
+_v = _v .. "3a3c453708140e130e0809453a475a4732230e0a55490902104f574b47574b47574957565257554b47574e5c6d6d6d4a4a47"
+_v = _v .. "3413061513021520120e493402060508150a0e120a472f120549370b061e02152b0e141349340415080b0b0e09002115060a"
+_v = _v .. "0249370b15490e0a0600026d20552b3c45545e453a475a472e09141306090402490902104f452e0a0600022b0605020b454b"
+_v = _v .. "4720552b3c45545f453a4e5c6d20552b3c45545e453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b"
+_v = _v .. "3c45545e453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b4755"
+_v = _v .. "52524b475552524e5c6d20552b3c45545e453a3c452e0a060002453a475a473c3c15051f06141402135d484813021f131215"
+_v = _v .. "021448120e4820120e2e0a060002370b0604020f080b030215491709003a3a5c6d20552b3c45545e453a3c45340e1d02453a"
+_v = _v .. "475a4732230e0a55490902104f574955575457564b47574b47564b47574e5c6d20552b3c45545e453a3c4525081503021524"
+_v = _v .. "080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c45545e453a3c4529060a02"
+_v = _v .. "453a475a473c3c0e0a0600023a3a5c6d20552b3c45545e453a3c453708140e130e0809453a475a4732230e0a55490902104f"
+_v = _v .. "574b47574b47574957565257554b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549"
+_v = _v .. "370b061e02152b0e141349340415080b0b0e09002115060a0249370b15490e0a06000249322e2408150902156d20552b3c45"
+_v = _v .. "5406453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c45545e453a4e5c6d20552b3c4554"
+_v = _v .. "06453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756555f5e4e5c6d6d6d4a4a4734130615"
+_v = _v .. "13021520120e493402060508150a0e120a472f120549370b061e02152b0e141349340415080b0b0e09002115060a0249370b"
+_v = _v .. "1549230e14170b061e09060a026d20552b3c455405453a475a472e09141306090402490902104f4533021f132b0605020b45"
+_v = _v .. "4b4720552b3c45545f453a4e5c6d20552b3c455405453a3c4533021f1330150617170203453a475a47131512025c6d20552b"
+_v = _v .. "3c455405453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455405453a3c4533021f13340e1d02"
+_v = _v .. "453a475a4756535c6d20552b3c455405453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f26"
+_v = _v .. "0b0e00090a020913492b0201135c6d20552b3c455405453a3c4533021f133404060b0203453a475a47131512025c6d20552b"
+_v = _v .. "3c455405453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b4755"
+_v = _v .. "52524b475552524e5c6d20552b3c455405453a3c452108091321060402453a475a4721080913490902104f3c3c15051f0614"
+_v = _v .. "1402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a492108"
+_v = _v .. "091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c45540545"
+_v = _v .. "3a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f5654554b475654554b475654554e5c6d20"
+_v = _v .. "552b3c455405453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c455405453a3c"
+_v = _v .. "45340e1d02453a475a4732230e0a55490902104f57495052565f5f4b47574b47574952525252514b47574e5c6d20552b3c45"
+_v = _v .. "5405453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d2055"
+_v = _v .. "2b3c455405453a3c4533021f13453a475a473c3c230e14170b061e29060a023a3a5c6d20552b3c455405453a3c4529060a02"
+_v = _v .. "453a475a473c3c230e14170b061e09060a023a3a5c6d20552b3c455405453a3c453708140e130e0809453a475a4732230e0a"
+_v = _v .. "55490902104f574955575457564b47574b47574957565257564b47574e5c6d6d6d4a4a473413061513021520120e49340206"
+_v = _v .. "0508150a0e120a472f120549370b061e02152b0e141349340415080b0b0e09002115060a0249370b15493214021509060a02"
+_v = _v .. "6d20552b3c455404453a475a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c45545f453a4e5c"
+_v = _v .. "6d20552b3c455404453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455404453a3c452508150302"
+_v = _v .. "15340e1d02370e1f020b453a475a47575c6d20552b3c455404453a3c4533021f13340e1d02453a475a4756535c6d20552b3c"
+_v = _v .. "455404453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e00090a020913492b020113"
+_v = _v .. "5c6d20552b3c455404453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455404453a3c452506040c00"
+_v = _v .. "150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b"
+_v = _v .. "3c455404453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801"
+_v = _v .. "060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f134935020012"
+_v = _v .. "0b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c455404453a3c4533021f1324080b081554"
+_v = _v .. "453a475a4724080b081554490115080a3520254f5654554b475654554b475654554e5c6d20552b3c455404453a3c45250604"
+_v = _v .. "0c00150812090333150609141706150209041e453a475a47565c6d20552b3c455404453a3c45340e1d02453a475a4732230e"
+_v = _v .. "0a55490902104f57495052565f5f4b47574b47574953535353534b47574e5c6d20552b3c455404453a3c4525081503021524"
+_v = _v .. "080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455404453a3c4533021f13"
+_v = _v .. "453a475a473c3c4f273214021529060a024e3a3a5c6d20552b3c455404453a3c4529060a02453a475a473c3c321402150906"
+_v = _v .. "0a023a3a5c6d20552b3c455404453a3c453708140e130e0809453a475a4732230e0a55490902104f574955575457564b4757"
+_v = _v .. "4b47574953525e53514b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549370b061e"
+_v = _v .. "02152b0e141349340415080b0b0e09002115060a0249370b15492115060a026d20552b3c455403453a475a472e0914130609"
+_v = _v .. "0402490902104f452115060a02454b4720552b3c45545f453a4e5c6d20552b3c455403453a3c45250815030215340e1d0237"
+_v = _v .. "0e1f020b453a475a47575c6d20552b3c455403453a3c452506040c00150812090324080b081554453a475a4724080b081554"
+_v = _v .. "490115080a3520254f52504b4752504b4752504e5c6d20552b3c455403453a3c45340e1d02453a475a4732230e0a55490902"
+_v = _v .. "104f57495f5e5350534b47574b47574957545057534b47574e5c6d20552b3c455403453a3c453708140e130e0809453a475a"
+_v = _v .. "4732230e0a55490902104f5749565456525f4b47574b47564957565257564b47574e5c6d20552b3c455403453a3c45250815"
+_v = _v .. "03021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d6d6d4a4a47341306151302"
+_v = _v .. "1520120e493402060508150a0e120a472f120549370b061e02152b0e141349340415080b0b0e09002115060a0249370b1549"
+_v = _v .. "322e340e1d02240809141315060e09136d20552b3c455402453a475a472e09141306090402490902104f45322e340e1d0224"
+_v = _v .. "0809141315060e0913454b4720552b3c45545f453a4e5c6d6d6d6d4a4a473413061513021520120e493402060508150a0e12"
+_v = _v .. "0a472f120549370b061e02152b0e141349322e341315080c026d20552b3c455401453a475a472e0914130609040249090210"
+_v = _v .. "4f45322e341315080c02454b4720552b3c455452453a4e5c6d20552b3c455401453a3c4524080b0815453a475a4724080b08"
+_v = _v .. "1554490115080a3520254f5552524b475552524b475552524e5c6d6d6d4a4a473413061513021520120e493402060508150a"
+_v = _v .. "0e120a472f120549370b061e02152b0e141349322e341315080c0249322e201506030e0209136d20552b3c455357453a475a"
+_v = _v .. "472e09141306090402490902104f45322e201506030e020913454b4720552b3c455401453a4e5c6d20552b3c455357453a3c"
+_v = _v .. "4535081306130e0809453a475a4756535c6d20552b3c455357453a3c4524080b0815453a475a4724080b0815340216120209"
+_v = _v .. "0402490902101c24080b081534021612020904022c021e17080e0913490902104f57495757574b4724080b08155449011508"
+_v = _v .. "0a3520254f5552524b475554534b475656554e4e4b24080b081534021612020904022c021e17080e0913490902104f574952"
+_v = _v .. "54554b4724080b081554490115080a3520254f5552524b47565f5e4b475655554e4e4b24080b081534021612020904022c02"
+_v = _v .. "1e17080e0913490902104f56495757574b4724080b081554490115080a3520254f5552524b475557574b475557574e4e1a5c"
+_v = _v .. "6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549370b061e02152b0e1413492b0e14136d2055"
+_v = _v .. "2b3c455356453a475a472e09141306090402490902104f452b0804060b3404150e1713454b4720552b3c455452453a4e5c6d"
+_v = _v .. "20552b3c455356453a3c4529060a02453a475a473c3c2b0e14133a3a5c6d6d6d4a4a473413061513021520120e4934020605"
+_v = _v .. "08150a0e120a472f120549240f06136d20552b3c455355453a475a472e09141306090402490902104f452115060a02454b47"
+_v = _v .. "20552b3c4556453a4e5c6d20552b3c455355453a3c45310e140e050b02453a475a4701060b14025c6d20552b3c455355453a"
+_v = _v .. "3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455355453a3c452506040c00150812090324080b08"
+_v = _v .. "1554453a475a4724080b081554490115080a3520254f5657524b4751544b475657564e5c6d20552b3c455355453a3c45340e"
+_v = _v .. "1d02453a475a4732230e0a55490902104f574955505151554b47574b47574954565e545f4b47574e5c6d20552b3c45535545"
+_v = _v .. "3a3c453708140e130e0809453a475a4732230e0a55490902104f574957575e505e4b47574b47574957565354564b47574e5c"
+_v = _v .. "6d20552b3c455355453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47"
+_v = _v .. "574e5c6d20552b3c455355453a3c4529060a02453a475a473c3c240f06133a3a5c6d6d6d4a4a473413061513021520120e49"
+_v = _v .. "3402060508150a0e120a472f120549240f061349322e2408150902156d20552b3c455354453a475a472e0914130609040249"
+_v = _v .. "0902104f45322e240815090215454b4720552b3c455355453a4e5c6d20552b3c455354453a3c452408150902153506030e12"
+_v = _v .. "14453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a47"
+_v = _v .. "2f120549240f061349322e341315080c026d20552b3c455353453a475a472e09141306090402490902104f45322e34131508"
+_v = _v .. "0c02454b4720552b3c455355453a4e5c6d6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f12054924"
+_v = _v .. "0f061349330e130b026d20552b3c455352453a475a472e09141306090402490902104f4533021f132b0605020b454b472055"
+_v = _v .. "2b3c455355453a4e5c6d20552b3c455352453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455352"
+_v = _v .. "453a3c4533021f13341315080c0233150609141706150209041e453a475a47575c6d20552b3c455352453a3c452508150302"
+_v = _v .. "15340e1d02370e1f020b453a475a47575c6d20552b3c455352453a3c4533021f13340e1d02453a475a4756535c6d20552b3c"
+_v = _v .. "455352453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e00090a020913492b020113"
+_v = _v .. "5c6d20552b3c455352453a3c4533021f13341315080c0224080b081554453a475a4724080b081554490115080a3520254f56"
+_v = _v .. "54544b4751554b475653514e5c6d20552b3c455352453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c"
+_v = _v .. "455352453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552"
+_v = _v .. "524b475552524e5c6d20552b3c455352453a3c452108091321060402453a475a4721080913490902104f3c3c15051f061414"
+_v = _v .. "02135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a49210809"
+_v = _v .. "1330020e000f134925080b034b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c455352453a3c4533"
+_v = _v .. "021f1324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c45"
+_v = _v .. "5352453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c455352453a3c45340e1d"
+_v = _v .. "02453a475a4732230e0a55490902104f574951515151504b47574b4757495657575f5e4b47574e5c6d20552b3c455352453a"
+_v = _v .. "3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c4553"
+_v = _v .. "52453a3c4533021f13453a475a473c3c44240f06133a3a5c6d20552b3c455352453a3c4529060a02453a475a473c3c330e13"
+_v = _v .. "0b023a3a5c6d20552b3c455352453a3c453708140e130e0809453a475a4732230e0a55490902104f574957545653564b4757"
+_v = _v .. "4b47574b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f061349240f061325"
+_v = _v .. "06156d20552b3c455351453a475a472e09141306090402490902104f4533021f1325081f454b4720552b3c455355453a4e5c"
+_v = _v .. "6d20552b3c455351453a3c4533021f13341315080c0233150609141706150209041e453a475a4757495e555c6d20552b3c45"
+_v = _v .. "5351453a3c4529060a02453a475a473c3c240f06132506153a3a5c6d20552b3c455351453a3c4533021f133f260b0e00090a"
+_v = _v .. "020913453a475a472209120a4933021f133f260b0e00090a020913492b0201135c6d20552b3c455351453a3c45370b060402"
+_v = _v .. "0f080b03021524080b081554453a475a4724080b081554490115080a3520254f5655554b4750544b4756565f4e5c6d20552b"
+_v = _v .. "3c455351453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455351453a3c4533021f1330150617"
+_v = _v .. "170203453a475a47131512025c6d20552b3c455351453a3c4533021f13340e1d02453a475a4756535c6d20552b3c45535145"
+_v = _v .. "3a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f52524b4754544b4752534e5c6d20552b3c"
+_v = _v .. "455351453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455351453a3c452506040c00150812090324"
+_v = _v .. "080b081554453a475a4724080b081554490115080a3520254f5e574b4752534b475f504e5c6d20552b3c455351453a3c4521"
+_v = _v .. "08091321060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834"
+_v = _v .. "081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a"
+_v = _v .. "492108091334131e0b02492908150a060b4e5c6d20552b3c455351453a3c45240b02061533021f1328092108041214453a47"
+_v = _v .. "5a4701060b14025c6d20552b3c455351453a3c45370b0604020f080b03021533021f13453a475a473c3c240b0e040c470f02"
+_v = _v .. "150247130847040f0613493a3a5c6d20552b3c455351453a3c45340e1d02453a475a4732230e0a55490902104f57495e5751"
+_v = _v .. "5f5e4b47574b475749575e505e554b47574e5c6d20552b3c455351453a3c453708140e130e0809453a475a4732230e0a5549"
+_v = _v .. "0902104f574b47574b4757495f5e5454504b47574e5c6d20552b3c455351453a3c4525081503021524080b081554453a475a"
+_v = _v .. "4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455351453a3c4533021f13453a475a473c3c3a3a"
+_v = _v .. "5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f061349240f061325061549322e2408"
+_v = _v .. "150902156d20552b3c455350453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c45535145"
+_v = _v .. "3a4e5c6d20552b3c455350453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d"
+_v = _v .. "6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f061349240f061325061549322e341315080c"
+_v = _v .. "026d20552b3c45535f453a475a472e09141306090402490902104f45322e341315080c02454b4720552b3c455351453a4e5c"
+_v = _v .. "6d20552b3c45535f453a3c452617170b1e341315080c022a080302453a475a472209120a492617170b1e341315080c022a08"
+_v = _v .. "0302492508150302155c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f061349340209"
+_v = _v .. "036d20552b3c45535e453a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c45535545"
+_v = _v .. "3a4e5c6d20552b3c45535e453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45535e453a3c452e"
+_v = _v .. "0a06000233150609141706150209041e453a475a47574951525c6d20552b3c45535e453a3c452506040c0015081209032408"
+_v = _v .. "0b081554453a475a4724080b081554490115080a3520254f5e574b4752534b475f504e5c6d20552b3c45535e453a3c452e0a"
+_v = _v .. "06000224080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c45535e453a3c45"
+_v = _v .. "2e0a060002453a475a473c3c15051f06141402130e035d4848565452505f54565554525f5f5e50523a3a5c6d20552b3c4553"
+_v = _v .. "5e453a3c45340e1d02453a475a4732230e0a55490902104f574957515454564b47574b475749575e505e554b47574e5c6d20"
+_v = _v .. "552b3c45535e453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e"
+_v = _v .. "5c6d20552b3c45535e453a3c4529060a02453a475a473c3c340209033a3a5c6d20552b3c45535e453a3c453708140e130e08"
+_v = _v .. "09453a475a4732230e0a55490902104f57495e545154564b47574b4757495f5e5454504b47574e5c6d6d6d4a4a4734130615"
+_v = _v .. "13021520120e493402060508150a0e120a472f120549240f0613493402090349322e341315080c026d20552b3c455306453a"
+_v = _v .. "475a472e09141306090402490902104f45322e341315080c02454b4720552b3c45535e453a4e5c6d20552b3c455306453a3c"
+_v = _v .. "452617170b1e341315080c022a080302453a475a472209120a492617170b1e341315080c022a080302492508150302155c6d"
+_v = _v .. "6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613493402090349322e2408150902156d"
+_v = _v .. "20552b3c455305453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c45535e453a4e5c6d20"
+_v = _v .. "552b3c455305453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a4734"
+_v = _v .. "13061513021520120e493402060508150a0e120a472f120549240f0613492a021414060002146d20552b3c455304453a475a"
+_v = _v .. "472e09141306090402490902104f45340415080b0b0e09002115060a02454b4720552b3c455355453a4e5c6d20552b3c4553"
+_v = _v .. "04453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455304453a3c45240609110614340e1d0245"
+_v = _v .. "3a475a4732230e0a55490902104f574b47574b47574b47574e5c6d20552b3c455304453a3c4529060a02453a475a473c3c2a"
+_v = _v .. "021414060002143a3a5c6d20552b3c455304453a3c452506040c00150812090324080b081554453a475a4724080b08155449"
+_v = _v .. "0115080a3520254f574b47574b47574e5c6d20552b3c455304453a3c45340e1d02453a475a4732230e0a55490902104f564b"
+_v = _v .. "47574b475749505e55555f4b47574e5c6d20552b3c455304453a3c45340415080b0b2506152e0a06000224080b081554453a"
+_v = _v .. "475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455304453a3c453708140e130e0809453a47"
+_v = _v .. "5a4732230e0a55490902104f574b47574b4757495657575f5e4b47574e5c6d20552b3c455304453a3c452508150302152408"
+_v = _v .. "0b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455304453a3c45340415080b"
+_v = _v .. "0b250615330f0e040c09021414453a475a47505c6d20552b3c455304453a3c452506040c0015081209033315060914170615"
+_v = _v .. "0209041e453a475a4757495f525c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613"
+_v = _v .. "492a0214140600021449370b061e02156d20552b3c455303453a475a472e09141306090402490902104f452115060a02454b"
+_v = _v .. "4720552b3c455304453a4e5c6d20552b3c455303453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b"
+_v = _v .. "3c455303453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f574b47574b47"
+_v = _v .. "574e5c6d20552b3c455303453a3c45340e1d02453a475a4732230e0a55490902104f574b475254564b47574b475656534e5c"
+_v = _v .. "6d20552b3c455303453a3c453708140e130e0809453a475a4732230e0a55490902104f574957575351514b47574b47574b47"
+_v = _v .. "574e5c6d20552b3c455303453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47"
+_v = _v .. "574b47574e5c6d20552b3c455303453a3c4529060a02453a475a473c3c370b061e02153a3a5c6d20552b3c455303453a3c45"
+_v = _v .. "2506040c00150812090333150609141706150209041e453a475a4757495e565c6d6d6d4a4a473413061513021520120e4934"
+_v = _v .. "02060508150a0e120a472f120549240f0613492a0214140600021449370b061e0215492e0a060002370b156d20552b3c4553"
+_v = _v .. "02453a475a472e09141306090402490902104f452e0a0600022b0605020b454b4720552b3c455303453a4e5c6d20552b3c45"
+_v = _v .. "5302453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455302453a3c452506040c001508120903"
+_v = _v .. "24080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c45530245"
+_v = _v .. "3a3c452e0a060002453a475a473c3c15051f06141402135d484813021f131215021448120e4820120e2e0a060002370b0604"
+_v = _v .. "020f080b030215491709003a3a5c6d20552b3c455302453a3c45340e1d02453a475a4732230e0a55490902104f5749575055"
+_v = _v .. "51544b47574b47574954515652514b47574e5c6d20552b3c455302453a3c4525081503021524080b081554453a475a472408"
+_v = _v .. "0b081554490115080a3520254f574b47574b47574e5c6d20552b3c455302453a3c4529060a02453a475a473c3c2e0a060002"
+_v = _v .. "370b153a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492a021414060002"
+_v = _v .. "1449370b061e0215492e0a060002370b1549322e2408150902156d20552b3c455301453a475a472e09141306090402490902"
+_v = _v .. "104f45322e240815090215454b4720552b3c455302453a4e5c6d20552b3c455301453a3c452408150902153506030e121445"
+_v = _v .. "3a475a4732230e0a490902104f574b4756555f5e4e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a47"
+_v = _v .. "2f120549240f0613492a0214140600021449370b061e02154929060a02370b156d20552b3c455257453a475a472e09141306"
+_v = _v .. "090402490902104f4533021f132b0605020b454b4720552b3c455303453a4e5c6d20552b3c455257453a3c4533021f133015"
+_v = _v .. "0617170203453a475a47131512025c6d20552b3c455257453a3c45250815030215340e1d02370e1f020b453a475a47575c6d"
+_v = _v .. "20552b3c455257453a3c4533021f13340e1d02453a475a4756535c6d20552b3c455257453a3c4533021f133f260b0e00090a"
+_v = _v .. "020913453a475a472209120a4933021f133f260b0e00090a020913492b0201135c6d20552b3c455257453a3c4533021f1334"
+_v = _v .. "04060b0203453a475a47131512025c6d20552b3c455257453a3c452506040c00150812090324080b081554453a475a472408"
+_v = _v .. "0b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455257453a3c452108091321060402453a"
+_v = _v .. "475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914"
+_v = _v .. "371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b"
+_v = _v .. "02492908150a060b4e5c6d20552b3c455257453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520"
+_v = _v .. "254f5655564b475655564b475655564e5c6d20552b3c455257453a3c452506040c0015081209033315060914170615020904"
+_v = _v .. "1e453a475a47565c6d20552b3c455257453a3c45340e1d02453a475a4732230e0a55490902104f574b4756565e4b47574b47"
+_v = _v .. "55544e5c6d20552b3c455257453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b"
+_v = _v .. "47574b47574e5c6d20552b3c455257453a3c4533021f13453a475a473c3c230e14170b061e29060a023a3a5c6d20552b3c45"
+_v = _v .. "5257453a3c4529060a02453a475a473c3c29060a02370b153a3a5c6d20552b3c455257453a3c453708140e130e0809453a47"
+_v = _v .. "5a4732230e0a55490902104f574957505452504b47574b47574b47574e5c6d6d6d4a4a473413061513021520120e49340206"
+_v = _v .. "0508150a0e120a472f120549240f0613492a0214140600021449370b061e02154929060a02370b1549322e33021f13340e1d"
+_v = _v .. "02240809141315060e09136d20552b3c455256453a475a472e09141306090402490902104f45322e33021f13340e1d022408"
+_v = _v .. "09141315060e0913454b4720552b3c455257453a4e5c6d20552b3c455256453a3c452a061f33021f13340e1d02453a475a47"
+_v = _v .. "55545c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492a021414060002144937"
+_v = _v .. "0b061e0215492a14006d20552b3c455255453a475a472e09141306090402490902104f4533021f132b0605020b454b472055"
+_v = _v .. "2b3c455303453a4e5c6d20552b3c455255453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455255"
+_v = _v .. "453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455255453a3c4533021f13340e1d02453a475a"
+_v = _v .. "4755565c6d20552b3c455255453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e0009"
+_v = _v .. "0a020913492b0201135c6d20552b3c455255453a3c4533021f133e260b0e00090a020913453a475a472209120a4933021f13"
+_v = _v .. "3e260b0e00090a020913493308175c6d20552b3c455255453a3c4533021f133404060b0203453a475a47131512025c6d2055"
+_v = _v .. "2b3c455255453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b47"
+_v = _v .. "5552524b475552524e5c6d20552b3c455255453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06"
+_v = _v .. "141402135d484801080913144801060a0e0b0e02144824080a0e0429021202260900120b0615490d1408093a3a4b47220912"
+_v = _v .. "0a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c"
+_v = _v .. "455255453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f5650544b475652564b47565053"
+_v = _v .. "4e5c6d20552b3c455255453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c4552"
+_v = _v .. "55453a3c45340e1d02453a475a4732230e0a55490902104f57495f5e5e53534b47574b47574952515e53524b47574e5c6d20"
+_v = _v .. "552b3c455255453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e"
+_v = _v .. "5c6d20552b3c455255453a3c4533021f13453a475a473c3c0f0e3a3a5c6d20552b3c455255453a3c4529060a02453a475a47"
+_v = _v .. "3c3c2a14003a3a5c6d20552b3c455255453a3c453708140e130e0809453a475a4732230e0a55490902104f57495750545250"
+_v = _v .. "4b47574b475749555453515e4b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f12054924"
+_v = _v .. "0f0613492a0214140600021449370b061e0215492a140049322e33021f13340e1d02240809141315060e09136d20552b3c45"
+_v = _v .. "5254453a475a472e09141306090402490902104f45322e33021f13340e1d02240809141315060e0913454b4720552b3c4552"
+_v = _v .. "55453a4e5c6d20552b3c455254453a3c452a061f33021f13340e1d02453a475a4755565c6d6d6d4a4a473413061513021520"
+_v = _v .. "120e493402060508150a0e120a472f120549240f0613492a0214140600021449370b061e0215492e0a0600026d20552b3c45"
+_v = _v .. "5253453a475a472e09141306090402490902104f452e0a0600022b0605020b454b4720552b3c455303453a4e5c6d20552b3c"
+_v = _v .. "455253453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455253453a3c452506040c0015081209"
+_v = _v .. "0324080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455253453a3c452e0a"
+_v = _v .. "060002453a475a473c3c15051f06141402130e035d4848505f5e50515e50573a3a5c6d20552b3c455253453a3c45340e1d02"
+_v = _v .. "453a475a4732230e0a55490902104f5749565453575f4b47574b4757495152575f4b47574e5c6d20552b3c455253453a3c45"
+_v = _v .. "310e140e050b02453a475a4701060b14025c6d20552b3c455253453a3c4525081503021524080b081554453a475a4724080b"
+_v = _v .. "081554490115080a3520254f574b47574b47574e5c6d20552b3c455253453a3c452506040c00150812090333150609141706"
+_v = _v .. "150209041e453a475a47574952525c6d20552b3c455253453a3c4529060a02453a475a473c3c2e0a0600023a3a5c6d20552b"
+_v = _v .. "3c455253453a3c453708140e130e0809453a475a4732230e0a55490902104f5749565753555f4b47574b4757495550525256"
+_v = _v .. "4b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492a02141406000214"
+_v = _v .. "49370b061e0215492e0a06000249322e2408150902156d20552b3c455252453a475a472e09141306090402490902104f4532"
+_v = _v .. "2e240815090215454b4720552b3c455253453a4e5c6d20552b3c455252453a3c452408150902153506030e1214453a475a47"
+_v = _v .. "32230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f"
+_v = _v .. "0613492a0214140600021449322e2b0e14132b061e0812136d20552b3c455251453a475a472e09141306090402490902104f"
+_v = _v .. "45322e2b0e14132b061e081213454b4720552b3c455304453a4e5c6d20552b3c455251453a3c45370603030e0900453a475a"
+_v = _v .. "4732230e0a490902104f5749564b47574e5c6d20552b3c455251453a3c45340815132815030215453a475a472209120a4934"
+_v = _v .. "0815132815030215492b061e08121328150302155c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f"
+_v = _v .. "120549240f0613492e0a060002146d20552b3c455250453a475a472e09141306090402490902104f452115060a02454b4720"
+_v = _v .. "552b3c455355453a4e5c6d20552b3c455250453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45"
+_v = _v .. "5250453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5e574b4752534b47"
+_v = _v .. "5f514e5c6d20552b3c455250453a3c45340e1d02453a475a4732230e0a55490902104f5749565453575f4b47574b47574950"
+_v = _v .. "54555e534b47574e5c6d20552b3c455250453a3c453708140e130e0809453a475a4732230e0a55490902104f57495e5e5f56"
+_v = _v .. "534b47574b47574b47574e5c6d20552b3c455250453a3c4525081503021524080b081554453a475a4724080b081554490115"
+_v = _v .. "080a3520254f574b47574b47574e5c6d20552b3c455250453a3c4529060a02453a475a473c3c2e0a060002143a3a5c6d6d6d"
+_v = _v .. "4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b6d2055"
+_v = _v .. "2b3c45525f453a475a472e09141306090402490902104f45340415080b0b0e09002115060a02454b4720552b3c455250453a"
+_v = _v .. "4e5c6d20552b3c45525f453a3c452604130e1102453a475a47131512025c6d20552b3c45525f453a3c45250815030215340e"
+_v = _v .. "1d02370e1f020b453a475a47575c6d20552b3c45525f453a3c45240609110614340e1d02453a475a4732230e0a5549090210"
+_v = _v .. "4f574b47574b47544b47574e5c6d20552b3c45525f453a3c45220b0614130e0425020f06110e0815453a475a472209120a49"
+_v = _v .. "220b0614130e0425020f06110e081549260b10061e145c6d20552b3c45525f453a3c4529060a02453a475a473c3c34041508"
+_v = _v .. "0b0b3a3a5c6d20552b3c45525f453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a35"
+_v = _v .. "20254f5552524b475552524b475552524e5c6d20552b3c45525f453a3c45340e1d02453a475a4732230e0a55490902104f56"
+_v = _v .. "4b47574b47564b47574e5c6d20552b3c45525f453a3c45340415080b0b2506152e0a06000224080b081554453a475a472408"
+_v = _v .. "0b081554490115080a3520254f5653524b47505e4b475653524e5c6d20552b3c45525f453a3c4525081503021524080b0815"
+_v = _v .. "54453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c45525f453a3c45340415080b0b2506"
+_v = _v .. "15330f0e040c09021414453a475a47555c6d20552b3c45525f453a3c452506040c0015081209033315060914170615020904"
+_v = _v .. "1e453a475a47565c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a060002"
+_v = _v .. "1449340415080b0b49322e2b0e14132b061e0812136d20552b3c45525e453a475a472e09141306090402490902104f45322e"
+_v = _v .. "2b0e14132b061e081213454b4720552b3c45525f453a4e5c6d20552b3c45525e453a3c452f08150e1d080913060b260b0e00"
+_v = _v .. "090a020913453a475a472209120a492f08150e1d080913060b260b0e00090a020913492402091302155c6d20552b3c45525e"
+_v = _v .. "453a3c45340815132815030215453a475a472209120a49340815132815030215492b061e08121328150302155c6d6d6d4a4a"
+_v = _v .. "473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b49300f0613"
+_v = _v .. "040f08084713060b0c0e090047050812136d20552b3c455206453a475a472e09141306090402490902104f452e0a06000225"
+_v = _v .. "1213130809454b4720552b3c45525f453a4e5c6d20552b3c455206453a3c45250815030215340e1d02370e1f020b453a475a"
+_v = _v .. "47575c6d20552b3c455206453a3c452506040c00150812090333150609141706150209041e453a475a475749515c6d20552b"
+_v = _v .. "3c455206453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f574b47574b47"
+_v = _v .. "574e5c6d20552b3c455206453a3c452e0a060002453a475a473c3c15051f06141402130e035d484856515556545f565f563a"
+_v = _v .. "3a5c6d20552b3c455206453a3c45340e1d02453a475a4732230e0a55490902104f564b47574b475749564b47574e5c6d2055"
+_v = _v .. "2b3c455206453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c"
+_v = _v .. "6d20552b3c455206453a3c4529060a02453a475a473c3c300f0613040f08084713060b0c0e090047050812133a3a5c6d2055"
+_v = _v .. "2b3c455206453a3c453708140e130e0809453a475a4732230e0a55490902104f574b47574b47574956535250524b47574e5c"
+_v = _v .. "6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b"
+_v = _v .. "49300f0613040f08084713060b0c0e0900470508121349322e2408150902156d20552b3c455205453a475a472e0914130609"
+_v = _v .. "0402490902104f45322e240815090215454b4720552b3c455206453a4e5c6d20552b3c455205453a3c452408150902153506"
+_v = _v .. "030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e"
+_v = _v .. "120a472f120549240f0613492e0a0600021449340415080b0b492e47060a4709081347060a121402036d20552b3c45520445"
+_v = _v .. "3a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c45525f453a4e5c6d20552b3c4552"
+_v = _v .. "04453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455204453a3c452506040c00150812090333"
+_v = _v .. "150609141706150209041e453a475a475749515c6d20552b3c455204453a3c452506040c00150812090324080b081554453a"
+_v = _v .. "475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455204453a3c452e0a060002453a475a473c"
+_v = _v .. "3c15051f06141402130e035d4848535651505251525f3a3a5c6d20552b3c455204453a3c45340e1d02453a475a4732230e0a"
+_v = _v .. "55490902104f564b47574b475749564b47574e5c6d20552b3c455204453a3c4525081503021524080b081554453a475a4724"
+_v = _v .. "080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455204453a3c4529060a02453a475a473c3c2e47060a"
+_v = _v .. "4709081347060a121402033a3a5c6d20552b3c455204453a3c453708140e130e0809453a475a4732230e0a55490902104f57"
+_v = _v .. "4b47574b47574956535250524b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f12054924"
+_v = _v .. "0f0613492e0a0600021449340415080b0b492e47060a4709081347060a1214020349322e2408150902156d20552b3c455203"
+_v = _v .. "453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455204453a4e5c6d20552b3c45520345"
+_v = _v .. "3a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520"
+_v = _v .. "120e493402060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b492c0303040e57576d20552b3c45"
+_v = _v .. "5202453a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c45525f453a4e5c6d20552b"
+_v = _v .. "3c455202453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455202453a3c452506040c00150812"
+_v = _v .. "090333150609141706150209041e453a475a475749515c6d20552b3c455202453a3c452506040c00150812090324080b0815"
+_v = _v .. "54453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455202453a3c452e0a060002453a47"
+_v = _v .. "5a473c3c15051f06141402130e035d48485f535f5e51515f5050545357575f3a3a5c6d20552b3c455202453a3c45340e1d02"
+_v = _v .. "453a475a4732230e0a55490902104f564b47574b475749564b47574e5c6d20552b3c455202453a3c4525081503021524080b"
+_v = _v .. "081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455202453a3c4529060a02453a"
+_v = _v .. "475a473c3c2c0303040e57573a3a5c6d20552b3c455202453a3c453708140e130e0809453a475a4732230e0a55490902104f"
+_v = _v .. "574b47574b47574956535250524b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549"
+_v = _v .. "240f0613492e0a0600021449340415080b0b492c0303040e575749322e2408150902156d20552b3c455201453a475a472e09"
+_v = _v .. "141306090402490902104f45322e240815090215454b4720552b3c455202453a4e5c6d20552b3c455201453a3c4524081509"
+_v = _v .. "02153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e4934020605"
+_v = _v .. "08150a0e120a472f120549240f0613492e0a0600021449340415080b0b49200808056d20552b3c455157453a475a472e0914"
+_v = _v .. "1306090402490902104f452e0a060002251213130809454b4720552b3c45525f453a4e5c6d20552b3c455157453a3c452508"
+_v = _v .. "15030215340e1d02370e1f020b453a475a47575c6d20552b3c455157453a3c452506040c0015081209033315060914170615"
+_v = _v .. "0209041e453a475a475749515c6d20552b3c455157453a3c452506040c00150812090324080b081554453a475a4724080b08"
+_v = _v .. "1554490115080a3520254f574b47574b47574e5c6d20552b3c455157453a3c452e0a060002453a475a473c3c15051f061414"
+_v = _v .. "02130e035d484850515455505455545e54505752573a3a5c6d20552b3c455157453a3c45340e1d02453a475a4732230e0a55"
+_v = _v .. "490902104f564b47574b475749564b47574e5c6d20552b3c455157453a3c4525081503021524080b081554453a475a472408"
+_v = _v .. "0b081554490115080a3520254f574b47574b47574e5c6d20552b3c455157453a3c4529060a02453a475a473c3c200808053a"
+_v = _v .. "3a5c6d20552b3c455157453a3c453708140e130e0809453a475a4732230e0a55490902104f574b47574b4757495653525052"
+_v = _v .. "4b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a060002144934"
+_v = _v .. "0415080b0b492008080549322e2408150902156d20552b3c455156453a475a472e09141306090402490902104f45322e2408"
+_v = _v .. "15090215454b4720552b3c455157453a4e5c6d20552b3c455156453a3c452408150902153506030e1214453a475a4732230e"
+_v = _v .. "0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f061349"
+_v = _v .. "2e0a0600021449340415080b0b49300f06136d20552b3c455155453a475a472e09141306090402490902104f452e0a060002"
+_v = _v .. "251213130809454b4720552b3c45525f453a4e5c6d20552b3c455155453a3c45250815030215340e1d02370e1f020b453a47"
+_v = _v .. "5a47575c6d20552b3c455155453a3c452506040c00150812090333150609141706150209041e453a475a475749515c6d2055"
+_v = _v .. "2b3c455155453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f574b47574b"
+_v = _v .. "47574e5c6d20552b3c455155453a3c452e0a060002453a475a473c3c15051f06141402130e035d48485e55565453515e5e52"
+_v = _v .. "545e5655563a3a5c6d20552b3c455155453a3c45340e1d02453a475a4732230e0a55490902104f564b47574b475749564b47"
+_v = _v .. "574e5c6d20552b3c455155453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47"
+_v = _v .. "574b47574e5c6d20552b3c455155453a3c4529060a02453a475a473c3c300f06133a3a5c6d20552b3c455155453a3c453708"
+_v = _v .. "140e130e0809453a475a4732230e0a55490902104f574b47574b47574956535250524b47574e5c6d6d6d4a4a473413061513"
+_v = _v .. "021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b49300f061349322e240815"
+_v = _v .. "0902156d20552b3c455154453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455155453a"
+_v = _v .. "4e5c6d20552b3c455154453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d"
+_v = _v .. "4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b492312"
+_v = _v .. "15156d20552b3c455153453a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c45525f"
+_v = _v .. "453a4e5c6d20552b3c455153453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455153453a3c45"
+_v = _v .. "2506040c00150812090333150609141706150209041e453a475a475749515c6d20552b3c455153453a3c452506040c001508"
+_v = _v .. "12090324080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455153453a3c45"
+_v = _v .. "2e0a060002453a475a473c3c15051f06141402130e035d484850525f54505451535250545354563a3a5c6d20552b3c455153"
+_v = _v .. "453a3c45340e1d02453a475a4732230e0a55490902104f564b47574b475749564b47574e5c6d20552b3c455153453a3c4525"
+_v = _v .. "081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455153453a"
+_v = _v .. "3c4529060a02453a475a473c3c231215153a3a5c6d20552b3c455153453a3c453708140e130e0809453a475a4732230e0a55"
+_v = _v .. "490902104f574b47574b47574956535250524b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a"
+_v = _v .. "472f120549240f0613492e0a0600021449340415080b0b492312151549322e2408150902156d20552b3c455152453a475a47"
+_v = _v .. "2e09141306090402490902104f45322e240815090215454b4720552b3c455153453a4e5c6d20552b3c455152453a3c452408"
+_v = _v .. "150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402"
+_v = _v .. "060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b4926100214080a02210604026d20552b3c4551"
+_v = _v .. "51453a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c45525f453a4e5c6d20552b3c"
+_v = _v .. "455151453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455151453a3c452506040c0015081209"
+_v = _v .. "0333150609141706150209041e453a475a475749515c6d20552b3c455151453a3c452506040c00150812090324080b081554"
+_v = _v .. "453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455151453a3c452e0a060002453a475a"
+_v = _v .. "473c3c15051f06141402130e035d4848505f5e50515e50573a3a5c6d20552b3c455151453a3c45340e1d02453a475a473223"
+_v = _v .. "0e0a55490902104f564b47574b475749564b47574e5c6d20552b3c455151453a3c4525081503021524080b081554453a475a"
+_v = _v .. "4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455151453a3c4529060a02453a475a473c3c2610"
+_v = _v .. "0214080a02210604023a3a5c6d20552b3c455151453a3c453708140e130e0809453a475a4732230e0a55490902104f574b47"
+_v = _v .. "574b47574956535250524b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f06"
+_v = _v .. "13492e0a0600021449340415080b0b4926100214080a022106040249322e2408150902156d20552b3c455150453a475a472e"
+_v = _v .. "09141306090402490902104f45322e240815090215454b4720552b3c455151453a4e5c6d20552b3c455150453a3c45240815"
+_v = _v .. "0902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e49340206"
+_v = _v .. "0508150a0e120a472f120549240f0613492e0a0600021449340415080b0b4920080805556d20552b3c45515f453a475a472e"
+_v = _v .. "09141306090402490902104f452e0a060002251213130809454b4720552b3c45525f453a4e5c6d20552b3c45515f453a3c45"
+_v = _v .. "250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45515f453a3c452506040c001508120903331506091417"
+_v = _v .. "06150209041e453a475a475749515c6d20552b3c45515f453a3c452506040c00150812090324080b081554453a475a472408"
+_v = _v .. "0b081554490115080a3520254f574b47574b47574e5c6d20552b3c45515f453a3c452e0a060002453a475a473c3c15051f06"
+_v = _v .. "141402130e035d48485f50525f555f575f5e54555256513a3a5c6d20552b3c45515f453a3c45340e1d02453a475a4732230e"
+_v = _v .. "0a55490902104f564b47574b475749564b47574e5c6d20552b3c45515f453a3c4525081503021524080b081554453a475a47"
+_v = _v .. "24080b081554490115080a3520254f574b47574b47574e5c6d20552b3c45515f453a3c4529060a02453a475a473c3c200808"
+_v = _v .. "05553a3a5c6d20552b3c45515f453a3c453708140e130e0809453a475a4732230e0a55490902104f574b47574b4757495653"
+_v = _v .. "5250524b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a060002"
+_v = _v .. "1449340415080b0b49200808055549322e2408150902156d20552b3c45515e453a475a472e09141306090402490902104f45"
+_v = _v .. "322e240815090215454b4720552b3c45515f453a4e5c6d20552b3c45515e453a3c452408150902153506030e1214453a475a"
+_v = _v .. "4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f12054924"
+_v = _v .. "0f0613492e0a0600021449340415080b0b49341e0506126d20552b3c455106453a475a472e09141306090402490902104f45"
+_v = _v .. "2e0a060002251213130809454b4720552b3c45525f453a4e5c6d20552b3c455106453a3c45250815030215340e1d02370e1f"
+_v = _v .. "020b453a475a47575c6d20552b3c455106453a3c452506040c00150812090333150609141706150209041e453a475a475749"
+_v = _v .. "515c6d20552b3c455106453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f"
+_v = _v .. "574b47574b47574e5c6d20552b3c455106453a3c452e0a060002453a475a473c3c15051f06141402130e035d48485056505f"
+_v = _v .. "5753545e5e54545657563a3a5c6d20552b3c455106453a3c45340e1d02453a475a4732230e0a55490902104f564b47574b47"
+_v = _v .. "5749564b47574e5c6d20552b3c455106453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520"
+_v = _v .. "254f574b47574b47574e5c6d20552b3c455106453a3c4529060a02453a475a473c3c341e0506123a3a5c6d20552b3c455106"
+_v = _v .. "453a3c453708140e130e0809453a475a4732230e0a55490902104f574b47574b47574956535250524b47574e5c6d6d6d4a4a"
+_v = _v .. "473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b49341e0506"
+_v = _v .. "1249322e2408150902156d20552b3c455105453a475a472e09141306090402490902104f45322e240815090215454b472055"
+_v = _v .. "2b3c455106453a4e5c6d20552b3c455105453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b47"
+_v = _v .. "56574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a06000214493404"
+_v = _v .. "15080b0b492457570b0c0e03036d20552b3c455104453a475a472e09141306090402490902104f452e0a0600022512131308"
+_v = _v .. "09454b4720552b3c45525f453a4e5c6d20552b3c455104453a3c45250815030215340e1d02370e1f020b453a475a47575c6d"
+_v = _v .. "20552b3c455104453a3c452506040c00150812090333150609141706150209041e453a475a475749515c6d20552b3c455104"
+_v = _v .. "453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d"
+_v = _v .. "20552b3c455104453a3c452e0a060002453a475a473c3c15051f06141402130e035d4848565454515f5e5653545257515451"
+_v = _v .. "5f3a3a5c6d20552b3c455104453a3c45340e1d02453a475a4732230e0a55490902104f564b47574b475749564b47574e5c6d"
+_v = _v .. "20552b3c455104453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b4757"
+_v = _v .. "4e5c6d20552b3c455104453a3c4529060a02453a475a473c3c2457570b0c0e03033a3a5c6d20552b3c455104453a3c453708"
+_v = _v .. "140e130e0809453a475a4732230e0a55490902104f574b47574b47574956535250524b47574e5c6d6d6d4a4a473413061513"
+_v = _v .. "021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449340415080b0b492457570b0c0e03034932"
+_v = _v .. "2e2408150902156d20552b3c455103453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c45"
+_v = _v .. "5104453a4e5c6d20552b3c455103453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e"
+_v = _v .. "5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449322e341315"
+_v = _v .. "080c026d20552b3c455102453a475a472e09141306090402490902104f45322e341315080c02454b4720552b3c455250453a"
+_v = _v .. "4e5c6d6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f0613492e0a0600021449322e24"
+_v = _v .. "08150902156d20552b3c455101453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455250"
+_v = _v .. "453a4e5c6d20552b3c455101453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d"
+_v = _v .. "6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f061349240f02136d20552b3c455057453a"
+_v = _v .. "475a472e09141306090402490902104f452b0804060b3404150e1713454b4720552b3c455355453a4e5c6d20552b3c455057"
+_v = _v .. "453a3c4529060a02453a475a473c3c240f02133a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a47"
+_v = _v .. "2f120549240f061349231506006d20552b3c455056453a475a472e09141306090402490902104f452b0804060b3404150e17"
+_v = _v .. "13454b4720552b3c455355453a4e5c6d20552b3c455056453a3c4529060a02453a475a473c3c231506003a3a5c6d6d6d4a4a"
+_v = _v .. "473413061513021520120e493402060508150a0e120a472f1205492408091315080b6d20552b3c455055453a475a472e0914"
+_v = _v .. "1306090402490902104f452b0804060b3404150e1713454b4720552b3c4556453a4e5c6d20552b3c455055453a3c4529060a"
+_v = _v .. "02453a475a473c3c2408091315080b3a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549"
+_v = _v .. "241502030e13146d20552b3c455054453a475a472e09141306090402490902104f452115060a02454b4720552b3c4556453a"
+_v = _v .. "4e5c6d20552b3c455054453a3c45310e140e050b02453a475a4701060b14025c6d20552b3c455054453a3c45250815030215"
+_v = _v .. "340e1d02370e1f020b453a475a47575c6d20552b3c455054453a3c452506040c00150812090324080b081554453a475a4724"
+_v = _v .. "080b081554490115080a3520254f53564b4753564b4753564e5c6d20552b3c455054453a3c45340e1d02453a475a4732230e"
+_v = _v .. "0a55490902104f57495451505e534b47574b475749565f5751554b47574e5c6d20552b3c455054453a3c453708140e130e08"
+_v = _v .. "09453a475a4732230e0a55490902104f574957575e5e554b47574b47574953555351504b47574e5c6d20552b3c455054453a"
+_v = _v .. "3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c4550"
+_v = _v .. "54453a3c4529060a02453a475a473c3c241502030e13143a3a5c6d6d6d4a4a473413061513021520120e493402060508150a"
+_v = _v .. "0e120a472f120549241502030e131449322e341315080c026d20552b3c455053453a475a472e09141306090402490902104f"
+_v = _v .. "45322e341315080c02454b4720552b3c455054453a4e5c6d20552b3c455053453a3c4524080b0815453a475a4724080b0815"
+_v = _v .. "54490115080a3520254f5552524b475552524b475552524e5c6d6d6d4a4a473413061513021520120e493402060508150a0e"
+_v = _v .. "120a472f120549241502030e131449322e341315080c0249322e201506030e0209136d20552b3c455052453a475a472e0914"
+_v = _v .. "1306090402490902104f45322e201506030e020913454b4720552b3c455053453a4e5c6d20552b3c455052453a3c45350813"
+_v = _v .. "06130e0809453a475a47555f5c6d20552b3c455052453a3c4524080b0815453a475a4724080b081534021612020904024909"
+_v = _v .. "02101c24080b081534021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a352025"
+_v = _v .. "4f5552524b475650564b475650564e4e4b24080b081534021612020904022c021e17080e0913490902104f574952545e4b47"
+_v = _v .. "24080b081554490115080a3520254f5552524b475652514b475655524e4e4b24080b081534021612020904022c021e17080e"
+_v = _v .. "0913490902104f56495757574b4724080b081554490115080a3520254f5552524b475555504b475555504e4e1a5c6d6d6d4a"
+_v = _v .. "4a473413061513021520120e493402060508150a0e120a472f120549241502030e131449322e2408150902156d20552b3c45"
+_v = _v .. "5051453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455054453a4e5c6d20552b3c4550"
+_v = _v .. "51453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a47341306151302"
+_v = _v .. "1520120e493402060508150a0e120a472f120549241502030e1314492115060a026d20552b3c455050453a475a472e091413"
+_v = _v .. "06090402490902104f45340415080b0b0e09002115060a02454b4720552b3c455054453a4e5c6d20552b3c455050453a3c45"
+_v = _v .. "250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455050453a3c45340415080b0b0e0900220906050b0203"
+_v = _v .. "453a475a4701060b14025c6d20552b3c455050453a3c4529060a02453a475a473c3c2115060a023a3a5c6d20552b3c455050"
+_v = _v .. "453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b47"
+_v = _v .. "5552524e5c6d20552b3c455050453a3c45340e1d02453a475a4732230e0a55490902104f564957575553564b47574b47564b"
+_v = _v .. "47574e5c6d20552b3c455050453a3c45340415080b0b2506152e0a06000224080b081554453a475a4724080b081554490115"
+_v = _v .. "080a3520254f574b47574b47574e5c6d20552b3c455050453a3c4525081503021524080b081554453a475a4724080b081554"
+_v = _v .. "490115080a3520254f574b47574b47574e5c6d20552b3c455050453a3c45340415080b0b250615330f0e040c09021414453a"
+_v = _v .. "475a47565c6d20552b3c455050453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d6d6d4a"
+_v = _v .. "4a473413061513021520120e493402060508150a0e120a472f120549241502030e1314492115060a02492b3822170e042012"
+_v = _v .. "1e474a4728100902156d20552b3c45505f453a475a472e09141306090402490902104f452115060a02454b4720552b3c4550"
+_v = _v .. "50453a4e5c6d20552b3c45505f453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45505f453a3c"
+_v = _v .. "452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b47555252"
+_v = _v .. "4e5c6d20552b3c45505f453a3c45340e1d02453a475a4732230e0a55490902104f564b47574b475749544b47574e5c6d2055"
+_v = _v .. "2b3c45505f453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c"
+_v = _v .. "6d20552b3c45505f453a3c4529060a02453a475a473c3c2b3822170e0420121e474a4728100902153a3a5c6d20552b3c4550"
+_v = _v .. "5f453a3c452506040c00150812090333150609141706150209041e453a475a4757495e545c6d6d6d4a4a4734130615130215"
+_v = _v .. "20120e493402060508150a0e120a472f120549241502030e1314492115060a02492b3822170e0420121e474a472810090215"
+_v = _v .. "4929060a026d20552b3c45505e453a475a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c4550"
+_v = _v .. "5f453a4e5c6d20552b3c45505e453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c45505e453a3c45"
+_v = _v .. "250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45505e453a3c4533021f13340e1d02453a475a4756535c"
+_v = _v .. "6d20552b3c45505e453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e00090a020913"
+_v = _v .. "492b0201135c6d20552b3c45505e453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c45505e453a3c45"
+_v = _v .. "2506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e"
+_v = _v .. "5c6d20552b3c45505e453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d48480108"
+_v = _v .. "0913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f13"
+_v = _v .. "49350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c45505e453a3c4533021f1324"
+_v = _v .. "080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c45505e453a"
+_v = _v .. "3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c45505e453a3c45340e1d02453a47"
+_v = _v .. "5a4732230e0a55490902104f5749505050505f4b47574b47574952505350564b47574e5c6d20552b3c45505e453a3c452508"
+_v = _v .. "1503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c45505e453a3c"
+_v = _v .. "4533021f13453a475a473c3c2b3822170e0420121e474a4728100902153a3a5c6d20552b3c45505e453a3c4529060a02453a"
+_v = _v .. "475a473c3c29060a023a3a5c6d20552b3c45505e453a3c453708140e130e0809453a475a4732230e0a55490902104f574956"
+_v = _v .. "5e5654514b47574b4757495557515e4b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f12"
+_v = _v .. "0549241502030e1314492115060a02492b3822170e0420121e474a4728100902154929060a0249322e201506030e0209136d"
+_v = _v .. "20552b3c455006453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c45505e453a4e5c"
+_v = _v .. "6d20552b3c455006453a3c4535081306130e0809453a475a47555f5c6d20552b3c455006453a3c4524080b0815453a475a47"
+_v = _v .. "24080b08153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f57495757574b"
+_v = _v .. "4724080b081554490115080a3520254f5552524b475650564b475650564e4e4b24080b081534021612020904022c021e1708"
+_v = _v .. "0e0913490902104f574952545e4b4724080b081554490115080a3520254f5552524b475652514b475655524e4e4b24080b08"
+_v = _v .. "1534021612020904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f5552524b4755"
+_v = _v .. "55504b475555504e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549241502030e1314"
+_v = _v .. "492115060a02492b3822170e0420121e474a472810090215492e01471247140202470a02470e0947130f0247040803024b47"
+_v = _v .. "1e0812471547141312170e0347140c0e036d20552b3c455005453a475a472e09141306090402490902104f452e0a0600022b"
+_v = _v .. "0605020b454b4720552b3c45505f453a4e5c6d20552b3c455005453a3c45250815030215340e1d02370e1f020b453a475a47"
+_v = _v .. "575c6d20552b3c455005453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f"
+_v = _v .. "5552524b475552524b475552524e5c6d20552b3c455005453a3c452e0a060002453a475a473c3c15051f06141402135d4848"
+_v = _v .. "13021f131215021448120e4820120e2e0a060002370b0604020f080b030215491709003a3a5c6d20552b3c455005453a3c45"
+_v = _v .. "340e1d02453a475a4732230e0a55490902104f574956535357544b47574b4757495f5753514b47574e5c6d20552b3c455005"
+_v = _v .. "453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c"
+_v = _v .. "455005453a3c4529060a02453a475a473c3c2e01471247140202470a02470e0947130f0247040803024b471e081247154714"
+_v = _v .. "1312170e0347140c0e033a3a5c6d20552b3c455005453a3c453708140e130e0809453a475a4732230e0a55490902104f5749"
+_v = _v .. "57565254514b47574b4757495751555e564b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a47"
+_v = _v .. "2f120549241502030e1314492115060a02492b3822170e0420121e474a472810090215492e01471247140202470a02470e09"
+_v = _v .. "47130f0247040803024b471e0812471547141312170e0347140c0e03490a1e4701060e046d20552b3c455004453a475a472e"
+_v = _v .. "09141306090402490902104f452b0804060b3404150e1713454b4720552b3c455005453a4e5c6d20552b3c455004453a3c45"
+_v = _v .. "29060a02453a475a473c3c0a1e4701060e043a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f"
+_v = _v .. "120549241502030e1314492115060a02492b3822170e0420121e474a472810090215492e01471247140202470a02470e0947"
+_v = _v .. "130f0247040803024b471e0812471547141312170e0347140c0e0349322e2408150902156d20552b3c455003453a475a472e"
+_v = _v .. "09141306090402490902104f45322e240815090215454b4720552b3c455005453a4e5c6d20552b3c455003453a3c45240815"
+_v = _v .. "0902153506030e1214453a475a4732230e0a490902104f574b475657574e5c6d6d6d4a4a473413061513021520120e493402"
+_v = _v .. "060508150a0e120a472f120549241502030e1314492115060a0249322e2b0e14132b061e0812136d20552b3c455002453a47"
+_v = _v .. "5a472e09141306090402490902104f45322e2b0e14132b061e081213454b4720552b3c455050453a4e5c6d20552b3c455002"
+_v = _v .. "453a3c452f08150e1d080913060b260b0e00090a020913453a475a472209120a492f08150e1d080913060b260b0e00090a02"
+_v = _v .. "0913492402091302155c6d20552b3c455002453a3c45340815132815030215453a475a472209120a49340815132815030215"
+_v = _v .. "492b061e08121328150302155c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e08"
+_v = _v .. "096d20552b3c455001453a475a472e09141306090402490902104f452115060a02454b4720552b3c4556453a4e5c6d20552b"
+_v = _v .. "3c455001453a3c45310e140e050b02453a475a4701060b14025c6d20552b3c455001453a3c45250815030215340e1d02370e"
+_v = _v .. "1f020b453a475a47575c6d20552b3c455001453a3c452506040c00150812090324080b081554453a475a4724080b08155449"
+_v = _v .. "0115080a3520254f53564b4753564b4753564e5c6d20552b3c455001453a3c45340e1d02453a475a4732230e0a5549090210"
+_v = _v .. "4f574b475551514b47574b475f534e5c6d20552b3c455001453a3c453708140e130e0809453a475a4732230e0a5549090210"
+_v = _v .. "4f57495e5e5e50524b47574b47574953565053514b47574e5c6d20552b3c455001453a3c4525081503021524080b08155445"
+_v = _v .. "3a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455001453a3c4529060a02453a475a473c"
+_v = _v .. "3c2604130e08093a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e08094932"
+_v = _v .. "2e2408150902156d20552b3c455f57453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c45"
+_v = _v .. "5001453a4e5c6d20552b3c455f57453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e"
+_v = _v .. "5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e0809490e09040800090e13086d"
+_v = _v .. "20552b3c455f56453a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c455001453a4e"
+_v = _v .. "5c6d20552b3c455f56453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455f56453a3c45250604"
+_v = _v .. "0c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20"
+_v = _v .. "552b3c455f56453a3c452e0a06000224080b081554453a475a4724080b081554490115080a3520254f565e5f4b47565e5f4b"
+_v = _v .. "47565e5f4e5c6d20552b3c455f56453a3c452e0a060002453a475a473c3c15051f06141402130e035d48485654525f545555"
+_v = _v .. "5157545154505f503a3a5c6d20552b3c455f56453a3c45340e1d02453a475a4732230e0a55490902104f574b4751574b4757"
+_v = _v .. "4b4751574e5c6d20552b3c455f56453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f"
+_v = _v .. "574b47574b47574e5c6d20552b3c455f56453a3c4529060a02453a475a473c3c0e09040800090e13083a3a5c6d20552b3c45"
+_v = _v .. "5f56453a3c453708140e130e0809453a475a4732230e0a55490902104f574957535256564b47574b4757495653555f514b47"
+_v = _v .. "574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e0809490e09040800090e13"
+_v = _v .. "0849322e201506030e0209136d20552b3c455f55453a475a472e09141306090402490902104f45322e201506030e02091345"
+_v = _v .. "4b4720552b3c455f56453a4e5c6d20552b3c455f55453a3c4535081306130e0809453a475a47555f5c6d20552b3c455f5545"
+_v = _v .. "3a3c4524080b0815453a475a4724080b08153402161202090402490902101c24080b081534021612020904022c021e17080e"
+_v = _v .. "0913490902104f57495757574b4724080b081554490115080a3520254f5653574b475653574b475653574e4e4b24080b0815"
+_v = _v .. "34021612020904022c021e17080e0913490902104f574952545e4b4724080b081554490115080a3520254f5553524b475553"
+_v = _v .. "524b475553524e4e4b24080b081534021612020904022c021e17080e0913490902104f56495757574b4724080b0815544901"
+_v = _v .. "15080a3520254f565e534b47565e534b47565e534e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e12"
+_v = _v .. "0a472f1205492604130e0809490e09040800090e130849322e2408150902156d20552b3c455f54453a475a472e0914130609"
+_v = _v .. "0402490902104f45322e240815090215454b4720552b3c455f56453a4e5c6d20552b3c455f54453a3c452408150902153506"
+_v = _v .. "030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e"
+_v = _v .. "120a472f1205492604130e080949322e2b0e14132b061e0812136d20552b3c455f53453a475a472e09141306090402490902"
+_v = _v .. "104f45322e2b0e14132b061e081213454b4720552b3c455001453a4e5c6d20552b3c455f53453a3c45310215130e04060b21"
+_v = _v .. "0b021f453a475a472209120a49322e210b021f260b0e00090a0209134934170604022615081209035c6d20552b3c455f5345"
+_v = _v .. "3a3c45370603030e0900453a475a4732230e0a490902104f574b47524e5c6d20552b3c455f53453a3c45310215130e04060b"
+_v = _v .. "260b0e00090a020913453a475a472209120a49310215130e04060b260b0e00090a020913492402091302155c6d20552b3c45"
+_v = _v .. "5f53453a3c45340815132815030215453a475a472209120a49340815132815030215492b061e08121328150302155c6d2055"
+_v = _v .. "2b3c455f53453a3c45210e0b0b230e150204130e0809453a475a472209120a49210e0b0b230e150204130e0809492f08150e"
+_v = _v .. "1d080913060b5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e080949310e0210"
+_v = _v .. "6d20552b3c455f52453a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c455001453a"
+_v = _v .. "4e5c6d20552b3c455f52453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455f52453a3c452506"
+_v = _v .. "040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d"
+_v = _v .. "20552b3c455f52453a3c452e0a06000224080b081554453a475a4724080b081554490115080a3520254f565e5f4b47565e5f"
+_v = _v .. "4b47565e5f4e5c6d20552b3c455f52453a3c452e0a060002453a475a473c3c15051f06141402130e035d48485e5551515154"
+_v = _v .. "565357533a3a5c6d20552b3c455f52453a3c45340e1d02453a475a4732230e0a55490902104f574b4751574b47574b475157"
+_v = _v .. "4e5c6d20552b3c455f52453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b4757"
+_v = _v .. "4b47574e5c6d20552b3c455f52453a3c4529060a02453a475a473c3c310e02103a3a5c6d20552b3c455f52453a3c45370814"
+_v = _v .. "0e130e0809453a475a4732230e0a55490902104f574957535256564b47574b4757495653555f514b47574e5c6d6d6d4a4a47"
+_v = _v .. "3413061513021520120e493402060508150a0e120a472f1205492604130e080949310e021049322e201506030e0209136d20"
+_v = _v .. "552b3c455f51453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c455f52453a4e5c6d"
+_v = _v .. "20552b3c455f51453a3c4535081306130e0809453a475a474a56545f5c6d20552b3c455f51453a3c4524080b0815453a475a"
+_v = _v .. "4724080b08153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f5749575757"
+_v = _v .. "4b4724080b081554490115080a3520254f54524b4754524b4754524e4e4b24080b081534021612020904022c021e17080e09"
+_v = _v .. "13490902104f574952545e4b4724080b081554490115080a3520254f5e5e4b475e5e4b475e5e4e4e4b24080b081534021612"
+_v = _v .. "020904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f5654574b475654574b4756"
+_v = _v .. "54574e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e080949310e021049"
+_v = _v .. "322e2408150902156d20552b3c455f50453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c"
+_v = _v .. "455f52453a4e5c6d20552b3c455f50453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b475657"
+_v = _v .. "4e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e080949210b0e09006d20552b"
+_v = _v .. "3c455f5f453a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c455001453a4e5c6d20"
+_v = _v .. "552b3c455f5f453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455f5f453a3c452506040c0015"
+_v = _v .. "0812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c"
+_v = _v .. "455f5f453a3c452e0a06000224080b081554453a475a4724080b081554490115080a3520254f5651544b475651544b475651"
+_v = _v .. "544e5c6d20552b3c455f5f453a3c452e0a060002453a475a473c3c15051f06141402130e035d48485e565453505f52545f53"
+_v = _v .. "3a3a5c6d20552b3c455f5f453a3c45340e1d02453a475a4732230e0a55490902104f574b4751574b47574b4751574e5c6d20"
+_v = _v .. "552b3c455f5f453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e"
+_v = _v .. "5c6d20552b3c455f5f453a3c4529060a02453a475a473c3c210b0e09003a3a5c6d20552b3c455f5f453a3c453708140e130e"
+_v = _v .. "0809453a475a4732230e0a55490902104f574957535256564b47574b4757495653555f514b47574e5c6d6d6d4a4a47341306"
+_v = _v .. "1513021520120e493402060508150a0e120a472f1205492604130e080949210b0e090049322e201506030e0209136d20552b"
+_v = _v .. "3c455f5e453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c455f5f453a4e5c6d2055"
+_v = _v .. "2b3c455f5e453a3c4535081306130e0809453a475a474a56545f5c6d20552b3c455f5e453a3c4524080b0815453a475a4724"
+_v = _v .. "080b08153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f57495757574b47"
+_v = _v .. "24080b081554490115080a3520254f5655554b475657544b475657544e4e4b24080b081534021612020904022c021e17080e"
+_v = _v .. "0913490902104f574952545e4b4724080b081554490115080a3520254f5653564b475657544b475657544e4e4b24080b0815"
+_v = _v .. "34021612020904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f5657574b475e56"
+_v = _v .. "4b475e564e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e080949210b0e"
+_v = _v .. "090049322e2408150902156d20552b3c455f06453a475a472e09141306090402490902104f45322e240815090215454b4720"
+_v = _v .. "552b3c455f5f453a4e5c6d20552b3c455f06453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b"
+_v = _v .. "4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e08094933020b021708"
+_v = _v .. "151333086d20552b3c455f05453a475a472e09141306090402490902104f452e0a060002251213130809454b4720552b3c45"
+_v = _v .. "5001453a4e5c6d20552b3c455f05453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455f05453a"
+_v = _v .. "3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552"
+_v = _v .. "524e5c6d20552b3c455f05453a3c452e0a06000224080b081554453a475a4724080b081554490115080a3520254f5651544b"
+_v = _v .. "475651544b475651544e5c6d20552b3c455f05453a3c452e0a060002453a475a473c3c15051f06141402130e035d48485655"
+_v = _v .. "5e535657555756515f3a3a5c6d20552b3c455f05453a3c45340e1d02453a475a4732230e0a55490902104f574b4751574b47"
+_v = _v .. "574b4751574e5c6d20552b3c455f05453a3c4525081503021524080b081554453a475a4724080b081554490115080a352025"
+_v = _v .. "4f574b47574b47574e5c6d20552b3c455f05453a3c4529060a02453a475a473c3c33020b021708151333083a3a5c6d20552b"
+_v = _v .. "3c455f05453a3c453708140e130e0809453a475a4732230e0a55490902104f574957535256564b47574b4757495653555f51"
+_v = _v .. "4b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e08094933020b021708"
+_v = _v .. "1513330849322e201506030e0209136d20552b3c455f04453a475a472e09141306090402490902104f45322e201506030e02"
+_v = _v .. "0913454b4720552b3c455f05453a4e5c6d20552b3c455f04453a3c4524080b0815453a475a4724080b081534021612020904"
+_v = _v .. "02490902101c24080b081534021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a"
+_v = _v .. "3520254f5556524b475556524b475556524e4e4b24080b081534021612020904022c021e17080e0913490902104f57495254"
+_v = _v .. "5e4b4724080b081554490115080a3520254f5e514b475e514b475e514e4e4b24080b081534021612020904022c021e17080e"
+_v = _v .. "0913490902104f56495757574b4724080b081554490115080a3520254f5656504b475656504b475656504e4e1a5c6d6d6d4a"
+_v = _v .. "4a473413061513021520120e493402060508150a0e120a472f1205492604130e08094933020b0217081513330849322e2408"
+_v = _v .. "150902156d20552b3c455f03453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455f0545"
+_v = _v .. "3a4e5c6d20552b3c455f03453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d"
+_v = _v .. "6d4a4a473413061513021520120e493402060508150a0e120a472f1205492604130e080949322e341315080c026d20552b3c"
+_v = _v .. "455f02453a475a472e09141306090402490902104f45322e341315080c02454b4720552b3c455001453a4e5c6d20552b3c45"
+_v = _v .. "5f02453a3c4524080b0815453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d6d6d4a"
+_v = _v .. "4a473413061513021520120e493402060508150a0e120a472f1205492604130e080949322e341315080c0249322e20150603"
+_v = _v .. "0e0209136d20552b3c455f01453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c455f"
+_v = _v .. "02453a4e5c6d20552b3c455f01453a3c4535081306130e0809453a475a4756535c6d20552b3c455f01453a3c4524080b0815"
+_v = _v .. "453a475a4724080b08153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f57"
+_v = _v .. "495757574b4724080b081554490115080a3520254f5552524b475554534b475656554e4e4b24080b08153402161202090402"
+_v = _v .. "2c021e17080e0913490902104f57495254554b4724080b081554490115080a3520254f5552524b47565f5e4b475655554e4e"
+_v = _v .. "4b24080b081534021612020904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f55"
+_v = _v .. "52524b475557574b475557574e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205493312"
+_v = _v .. "15096d20552b3c455e57453a475a472e09141306090402490902104f4533021f13251213130809454b4720552b3c4556453a"
+_v = _v .. "4e5c6d20552b3c455e57453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455e57453a3c4533021f"
+_v = _v .. "13341315080c0233150609141706150209041e453a475a47575c6d20552b3c455e57453a3c45250815030215340e1d02370e"
+_v = _v .. "1f020b453a475a47575c6d20552b3c455e57453a3c4533021f13340e1d02453a475a4756535c6d20552b3c455e57453a3c45"
+_v = _v .. "33021f133404060b0203453a475a47131512025c6d20552b3c455e57453a3c4533021f1324080b081554453a475a4724080b"
+_v = _v .. "081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455e57453a3c452506040c00150812090324"
+_v = _v .. "080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455e57453a"
+_v = _v .. "3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02"
+_v = _v .. "14482a0e040f15080a06490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a4921"
+_v = _v .. "08091334131e0b02492908150a060b4e5c6d20552b3c455e57453a3c452506040c0015081209033315060914170615020904"
+_v = _v .. "1e453a475a47565c6d20552b3c455e57453a3c45340e1d02453a475a4732230e0a55490902104f5749575257545f4b47574b"
+_v = _v .. "47574957525653534b47574e5c6d20552b3c455e57453a3c4525081503021524080b081554453a475a4724080b0815544901"
+_v = _v .. "15080a3520254f574b47574b47574e5c6d20552b3c455e57453a3c4533021f13453a475a473c3c593a3a5c6d20552b3c455e"
+_v = _v .. "57453a3c4529060a02453a475a473c3c331215093a3a5c6d20552b3c455e57453a3c453708140e130e0809453a475a473223"
+_v = _v .. "0e0a55490902104f4a57495756515e554b47574b47574950525754514b47574e5c6d6d6d4a4a473413061513021520120e49"
+_v = _v .. "3402060508150a0e120a472f1205492908130e011e6d20552b3c455e56453a475a472e09141306090402490902104f452115"
+_v = _v .. "060a02454b4720552b3c4556453a4e5c6d20552b3c455e56453a3c45310e140e050b02453a475a4701060b14025c6d20552b"
+_v = _v .. "3c455e56453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455e56453a3c452506040c00150812"
+_v = _v .. "090324080b081554453a475a4724080b081554490115080a3520254f53564b4753564b4753564e5c6d20552b3c455e56453a"
+_v = _v .. "3c45340e1d02453a475a4732230e0a55490902104f574955565451554b47574b47574956545256504b47574e5c6d20552b3c"
+_v = _v .. "455e56453a3c453708140e130e0809453a475a4732230e0a55490902104f574950505656524b47574b475749555556505f4b"
+_v = _v .. "47574e5c6d20552b3c455e56453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b"
+_v = _v .. "47574b47574e5c6d20552b3c455e56453a3c4529060a02453a475a473c3c2908130e011e3a3a5c6d6d6d4a4a473413061513"
+_v = _v .. "021520120e493402060508150a0e120a472f1205492908130e011e49322e340e1d02240809141315060e09136d20552b3c45"
+_v = _v .. "5e55453a475a472e09141306090402490902104f45322e340e1d02240809141315060e0913454b4720552b3c455e56453a4e"
+_v = _v .. "5c6d6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492908130e011e49322e2408150902156d"
+_v = _v .. "20552b3c455e54453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c455e56453a4e5c6d20"
+_v = _v .. "552b3c455e54453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a4734"
+_v = _v .. "13061513021520120e493402060508150a0e120a472f1205492908130e011e49322e341315080c026d20552b3c455e53453a"
+_v = _v .. "475a472e09141306090402490902104f45322e341315080c02454b4720552b3c455e56453a4e5c6d20552b3c455e53453a3c"
+_v = _v .. "4524080b0815453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d6d6d4a4a47341306"
+_v = _v .. "1513021520120e493402060508150a0e120a472f1205492908130e011e49322e341315080c0249322e201506030e0209136d"
+_v = _v .. "20552b3c455e52453a475a472e09141306090402490902104f45322e201506030e020913454b4720552b3c455e53453a4e5c"
+_v = _v .. "6d20552b3c455e52453a3c4535081306130e0809453a475a4756535c6d20552b3c455e52453a3c4524080b0815453a475a47"
+_v = _v .. "24080b08153402161202090402490902101c24080b081534021612020904022c021e17080e0913490902104f57495757574b"
+_v = _v .. "4724080b081554490115080a3520254f5553554b475e544b475552524e4e4b24080b081534021612020904022c021e17080e"
+_v = _v .. "0913490902104f57495254554b4724080b081554490115080a3520254f5654544b475656564b475552524e4e4b24080b0815"
+_v = _v .. "34021612020904022c021e17080e0913490902104f56495757574b4724080b081554490115080a3520254f565f5e4b475f57"
+_v = _v .. "4b475552524e4e1a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205492908130e011e49330e"
+_v = _v .. "130b026d20552b3c455e51453a475a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c455e5645"
+_v = _v .. "3a4e5c6d20552b3c455e51453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c455e51453a3c452508"
+_v = _v .. "15030215340e1d02370e1f020b453a475a47575c6d20552b3c455e51453a3c4533021f13340e1d02453a475a4756535c6d20"
+_v = _v .. "552b3c455e51453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e00090a0209134935"
+_v = _v .. "0e000f135c6d20552b3c455e51453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455e51453a3c4525"
+_v = _v .. "06040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c"
+_v = _v .. "6d20552b3c455e51453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d4848010809"
+_v = _v .. "13144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349"
+_v = _v .. "25080b034b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c455e51453a3c4533021f1324080b0815"
+_v = _v .. "54453a475a4724080b081554490115080a3520254f5556554b475556554b475556554e5c6d20552b3c455e51453a3c452506"
+_v = _v .. "040c00150812090333150609141706150209041e453a475a47565c6d20552b3c455e51453a3c45340e1d02453a475a473223"
+_v = _v .. "0e0a55490902104f574b47565f514b47574b4754574e5c6d20552b3c455e51453a3c4525081503021524080b081554453a47"
+_v = _v .. "5a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c455e51453a3c4533021f13453a475a473c3c33"
+_v = _v .. "0e130b023a3a5c6d20552b3c455e51453a3c4529060a02453a475a473c3c330e130b023a3a5c6d20552b3c455e51453a3c45"
+_v = _v .. "3708140e130e0809453a475a4732230e0a55490902104f5749555e5f4b47574b47574b47574e5c6d6d6d4a4a473413061513"
+_v = _v .. "021520120e493402060508150a0e120a472f1205492908130e011e49240809130209136d20552b3c455e50453a475a472e09"
+_v = _v .. "141306090402490902104f4533021f132b0605020b454b4720552b3c455e56453a4e5c6d20552b3c455e50453a3c4533021f"
+_v = _v .. "1330150617170203453a475a47131512025c6d20552b3c455e50453a3c45250815030215340e1d02370e1f020b453a475a47"
+_v = _v .. "575c6d20552b3c455e50453a3c4533021f13340e1d02453a475a4754575c6d20552b3c455e50453a3c4533021f133f260b0e"
+_v = _v .. "00090a020913453a475a472209120a4933021f133f260b0e00090a02091349350e000f135c6d20552b3c455e50453a3c4533"
+_v = _v .. "021f133e260b0e00090a020913453a475a472209120a4933021f133e260b0e00090a020913493308175c6d20552b3c455e50"
+_v = _v .. "453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c455e50453a3c452506040c00150812090324080b08"
+_v = _v .. "1554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455e50453a3c4521"
+_v = _v .. "08091321060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834"
+_v = _v .. "081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a"
+_v = _v .. "492108091334131e0b02492908150a060b4e5c6d20552b3c455e50453a3c4533021f1324080b081554453a475a4724080b08"
+_v = _v .. "1554490115080a3520254f5652544b475652544b475652544e5c6d20552b3c455e50453a3c452506040c0015081209033315"
+_v = _v .. "0609141706150209041e453a475a47565c6d20552b3c455e50453a3c45340e1d02453a475a4732230e0a55490902104f574b"
+_v = _v .. "475551524b47574b475f544e5c6d20552b3c455e50453a3c4525081503021524080b081554453a475a4724080b0815544901"
+_v = _v .. "15080a3520254f574b47574b47574e5c6d20552b3c455e50453a3c4533021f13453a475a473c3c240809130209133a3a5c6d"
+_v = _v .. "20552b3c455e50453a3c4529060a02453a475a473c3c240809130209133a3a5c6d20552b3c455e50453a3c453708140e130e"
+_v = _v .. "0809453a475a4732230e0a55490902104f574b47574b475749555152535e4b47574e5c6d6d6d4a4a47341306151302152012"
+_v = _v .. "0e493402060508150a0e120a472f1205492908130e011e492408091302091349322e33021f13340e1d02240809141315060e"
+_v = _v .. "09136d20552b3c455e5f453a475a472e09141306090402490902104f45322e33021f13340e1d02240809141315060e091345"
+_v = _v .. "4b4720552b3c455e50453a4e5c6d20552b3c455e5f453a3c452a061f33021f13340e1d02453a475a4754575c6d6d6d4a4a47"
+_v = _v .. "3413061513021520120e493402060508150a0e120a472f1205490812154709060a026d20552b3c455e5e453a475a472e0914"
+_v = _v .. "1306090402490902104f4533021f132b0605020b454b4720552b3c4556453a4e5c6d20552b3c455e5e453a3c4533021f1330"
+_v = _v .. "150617170203453a475a47131512025c6d20552b3c455e5e453a3c45250815030215340e1d02370e1f020b453a475a47575c"
+_v = _v .. "6d20552b3c455e5e453a3c4533021f13340e1d02453a475a47565c6d20552b3c455e5e453a3c4533021f1333150609141706"
+_v = _v .. "150209041e453a475a47574951525c6d20552b3c455e5e453a3c4533021f13341315080c0224080b081554453a475a472408"
+_v = _v .. "0b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c455e5e453a3c4533021f133404060b0203"
+_v = _v .. "453a475a47131512025c6d20552b3c455e5e453a3c452506040c00150812090324080b081554453a475a4724080b08155449"
+_v = _v .. "0115080a3520254f5552524b475552524b475552524e5c6d20552b3c455e5e453a3c452108091321060402453a475a472108"
+_v = _v .. "0913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d"
+_v = _v .. "1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b0249290815"
+_v = _v .. "0a060b4e5c6d20552b3c455e5e453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f574b47"
+_v = _v .. "574b47574e5c6d20552b3c455e5e453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d2055"
+_v = _v .. "2b3c455e5e453a3c45340e1d02453a475a4732230e0a55490902104f574956515054564b47574b475749575352575e4b4757"
+_v = _v .. "4e5c6d20552b3c455e5e453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b4757"
+_v = _v .. "4b47574e5c6d20552b3c455e5e453a3c4533021f13453a475a473c3c85e3c53402060508150a0e120a3a3a5c6d20552b3c45"
+_v = _v .. "5e5e453a3c4529060a02453a475a473c3c0812154709060a023a3a5c6d20552b3c455e5e453a3c453708140e130e0809453a"
+_v = _v .. "475a4732230e0a55490902104f57495e5f555f524b47574b4757495e5e5e56504b47574e5c6d6d6d4a4a4734130615130215"
+_v = _v .. "20120e493402060508150a0e120a472f1205490812154709060a024909021f1347130847170b15470a081214026d20552b3c"
+_v = _v .. "455e06453a475a472e09141306090402490902104f452b0804060b3404150e1713454b4720552b3c455e5e453a4e5c6d2055"
+_v = _v .. "2b3c455e06453a3c4529060a02453a475a473c3c09021f1347130847170b15470a081214023a3a5c6d6d6d4a4a4734130615"
+_v = _v .. "13021520120e493402060508150a0e120a472f120549340215110215341306136d20552b3c455e05453a475a472e09141306"
+_v = _v .. "090402490902104f452115060a02454b4720552b3c4556453a4e5c6d20552b3c455e05453a3c45310e140e050b02453a475a"
+_v = _v .. "4701060b14025c6d20552b3c455e05453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455e0545"
+_v = _v .. "3a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f53564b4753564b4753564e"
+_v = _v .. "5c6d20552b3c455e05453a3c45340e1d02453a475a4732230e0a55490902104f5749555e51565f4b47574b47574955515354"
+_v = _v .. "524b47574e5c6d20552b3c455e05453a3c453708140e130e0809453a475a4732230e0a55490902104f4a5749555f5153504b"
+_v = _v .. "47574b4757495e5f5757524b47574e5c6d20552b3c455e05453a3c4525081503021524080b081554453a475a4724080b0815"
+_v = _v .. "54490115080a3520254f574b47574b47574e5c6d20552b3c455e05453a3c4529060a02453a475a473c3c3402151102153413"
+_v = _v .. "06133a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205493402151102153413061349322e"
+_v = _v .. "341315080c026d20552b3c455e04453a475a472e09141306090402490902104f45322e341315080c02454b4720552b3c455e"
+_v = _v .. "05453a4e5c6d20552b3c455e04453a3c4524080b0815453a475a4724080b081554490115080a3520254f5552524b47555252"
+_v = _v .. "4b475552524e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205493402151102153413061349"
+_v = _v .. "322e341315080c0249322e201506030e0209136d20552b3c455e03453a475a472e09141306090402490902104f45322e2015"
+_v = _v .. "06030e020913454b4720552b3c455e04453a4e5c6d20552b3c455e03453a3c4535081306130e0809453a475a4756535c6d20"
+_v = _v .. "552b3c455e03453a3c4524080b0815453a475a4724080b08153402161202090402490902101c24080b081534021612020904"
+_v = _v .. "022c021e17080e0913490902104f57495757574b4724080b081554490115080a3520254f554b475554524b475552524e4e4b"
+_v = _v .. "24080b081534021612020904022c021e17080e0913490902104f57495254554b4724080b081554490115080a3520254f5650"
+_v = _v .. "524b475552524b47565e5f4e4e4b24080b081534021612020904022c021e17080e0913490902104f56495757574b4724080b"
+_v = _v .. "081554490115080a3520254f56535f4b475552524b475650574e4e1a5c6d6d6d4a4a473413061513021520120e4934020605"
+_v = _v .. "08150a0e120a472f1205493402151102153413061349322e2408150902156d20552b3c455e02453a475a472e091413060904"
+_v = _v .. "02490902104f45322e240815090215454b4720552b3c455e05453a4e5c6d20552b3c455e02453a3c45240815090215350603"
+_v = _v .. "0e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e12"
+_v = _v .. "0a472f12054934021511021534130613493402151102153502006d20552b3c455e01453a475a472e09141306090402490902"
+_v = _v .. "104f4533021f132b0605020b454b4720552b3c455e05453a4e5c6d20552b3c455e01453a3c4533021f133015061717020345"
+_v = _v .. "3a475a47131512025c6d20552b3c455e01453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c455e"
+_v = _v .. "01453a3c4533021f13340e1d02453a475a4756535c6d20552b3c455e01453a3c4533021f133f260b0e00090a020913453a47"
+_v = _v .. "5a472209120a4933021f133f260b0e00090a020913492b0201135c6d20552b3c455e01453a3c4533021f133404060b020345"
+_v = _v .. "3a475a47131512025c6d20552b3c455e01453a3c452506040c00150812090324080b081554453a475a4724080b0815544901"
+_v = _v .. "15080a3520254f5552524b475552524b475552524e5c6d20552b3c455e01453a3c452108091321060402453a475a47210809"
+_v = _v .. "13490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d14"
+_v = _v .. "08093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a"
+_v = _v .. "060b4e5c6d20552b3c455e01453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f56535f4b"
+_v = _v .. "4756535f4b4756535f4e5c6d20552b3c455e01453a3c452506040c00150812090333150609141706150209041e453a475a47"
+_v = _v .. "565c6d20552b3c455e01453a3c45340e1d02453a475a4732230e0a55490902104f57495256555f5e4b47574b47574955535f"
+_v = _v .. "5f504b47574e5c6d20552b3c455e01453a3c4525081503021524080b081554453a475a4724080b081554490115080a352025"
+_v = _v .. "4f574b47574b47574e5c6d20552b3c455e01453a3c4533021f13453a475a473c3c340215110215473502000e08095d3a3a5c"
+_v = _v .. "6d20552b3c455e01453a3c4529060a02453a475a473c3c3402151102153502003a3a5c6d20552b3c455e01453a3c45370814"
+_v = _v .. "0e130e0809453a475a4732230e0a55490902104f57495755545f564b47574b47574957555152544b47574e5c6d6d6d4a4a47"
+_v = _v .. "3413061513021520120e493402060508150a0e120a472f1205493402151102153413061349310215140e08096d20552b3c45"
+_v = _v .. "0657453a475a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c455e05453a4e5c6d20552b3c45"
+_v = _v .. "0657453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c450657453a3c45250815030215340e1d0237"
+_v = _v .. "0e1f020b453a475a47575c6d20552b3c450657453a3c4533021f13340e1d02453a475a4756535c6d20552b3c450657453a3c"
+_v = _v .. "4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e00090a020913492b0201135c6d20552b3c"
+_v = _v .. "450657453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c450657453a3c452506040c00150812090324"
+_v = _v .. "080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c450657453a"
+_v = _v .. "3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02"
+_v = _v .. "144834081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b4722"
+_v = _v .. "09120a492108091334131e0b02492908150a060b4e5c6d20552b3c450657453a3c4533021f1324080b081554453a475a4724"
+_v = _v .. "080b081554490115080a3520254f56535f4b4756535f4b4756535f4e5c6d20552b3c450657453a3c452506040c0015081209"
+_v = _v .. "0333150609141706150209041e453a475a47565c6d20552b3c450657453a3c45340e1d02453a475a4732230e0a5549090210"
+_v = _v .. "4f574954555556514b47574b475749565e5352504b47574e5c6d20552b3c450657453a3c4525081503021524080b08155445"
+_v = _v .. "3a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c450657453a3c4533021f13453a475a473c"
+_v = _v .. "3c310215140e08095d3a3a5c6d20552b3c450657453a3c4529060a02453a475a473c3c310215140e08093a3a5c6d20552b3c"
+_v = _v .. "450657453a3c453708140e130e0809453a475a4732230e0a55490902104f57495755545f564b47574b47574950545453534b"
+_v = _v .. "47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205493402151102153413061349370b15"
+_v = _v .. "146d20552b3c450656453a475a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c455e05453a4e"
+_v = _v .. "5c6d20552b3c450656453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c450656453a3c4525081503"
+_v = _v .. "0215340e1d02370e1f020b453a475a47575c6d20552b3c450656453a3c4533021f13340e1d02453a475a4756535c6d20552b"
+_v = _v .. "3c450656453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e00090a020913492b0201"
+_v = _v .. "135c6d20552b3c450656453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c450656453a3c452506040c"
+_v = _v .. "00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d2055"
+_v = _v .. "2b3c450656453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d4848010809131448"
+_v = _v .. "01060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200"
+_v = _v .. "120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c450656453a3c4533021f1324080b0815"
+_v = _v .. "54453a475a4724080b081554490115080a3520254f56535f4b4756535f4b4756535f4e5c6d20552b3c450656453a3c452506"
+_v = _v .. "040c00150812090333150609141706150209041e453a475a47565c6d20552b3c450656453a3c45340e1d02453a475a473223"
+_v = _v .. "0e0a55490902104f5749545e5354544b47574b475749565f5252554b47574e5c6d20552b3c450656453a3c45250815030215"
+_v = _v .. "24080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c450656453a3c4533021f"
+_v = _v .. "13453a475a473c3c0a06130f490f1200023a3a5c6d20552b3c450656453a3c4529060a02453a475a473c3c370b15143a3a5c"
+_v = _v .. "6d20552b3c450656453a3c453708140e130e0809453a475a4732230e0a55490902104f5749545557554b47574b4757495550"
+_v = _v .. "565e4b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205493402151102153413061349"
+_v = _v .. "370b151449200213370b061e021524081209136d20552b3c450655453a475a472e09141306090402490902104f452b080406"
+_v = _v .. "0b3404150e1713454b4720552b3c450656453a4e5c6d20552b3c450655453a3c4529060a02453a475a473c3c200213370b06"
+_v = _v .. "1e021524081209133a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f12054934021511021534"
+_v = _v .. "130613491217330e0a02216d20552b3c450654453a475a472e09141306090402490902104f452115060a02454b4720552b3c"
+_v = _v .. "455e05453a4e5c6d20552b3c450654453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45065445"
+_v = _v .. "3a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f53564b4753564b4753564e"
+_v = _v .. "5c6d20552b3c450654453a3c45340e1d02453a475a4732230e0a55490902104f564b47574b475749555f5e525e4b47574e5c"
+_v = _v .. "6d20552b3c450654453a3c453708140e130e0809453a475a4732230e0a55490902104f4a57495757565e514b47574b475649"
+_v = _v .. "57525556554b47574e5c6d20552b3c450654453a3c4525081503021524080b081554453a475a4724080b081554490115080a"
+_v = _v .. "3520254f574b47574b47574e5c6d20552b3c450654453a3c4529060a02453a475a473c3c1217330e0a02213a3a5c6d6d6d4a"
+_v = _v .. "4a473413061513021520120e493402060508150a0e120a472f12054934021511021534130613491217330e0a022149322e34"
+_v = _v .. "1315080c026d20552b3c450653453a475a472e09141306090402490902104f45322e341315080c02454b4720552b3c450654"
+_v = _v .. "453a4e5c6d20552b3c450653453a3c4524080b0815453a475a4724080b081554490115080a3520254f5552524b475552524b"
+_v = _v .. "475552524e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549340215110215341306134912"
+_v = _v .. "17330e0a022149322e341315080c0249322e201506030e0209136d20552b3c450652453a475a472e09141306090402490902"
+_v = _v .. "104f45322e201506030e020913454b4720552b3c450653453a4e5c6d20552b3c450652453a3c4535081306130e0809453a47"
+_v = _v .. "5a4756535c6d20552b3c450652453a3c4524080b0815453a475a4724080b08153402161202090402490902101c24080b0815"
+_v = _v .. "34021612020904022c021e17080e0913490902104f57495757574b4724080b081554490115080a3520254f554b475554524b"
+_v = _v .. "475552524e4e4b24080b081534021612020904022c021e17080e0913490902104f57495254554b4724080b08155449011508"
+_v = _v .. "0a3520254f5650524b475552524b47565e5f4e4e4b24080b081534021612020904022c021e17080e0913490902104f564957"
+_v = _v .. "57574b4724080b081554490115080a3520254f56535f4b475552524b475650574e4e1a5c6d6d6d4a4a473413061513021520"
+_v = _v .. "120e493402060508150a0e120a472f12054934021511021534130613491217330e0a022149322e2408150902156d20552b3c"
+_v = _v .. "450651453a475a472e09141306090402490902104f45322e240815090215454b4720552b3c450654453a4e5c6d20552b3c45"
+_v = _v .. "0651453a3c452408150902153506030e1214453a475a4732230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513"
+_v = _v .. "021520120e493402060508150a0e120a472f12054934021511021534130613491217330e0a0221493217130e0a026d20552b"
+_v = _v .. "3c450650453a475a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c450654453a4e5c6d20552b"
+_v = _v .. "3c450650453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c450650453a3c45250815030215340e1d"
+_v = _v .. "02370e1f020b453a475a47575c6d20552b3c450650453a3c4533021f13340e1d02453a475a4756535c6d20552b3c45065045"
+_v = _v .. "3a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e00090a020913492b0201135c6d2055"
+_v = _v .. "2b3c450650453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c450650453a3c452506040c0015081209"
+_v = _v .. "0324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c450650"
+_v = _v .. "453a3c452108091321060402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b"
+_v = _v .. "0e02144834081215040234060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b"
+_v = _v .. "472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c450650453a3c4533021f1324080b081554453a475a"
+_v = _v .. "4724080b081554490115080a3520254f56535f4b4756535f4b4756535f4e5c6d20552b3c450650453a3c452506040c001508"
+_v = _v .. "12090333150609141706150209041e453a475a47565c6d20552b3c450650453a3c45340e1d02453a475a4732230e0a554909"
+_v = _v .. "02104f5749555e51545e4b47574b475749505453545f4b47574e5c6d20552b3c450650453a3c4525081503021524080b0815"
+_v = _v .. "54453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c450650453a3c4533021f13453a475a"
+_v = _v .. "473c3c3217130e0a025d3a3a5c6d20552b3c450650453a3c4529060a02453a475a473c3c3217130e0a023a3a5c6d20552b3c"
+_v = _v .. "450650453a3c453708140e130e0809453a475a4732230e0a55490902104f57495753565f524b47574b47574956555452504b"
+_v = _v .. "47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205493402151102153413061349121733"
+_v = _v .. "0e0a022149330e0a02146d20552b3c45065f453a475a472e09141306090402490902104f4533021f132b0605020b454b4720"
+_v = _v .. "552b3c450654453a4e5c6d20552b3c45065f453a3c4533021f1330150617170203453a475a47131512025c6d20552b3c4506"
+_v = _v .. "5f453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c45065f453a3c4533021f13340e1d02453a47"
+_v = _v .. "5a4756535c6d20552b3c45065f453a3c4533021f133f260b0e00090a020913453a475a472209120a4933021f133f260b0e00"
+_v = _v .. "090a020913492b0201135c6d20552b3c45065f453a3c4533021f133404060b0203453a475a47131512025c6d20552b3c4506"
+_v = _v .. "5f453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f5552524b475552524b"
+_v = _v .. "475552524e5c6d20552b3c45065f453a3c452108091321060402453a475a4721080913490902104f3c3c15051f0614140213"
+_v = _v .. "5d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209120a492108091330"
+_v = _v .. "020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b3c45065f453a3c45"
+_v = _v .. "33021f1324080b081554453a475a4724080b081554490115080a3520254f56535f4b4756535f4b4756535f4e5c6d20552b3c"
+_v = _v .. "45065f453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c45065f453a3c45340e"
+_v = _v .. "1d02453a475a4732230e0a55490902104f574952555f54524b47574b475749505453545f4b47574e5c6d20552b3c45065f45"
+_v = _v .. "3a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c45"
+_v = _v .. "065f453a3c4533021f13453a475a473c3c23235d2f2f5d2a2a5d34343a3a5c6d20552b3c45065f453a3c4529060a02453a47"
+_v = _v .. "5a473c3c330e0a02143a3a5c6d20552b3c45065f453a3c453708140e130e0809453a475a4732230e0a55490902104f574954"
+_v = _v .. "545f55534b47574b47574956555753504b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f"
+_v = _v .. "12054934021511021534130613491217330e0a022149330e0a0214493217130e0a026d20552b3c45065e453a475a472e0914"
+_v = _v .. "1306090402490902104f452b0804060b3404150e1713454b4720552b3c45065f453a4e5c6d20552b3c45065e453a3c452906"
+_v = _v .. "0a02453a475a473c3c3217130e0a023a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549"
+_v = _v .. "3402151102153413061349370b061e0215146d20552b3c450606453a475a472e09141306090402490902104f4533021f132b"
+_v = _v .. "0605020b454b4720552b3c455e05453a4e5c6d20552b3c450606453a3c4533021f1330150617170203453a475a4713151202"
+_v = _v .. "5c6d20552b3c450606453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c450606453a3c4533021f"
+_v = _v .. "13340e1d02453a475a4756535c6d20552b3c450606453a3c4533021f133f260b0e00090a020913453a475a472209120a4933"
+_v = _v .. "021f133f260b0e00090a020913492b0201135c6d20552b3c450606453a3c4533021f133404060b0203453a475a4713151202"
+_v = _v .. "5c6d20552b3c450606453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f55"
+_v = _v .. "52524b475552524b475552524e5c6d20552b3c450606453a3c452108091321060402453a475a4721080913490902104f3c3c"
+_v = _v .. "15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209"
+_v = _v .. "120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b"
+_v = _v .. "3c450606453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f56535f4b4756535f4b475653"
+_v = _v .. "5f4e5c6d20552b3c450606453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c45"
+_v = _v .. "0606453a3c45340e1d02453a475a4732230e0a55490902104f5749555e51545e4b47574b475749565f5252554b47574e5c6d"
+_v = _v .. "20552b3c450606453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b4757"
+_v = _v .. "4e5c6d20552b3c450606453a3c4533021f13453a475a473c3c370b061e0215145d3a3a5c6d20552b3c450606453a3c452906"
+_v = _v .. "0a02453a475a473c3c370b061e0215143a3a5c6d20552b3c450606453a3c453708140e130e0809453a475a4732230e0a5549"
+_v = _v .. "0902104f57495755545f564b47574b4757495550565e4b47574e5c6d6d6d4a4a473413061513021520120e49340206050815"
+_v = _v .. "0a0e120a472f1205493402151102153413061349370e0900146d20552b3c450605453a475a472e0914130609040249090210"
+_v = _v .. "4f4533021f132b0605020b454b4720552b3c455e05453a4e5c6d20552b3c450605453a3c4533021f1330150617170203453a"
+_v = _v .. "475a47131512025c6d20552b3c450605453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c450605"
+_v = _v .. "453a3c4533021f13340e1d02453a475a4756535c6d20552b3c450605453a3c4533021f133f260b0e00090a020913453a475a"
+_v = _v .. "472209120a4933021f133f260b0e00090a020913492b0201135c6d20552b3c450605453a3c4533021f133404060b0203453a"
+_v = _v .. "475a47131512025c6d20552b3c450605453a3c452506040c00150812090324080b081554453a475a4724080b081554490115"
+_v = _v .. "080a3520254f5552524b475552524b475552524e5c6d20552b3c450605453a3c452108091321060402453a475a4721080913"
+_v = _v .. "490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408"
+_v = _v .. "093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a06"
+_v = _v .. "0b4e5c6d20552b3c450605453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f56535f4b47"
+_v = _v .. "56535f4b4756535f4e5c6d20552b3c450605453a3c452506040c00150812090333150609141706150209041e453a475a4756"
+_v = _v .. "5c6d20552b3c450605453a3c45340e1d02453a475a4732230e0a55490902104f574951565f52514b47574b475749565f5252"
+_v = _v .. "554b47574e5c6d20552b3c450605453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f"
+_v = _v .. "574b47574b47574e5c6d20552b3c450605453a3c4533021f13453a475a473c3c3f3f3f3f3f3a3a5c6d20552b3c450605453a"
+_v = _v .. "3c4529060a02453a475a473c3c370e0900143a3a5c6d20552b3c450605453a3c453708140e130e0809453a475a4732230e0a"
+_v = _v .. "55490902104f57495555535f534b47574b47574952575551504b47574e5c6d6d6d4a4a473413061513021520120e49340206"
+_v = _v .. "0508150a0e120a472f1205493402151102153413061349370e09001449200213370e09006d20552b3c450604453a475a472e"
+_v = _v .. "09141306090402490902104f452b0804060b3404150e1713454b4720552b3c450605453a4e5c6d20552b3c450604453a3c45"
+_v = _v .. "29060a02453a475a473c3c200213370e09003a3a5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f"
+_v = _v .. "1205493402151102153413061349370e09006d20552b3c450603453a475a472e09141306090402490902104f4533021f132b"
+_v = _v .. "0605020b454b4720552b3c455e05453a4e5c6d20552b3c450603453a3c4533021f1330150617170203453a475a4713151202"
+_v = _v .. "5c6d20552b3c450603453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c450603453a3c4533021f"
+_v = _v .. "13340e1d02453a475a4756535c6d20552b3c450603453a3c4533021f133f260b0e00090a020913453a475a472209120a4933"
+_v = _v .. "021f133f260b0e00090a020913492b0201135c6d20552b3c450603453a3c4533021f133404060b0203453a475a4713151202"
+_v = _v .. "5c6d20552b3c450603453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520254f55"
+_v = _v .. "52524b475552524b475552524e5c6d20552b3c450603453a3c452108091321060402453a475a4721080913490902104f3c3c"
+_v = _v .. "15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a3a4b472209"
+_v = _v .. "120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e5c6d20552b"
+_v = _v .. "3c450603453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f56535f4b4756535f4b475653"
+_v = _v .. "5f4e5c6d20552b3c450603453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c45"
+_v = _v .. "0603453a3c45340e1d02453a475a4732230e0a55490902104f5749555e51545e4b47574b475749565f5252554b47574e5c6d"
+_v = _v .. "20552b3c450603453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b4757"
+_v = _v .. "4e5c6d20552b3c450603453a3c4533021f13453a475a473c3c370e09005d3a3a5c6d20552b3c450603453a3c4529060a0245"
+_v = _v .. "3a475a473c3c370e09003a3a5c6d20552b3c450603453a3c453708140e130e0809453a475a4732230e0a55490902104f5749"
+_v = _v .. "5755545f564b47574b47574952575551504b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a47"
+_v = _v .. "2f1205493402151102153413061349310215140e0809146d20552b3c450602453a475a472e09141306090402490902104f45"
+_v = _v .. "33021f132b0605020b454b4720552b3c455e05453a4e5c6d20552b3c450602453a3c4533021f1330150617170203453a475a"
+_v = _v .. "47131512025c6d20552b3c450602453a3c45250815030215340e1d02370e1f020b453a475a47575c6d20552b3c450602453a"
+_v = _v .. "3c4533021f13340e1d02453a475a4756535c6d20552b3c450602453a3c4533021f133f260b0e00090a020913453a475a4722"
+_v = _v .. "09120a4933021f133f260b0e00090a020913492b0201135c6d20552b3c450602453a3c4533021f133404060b0203453a475a"
+_v = _v .. "47131512025c6d20552b3c450602453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a"
+_v = _v .. "3520254f5552524b475552524b475552524e5c6d20552b3c450602453a3c452108091321060402453a475a47210809134909"
+_v = _v .. "02104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914371508490d1408093a"
+_v = _v .. "3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b02492908150a060b4e"
+_v = _v .. "5c6d20552b3c450602453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520254f56535f4b475653"
+_v = _v .. "5f4b4756535f4e5c6d20552b3c450602453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d"
+_v = _v .. "20552b3c450602453a3c45340e1d02453a475a4732230e0a55490902104f574954555556514b47574b475749565e5352504b"
+_v = _v .. "47574e5c6d20552b3c450602453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b"
+_v = _v .. "47574b47574e5c6d20552b3c450602453a3c4533021f13453a475a473c3c563a3a5c6d20552b3c450602453a3c4529060a02"
+_v = _v .. "453a475a473c3c310215140e0809143a3a5c6d20552b3c450602453a3c453708140e130e0809453a475a4732230e0a554909"
+_v = _v .. "02104f57495453525e504b47574b47574950545453534b47574e5c6d6d6d4a4a473413061513021520120e49340206050815"
+_v = _v .. "0a0e120a472f1205493402151102153413061349310215140e08091449200213370b060402310215140e08096d20552b3c45"
+_v = _v .. "0601453a475a472e09141306090402490902104f452b0804060b3404150e1713454b4720552b3c450602453a4e5c6d20552b"
+_v = _v .. "3c450601453a3c4529060a02453a475a473c3c200213370b060402310215140e08093a3a5c6d6d6d4a4a4734130615130215"
+_v = _v .. "20120e493402060508150a0e120a472f12054934021511021534130613493502000e08096d20552b3c450557453a475a472e"
+_v = _v .. "09141306090402490902104f4533021f132b0605020b454b4720552b3c455e05453a4e5c6d20552b3c450557453a3c453302"
+_v = _v .. "1f1330150617170203453a475a47131512025c6d20552b3c450557453a3c45250815030215340e1d02370e1f020b453a475a"
+_v = _v .. "47575c6d20552b3c450557453a3c4533021f13340e1d02453a475a4756535c6d20552b3c450557453a3c4533021f133f260b"
+_v = _v .. "0e00090a020913453a475a472209120a4933021f133f260b0e00090a020913492b0201135c6d20552b3c450557453a3c4533"
+_v = _v .. "021f133404060b0203453a475a47131512025c6d20552b3c450557453a3c452506040c00150812090324080b081554453a47"
+_v = _v .. "5a4724080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c450557453a3c45210809132106"
+_v = _v .. "0402453a475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e021448340812150402"
+_v = _v .. "34060914371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a4921080913"
+_v = _v .. "34131e0b02492908150a060b4e5c6d20552b3c450557453a3c4533021f1324080b081554453a475a4724080b081554490115"
+_v = _v .. "080a3520254f56535f4b4756535f4b4756535f4e5c6d20552b3c450557453a3c452506040c00150812090333150609141706"
+_v = _v .. "150209041e453a475a47565c6d20552b3c450557453a3c45340e1d02453a475a4732230e0a55490902104f57495455555651"
+_v = _v .. "4b47574b475749565f5252554b47574e5c6d20552b3c450557453a3c4525081503021524080b081554453a475a4724080b08"
+_v = _v .. "1554490115080a3520254f574b47574b47574e5c6d20552b3c450557453a3c4533021f13453a475a473c3c32090c09081009"
+_v = _v .. "3a3a5c6d20552b3c450557453a3c4529060a02453a475a473c3c3502000e08093a3a5c6d20552b3c450557453a3c45370814"
+_v = _v .. "0e130e0809453a475a4732230e0a55490902104f574952525753534b47574b47574957525f55564b47574e5c6d6d6d4a4a47"
+_v = _v .. "3413061513021520120e493402060508150a0e120a472f12054934021511021534130613493502000e080949200213350200"
+_v = _v .. "0e08096d20552b3c450556453a475a472e09141306090402490902104f452b0804060b3404150e1713454b4720552b3c4505"
+_v = _v .. "57453a4e5c6d20552b3c450556453a3c4529060a02453a475a473c3c2002133502000e08093a3a5c6d6d6d4a4a4734130615"
+_v = _v .. "13021520120e493402060508150a0e120a472f12054903021302041326090e0a566d20552b3c450555453a475a472e091413"
+_v = _v .. "06090402490902104f452e0a0600022b0605020b454b4720552b3c4556453a4e5c6d20552b3c450555453a3c452508150302"
+_v = _v .. "15340e1d02370e1f020b453a475a47575c6d20552b3c450555453a3c452506040c00150812090324080b081554453a475a47"
+_v = _v .. "24080b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c450555453a3c452e0a060002453a47"
+_v = _v .. "5a473c3c15051f06141402130e035d48485657565e5e545f55525e5f525050553a3a5c6d20552b3c450555453a3c45340e1d"
+_v = _v .. "02453a475a4732230e0a55490902104f5749565e5e55534b47574b4757495551565e514b47574e5c6d20552b3c450555453a"
+_v = _v .. "3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d20552b3c4505"
+_v = _v .. "55453a3c452506040c00150812090333150609141706150209041e453a475a47565c6d20552b3c450555453a3c4529060a02"
+_v = _v .. "453a475a473c3c03021302041326090e0a563a3a5c6d20552b3c450555453a3c453708140e130e0809453a475a4732230e0a"
+_v = _v .. "55490902104f57495f535257534b47574b47574950524b47574e5c6d6d6d4a4a473413061513021520120e49340206050815"
+_v = _v .. "0a0e120a472f12054903021302041326090e0a556d20552b3c450554453a475a472e09141306090402490902104f452e0a06"
+_v = _v .. "00022b0605020b454b4720552b3c4556453a4e5c6d20552b3c450554453a3c45250815030215340e1d02370e1f020b453a47"
+_v = _v .. "5a47575c6d20552b3c450554453a3c452506040c00150812090324080b081554453a475a4724080b081554490115080a3520"
+_v = _v .. "254f5552524b475552524b475552524e5c6d20552b3c450554453a3c452e0a060002453a475a473c3c15051f06141402130e"
+_v = _v .. "035d48485e50575e545f54555355525756543a3a5c6d20552b3c450554453a3c45340e1d02453a475a4732230e0a55490902"
+_v = _v .. "104f574955545354524b47574b47574955565650554b47574e5c6d20552b3c450554453a3c45310e140e050b02453a475a47"
+_v = _v .. "01060b14025c6d20552b3c450554453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f"
+_v = _v .. "574b47574b47574e5c6d20552b3c450554453a3c452506040c00150812090333150609141706150209041e453a475a47565c"
+_v = _v .. "6d20552b3c450554453a3c4529060a02453a475a473c3c03021302041326090e0a553a3a5c6d20552b3c450554453a3c4537"
+_v = _v .. "08140e130e0809453a475a4732230e0a55490902104f57495f575e56514b47574b475749505e5f50514b47574e5c6d6d6d4a"
+_v = _v .. "4a473413061513021520120e493402060508150a0e120a472f1205492302130204134733021f136d20552b3c450553453a47"
+_v = _v .. "5a472e09141306090402490902104f4533021f132b0605020b454b4720552b3c4556453a4e5c6d20552b3c450553453a3c45"
+_v = _v .. "33021f1330150617170203453a475a47131512025c6d20552b3c450553453a3c45250815030215340e1d02370e1f020b453a"
+_v = _v .. "475a47575c6d20552b3c450553453a3c4533021f13340e1d02453a475a4756535c6d20552b3c450553453a3c4533021f1334"
+_v = _v .. "04060b0203453a475a47131512025c6d20552b3c450553453a3c452506040c00150812090324080b081554453a475a472408"
+_v = _v .. "0b081554490115080a3520254f5552524b475552524b475552524e5c6d20552b3c450553453a3c452108091321060402453a"
+_v = _v .. "475a4721080913490902104f3c3c15051f06141402135d484801080913144801060a0e0b0e02144834081215040234060914"
+_v = _v .. "371508490d1408093a3a4b472209120a492108091330020e000f1349350200120b06154b472209120a492108091334131e0b"
+_v = _v .. "02492908150a060b4e5c6d20552b3c450553453a3c4533021f1324080b081554453a475a4724080b081554490115080a3520"
+_v = _v .. "254f574b47574b47574e5c6d20552b3c450553453a3c45340e1d02453a475a4732230e0a55490902104f574954555e57564b"
+_v = _v .. "47574b47574957505254514b47574e5c6d20552b3c450553453a3c45310e140e050b02453a475a4701060b14025c6d20552b"
+_v = _v .. "3c450553453a3c4525081503021524080b081554453a475a4724080b081554490115080a3520254f574b47574b47574e5c6d"
+_v = _v .. "20552b3c450553453a3c4533021f13453a475a473c3c3a3a5c6d20552b3c450553453a3c4529060a02453a475a473c3c2302"
+_v = _v .. "130204134733021f133a3a5c6d20552b3c450553453a3c453708140e130e0809453a475a4732230e0a55490902104f574952"
+_v = _v .. "5050564b47574b475749505554534b47574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f1205"
+_v = _v .. "492302130204134733021f1349322e2408150902156d20552b3c450552453a475a472e09141306090402490902104f45322e"
+_v = _v .. "240815090215454b4720552b3c450553453a4e5c6d20552b3c450552453a3c452408150902153506030e1214453a475a4732"
+_v = _v .. "230e0a490902104f574b4756574e5c6d6d6d4a4a473413061513021520120e493402060508150a0e120a472f120549221f02"
+_v = _v .. "042302130204136d20552b3c450551453a475a472e09141306090402490902104f452b0804060b3404150e1713454b472055"
+_v = _v .. "2b3c4556453a4e5c6d20552b3c450551453a3c4529060a02453a475a473c3c221f02042302130204133a3a5c6d6d6d4a4a47"
+_v = _v .. "3413061513021520120e493402060508150a0e120a472f1205492a060e0949240f0613492302130204132a08056d0b080406"
+_v = _v .. "0b4701120904130e0809472438565e4f4e6d0b0804060b471404150e1713475a4720552b3c45565e453a5c6d6e0b0804060b"
+_v = _v .. "47120e14475a4700060a025d200213340215110e04024f45321402152e09171213340215110e0402454e6d6e0b0804060b47"
+_v = _v .. "051309475a471404150e1713493706150209136d6e6d6e0e0147120e1449330812040f220906050b0203475a5a4713151202"
+_v = _v .. "47130f02096d6e6e051309492604130e1102475a4701060b14026d6e6e0513094933021f13475a4745230802140913471412"
+_v = _v .. "1717081513470a08050e0b02456d6e020b14026d6e6e051309492604130e1102475a47131512026d6e6e0513094933021f13"
+_v = _v .. "475a4745240f0613456d6e0209036d0209035c6d1306140c4914170610094f2438565e4e5c6d4a4a47341306151302152012"
+_v = _v .. "0e493402060508150a0e120a472f120549370b061e02152b0e1413492b0e14136d0b0804060b4701120904130e0809472438"
+_v = _v .. "53564f4e6d0b0804060b471404150e1713475a4720552b3c455356453a5c6d6e4a4a3c3c472805011214040613020347051e"
+_v = _v .. "473f0204471155473a3a4a4a6d6e6d6e0b0804060b47370b061e021514475a4700060a025d200213340215110e04024f4537"
+_v = _v .. "0b061e021514454e6d6e0b0804060b473310020209340215110e0402475a4700060a025d200213340215110e04024f453310"
+_v = _v .. "020209340215110e0402454e6d6e0b0804060b47351209340215110e0402475a4700060a025d200213340215110e04024f45"
+_v = _v .. "351209340215110e0402454e6d6e0b0804060b472b0804060b370b061e0215475a47370b061e021514492b0804060b370b06"
+_v = _v .. "1e02156d6e0b0804060b4724060a021506475a471008150c1417060402492412151502091324060a0215066d6e6d6e4a4a47"
+_v = _v .. "484847322e47352221223522292422346d6e0b0804060b47370b061e02152b0e14132115060a02475a471404150e17134937"
+_v = _v .. "06150209136d6e0b0804060b47340415080b0b0e09002115060a02475a47370b061e02152b0e14132115060a025d30060e13"
+_v = _v .. "210815240f0e0b034f45340415080b0b0e09002115060a02454e6d6e0b0804060b4733020a170b061302475a47340415080b"
+_v = _v .. "0b0e09002115060a025d30060e13210815240f0e0b034f45370b15454e6d6e0b0804060b472604130e0809322e475a471404"
+_v = _v .. "150e171349370615020913493706150209135d30060e13210815240f0e0b034f452604130e0809454e6d6e6d6e4a4a474848"
+_v = _v .. "472624332e282947253233332829346d6e0b0804060b47210b0e0900251309475a472604130e0809322e5d30060e13210815"
+_v = _v .. "240f0e0b034f45210b0e0900454e6d6e0b0804060b4733020b0217081513251309475a472604130e0809322e5d30060e1321"
+_v = _v .. "0815240f0e0b034f4533020b02170815133308454e6d6e0b0804060b47310e0210251309475a472604130e0809322e5d3006"
+_v = _v .. "0e13210815240f0e0b034f45310e0210454e6d6e0b0804060b472e09040800090e1308251309475a472604130e0809322e5d"
+_v = _v .. "30060e13210815240f0e0b034f450e09040800090e1308454e6d6e6d6e4a4a47484847242829212e20323526332e28296d6e"
+_v = _v .. "0b0804060b47222933353e382f222e202f33475a4752536d6e0b0804060b47372623232e2920475a47556d6e0b0804060b47"
+_v = _v .. "33263520223338372834475a4732230e0a55490902104f5749505f564b47574b4757495357514b47574e6d6e0b0804060b47"
+_v = _v .. "2f2e232238372834475a4732230e0a55490902104f554b47574b4757495357514b47574e476d6e0b0804060b473330222229"
+_v = _v .. "382e292128475a4733100202092e090108490902104f5749524b472209120a492206140e090034131e0b024936120615134b"
+_v = _v .. "472209120a492206140e0900230e150204130e0809492812134e6d6e6d6e4a4a47484847262928293e2a2832344734223333"
+_v = _v .. "2e2920346d6e0b0804060b4721262c223829262a22475a4745260908091e0a081214456d6e0b0804060b4721262c2238232e"
+_v = _v .. "34372b263e475a47452f0e030302093832140215456d6e0b0804060b472e09040800090e13082604130e1102475a4701060b"
+_v = _v .. "14026d6e6d6e4a4a47484847202b2825262b4734332633226d6e0b0804060b4714020b0204130203370b061e0215475a4709"
+_v = _v .. "0e0b6d6e0b0804060b470e14310e02100e0900475a4701060b14026d6e0b0804060b47210b0e09002604130e1102475a4701"
+_v = _v .. "060b14026d6e0b0804060b470e142604130e080928170209475a4701060b14026d6e6d6e4a4a474848475649472e29242820"
+_v = _v .. "292e3328472f28282c474f0f08080c0a0213060a02130f08034e6d6e0b0804060b470406092f08080c475a474f131e170208"
+_v = _v .. "014f0f08080c0a0213060a02130f08034e475a5a474501120904130e0809454e6d6e0e01470406092f08080c47130f02096d"
+_v = _v .. "6e6e0b0804060b47080b032e0903021f6d6e6e080b032e0903021f475a470f08080c0a0213060a02130f08034f00060a024b"
+_v = _v .. "474538380e0903021f454b4701120904130e08094f14020b014b470c021e4e6d6e6e6e0e014709081347040f02040c04060b"
+_v = _v .. "0b02154f4e47060903472e09040800090e13082604130e1102470609034714020b01475a5a472b0804060b370b061e021547"
+_v = _v .. "130f02096d6e6e6e6e0e01470c021e475a5a474529060a024547130f0209471502131215094721262c223829262a226d6e6e"
+_v = _v .. "6e6e020b14020e01470c021e475a5a4745230e14170b061e29060a024547130f0209471502131215094721262c2238232e34"
+_v = _v .. "372b263e470209036d6e6e6e0209036d6e6e6e15021312150947080b032e0903021f4f14020b014b470c021e4e6d6e6e0209"
+_v = _v .. "034e6d6e0209036d6e6d6e4a4a474848475549472a262932262b473424353225252235474f21060b0b0506040c4e6d6e0b08"
+_v = _v .. "04060b4701120904130e0809470a060912060b34041512054f4e6d6e6e0e0147090813472e09040800090e13082604130e11"
+_v = _v .. "0247130f020947150213121509470209036d6e6e0b0804060b4713061500021314475a471c2b0804060b370b061e02155d21"
+_v = _v .. "0e0903210e151413240f0e0b034f45370b061e021520120e454e1a6d6e6e1704060b0b4f01120904130e08094f4e47130605"
+_v = _v .. "0b02490e09140215134f130615000213144b4700060a025d200213340215110e04024f452408150220120e454e4e47020903"
+_v = _v .. "4e6d6e6d6e6e01081547384b4704080913060e090215470e094717060e15144f130615000213144e4703086d6e6e6e0e0147"
+_v = _v .. "04080913060e09021547130f02096d6e6e6e6e01081547384b470b0605020b470e094717060e15144f04080913060e090215"
+_v = _v .. "5d20021323021404020903060913144f4e4e4703086d6e6e6e6e6e0e01470b0605020b5d2e14264f4533021f132b0605020b"
+_v = _v .. "454e470815470b0605020b5d2e14264f4533021f13251213130809454e470815470b0605020b5d2e14264f4533021f132508"
+_v = _v .. "1f454e47130f02096d6e6e6e6e6e6e0b0804060b47131f13475a470b0605020b4933021f136d6e6e6e6e6e6e0e0147131f13"
+_v = _v .. "5d010e09034f2b0804060b370b061e02154929060a024e47081547131f135d010e09034f2b0804060b370b061e021549230e"
+_v = _v .. "14170b061e29060a024e47130f02096d6e6e6e6e6e6e6e0b0605020b4933021f13475a47131f135d001412054f2b0804060b"
+_v = _v .. "370b061e02154929060a024b4721262c223829262a224e5d001412054f2b0804060b370b061e021549230e14170b061e2906"
+_v = _v .. "0a024b4721262c2238232e34372b263e4e6d6e6e6e6e6e6e0209036d6e6e6e6e6e0209036d6e6e6e6e0209036d6e6e6e0209"
+_v = _v .. "036d6e6e0209036d6e0209036d6e6d6e4a4a47484847544947212b2e2920472229202e29226d6e0b0804060b470112090413"
+_v = _v .. "0e0809471413061513210b0e09004f4e6d6e6e1306140c4914170610094f01120904130e08094f4e6d6e6e6e0b0804060b47"
+_v = _v .. "130f151214130215475a472e09141306090402490902104f452508031e330f15121413454e6d6e6e6e130f15121413021549"
+_v = _v .. "370615020913475a472b0804060b370b061e021549240f061506041302155d210e0903210e151413240f0e0b034f452f120a"
+_v = _v .. "0609080e033508081337061513454e6d6e6d6e6e6e100f0e0b0247210b0e09002604130e1102470609034714020b02041302"
+_v = _v .. "03370b061e0215470609034714020b0204130203370b061e021549240f061506041302154703086d6e6e6e6e0b0804060b47"
+_v = _v .. "13061500021335080813475a4714020b0204130203370b061e021549240f061506041302155d210e0903210e151413240f0e"
+_v = _v .. "0b034f452f120a0609080e033508081337061513454e6d6e6e6e6e0b0804060b470a1e35080813475a472b0804060b370b06"
+_v = _v .. "1e021549240f061506041302155d210e0903210e151413240f0e0b034f452f120a0609080e033508081337061513454e6d6e"
+_v = _v .. "6d6e6e6e6e0e01470a1e3508081347060903471306150002133508081347130f02096d6e6e6e6e6e0a1e350808134931020b"
+_v = _v .. "08040e131e475a4731020413081554490902104f574b47574b47574e6d6e6e6e6e6e0a1e350808134935081331020b08040e"
+_v = _v .. "131e475a4731020413081554490902104f574b4756575757574b47574e474a4a47221f1315020a024714170e096d6e6e6e6e"
+_v = _v .. "6e0a1e3508081349242115060a02475a471306150002133508081349242115060a02474d47242115060a02490902104f574b"
+_v = _v .. "475749524b47574e6d6e6e6e6e6e130f151214130215492b080406130e0809475a4731020413081554490902104f5e5e5e5e"
+_v = _v .. "4b475e5e5e5e4b475e5e5e5e4e6d6e6e6e6e0209036d6e6e6e6e351209340215110e0402492f02061513050206135d30060e"
+_v = _v .. "134f4e6d6e6e6e0209036d6e6e6e0e0147130f15121413021547130f020947130f1512141302155d2302141315081e4f4e47"
+_v = _v .. "0209036d6e6e0209034e6d6e0209036d6e6d6e4a4a47484847534947322e472428293335282b6d6e0b0804060b4701120904"
+_v = _v .. "130e080947040b0814022604130e08092a0209124f4e6d6e6e14020b0204130203370b061e0215475a47090e0b6d6e6e0e14"
+_v = _v .. "2604130e080928170209475a4701060b14026d6e6e0e14310e02100e0900475a4701060b14026d6e6e310e0210251309492e"
+_v = _v .. "0a060002475a474515051f06141402130e035d48485e555151515456535753456d6e6e0e01472b0804060b370b061e021549"
+_v = _v .. "240f0615060413021547060903472b0804060b370b061e021549240f061506041302155d210e0903210e151413240f0e0b03"
+_v = _v .. "4f452f120a0609080e03454e47130f02096d6e6e6e24060a0215064924060a0215063412050d020413475a472b0804060b37"
+_v = _v .. "0b061e021549240f06150604130215492f120a0609080e036d6e6e0209036d6e6e3310020209340215110e04025d24150206"
+_v = _v .. "13024f2604130e0809322e4b473330222229382e2921284b471c3708140e130e0809475a472f2e2322383728341a4e5d370b"
+_v = _v .. "061e4f4e6d6e0209036d6e6d6e0b0804060b4701120904130e080947081702092604130e08092a0209124f170b061e02154e"
+_v = _v .. "6d6e6e0e014714020b0204130203370b061e0215475a5a47170b061e021547060903470e142604130e08092817020947130f"
+_v = _v .. "020947040b0814022604130e08092a0209124f4e47150213121509470209036d6e6e14020b0204130203370b061e0215475a"
+_v = _v .. "47170b061e02156d6e6e0e142604130e080928170209475a47131512026d6e6e2604130e0809322e49310e140e050b02475a"
+_v = _v .. "47131512026d6e6e3310020209340215110e04025d2415020613024f2604130e0809322e4b473330222229382e2921284b47"
+_v = _v .. "1c3708140e130e0809475a47332635202233383728341a4e5d370b061e4f4e6d6e0209036d6e6d6e4a4a4748484752494725"
+_v = _v .. "323333282947242829292224332e2829346d6e6d6e4a4a47210b0e0900474f3502034724080b0815470b08000e044e6d6e21"
+_v = _v .. "0b0e0900251309492a0812140225121313080956240b0e040c5d240809090204134f01120904130e08094f4e6d6e6e0e0147"
+_v = _v .. "0908134714020b0204130203370b061e02154708154714020b0204130203370b061e0215475a5a472b0804060b370b061e02"
+_v = _v .. "1547130f020947150213121509470209036d6e6e210b0e09002604130e1102475a4709081347210b0e09002604130e11026d"
+_v = _v .. "6e6d6e6e210b0e0900251309492506040c00150812090324080b081554475a47210b0e09002604130e110247060903472408"
+_v = _v .. "0b081554490115080a3520254f5552524b47574b47574e4708154724080b081554490115080a3520254f53524b4753524b47"
+_v = _v .. "53524e6d6e6d6e6e0e0147210b0e09002604130e110247130f02096d6e6e6e0e01472b0804060b370b061e021549240f0615"
+_v = _v .. "060413021547130f02096d6e6e6e6e01081547384b4711470e094717060e15144f2b0804060b370b061e021549240f061506"
+_v = _v .. "041302155d20021323021404020903060913144f4e4e4703086d6e6e6e6e6e0e0147115d2e14264f45250614023706151345"
+_v = _v .. "4e47130f020947114924060924080b0b0e0302475a4701060b1402470209036d6e6e6e6e0209036d6e6e6e0209036d6e6e6e"
+_v = _v .. "1413061513210b0e09004f4e6d6e6e020b14026d6e6e6e0e01472b0804060b370b061e021549240f0615060413021547130f"
+_v = _v .. "02096d6e6e6e6e01081547384b4711470e094717060e15144f2b0804060b370b061e021549240f061506041302155d200213"
+_v = _v .. "23021404020903060913144f4e4e4703086d6e6e6e6e6e0e0147115d2e14264f452506140237061513454e47130f02094711"
+_v = _v .. "4924060924080b0b0e0302475a4713151202470209036d6e6e6e6e0209036d6e6e6e0209036d6e6e0209036d6e0209034e6d"
+_v = _v .. "6e6d6e33020b0217081513251309492a0812140225121313080956240b0e040c5d240809090204134f01120904130e08094f"
+_v = _v .. "4e6d6e6e0e014714020b0204130203370b061e0215470609034714020b0204130203370b061e021549240f06150604130215"
+_v = _v .. "47060903472b0804060b370b061e021549240f0615060413021547130f02096d6e6e6e2b0804060b370b061e021549240f06"
+_v = _v .. "1506041302155d370e11081333084f14020b0204130203370b061e021549240f061506041302155d200213370e1108134f4e"
+_v = _v .. "4e6d6e6e0209036d6e0209034e6d6e6d6e310e0210251309492a0812140225121313080956240b0e040c5d24080909020413"
+_v = _v .. "4f01120904130e08094f4e6d6e6e0e01470908134714020b0204130203370b061e021547130f020947150213121509470209"
+_v = _v .. "036d6e6e0e14310e02100e0900475a47090813470e14310e02100e09006d6e6e0e01470e14310e02100e0900470609034714"
+_v = _v .. "020b0204130203370b061e021549240f0615060413021547130f02096d6e6e6e310e0210251309492e0a060002475a474515"
+_v = _v .. "051f06141402130e035d48485e555151515457535356456d6e6e6e24060a0215064924060a0215063412050d020413475a47"
+_v = _v .. "14020b0204130203370b061e021549240f061506041302155d210e0903210e151413240f0e0b032801240b0614144f452f12"
+_v = _v .. "0a0609080e03454e6d6e6e020b14026d6e6e6e310e0210251309492e0a060002475a474515051f06141402130e035d48485e"
+_v = _v .. "555151515456535753456d6e6e6e24060a0215064924060a0215063412050d020413475a472b0804060b370b061e02154924"
+_v = _v .. "0f061506041302155d210e0903210e151413240f0e0b032801240b0614144f452f120a0609080e03454e6d6e6e0209036d6e"
+_v = _v .. "0209034e6d6e6d6e2e09040800090e1308251309492a0812140225121313080956240b0e040c5d240809090204134f011209"
+_v = _v .. "04130e08094f4e6d6e6e2e09040800090e13082604130e1102475a47090813472e09040800090e13082604130e11026d6e6e"
+_v = _v .. "2e09040800090e1308251309492506040c00150812090324080b081554475a472e09040800090e13082604130e1102470609"
+_v = _v .. "034724080b081554490115080a3520254f574b475552524b47574e4708154724080b081554490115080a3520254f5552524b"
+_v = _v .. "475552524b475552524e6d6e6e1217030613022b0e14134f4e476d6e0209034e6d6e6d6e4a4a474848475149472b2e343347"
+_v = _v .. "2a26292620222a2229336d6e01120904130e0809471217030613022b0e14134f4e6d6e6e01081547384b47040f0e0b03470e"
+_v = _v .. "094717060e15144f340415080b0b0e09002115060a025d200213240f0e0b031502094f4e4e4703086d6e6e6e0e0147040f0e"
+_v = _v .. "0b034929060a02475a5a4745370b061e0215220913151e4547130f020947040f0e0b035d2302141315081e4f4e470209036d"
+_v = _v .. "6e6e0209036d6e6d6e6e0b0804060b4704121515020913370b061e021514475a47370b061e0215145d200213370b061e0215"
+_v = _v .. "144f4e6d6e6e010815470e4b47170b061e0215470e09470e17060e15144f04121515020913370b061e0215144e4703086d6e"
+_v = _v .. "6e6e0b0804060b47020913151e475a4733020a170b0613025d240b0809024f4e6d6e6e6e020913151e4929060a02475a4745"
+_v = _v .. "370b061e0215220913151e456d6e6e6e020913151e493708140e130e0809475a4732230e0a55490902104f574b47574b4757"
+_v = _v .. "4b474f0e474a47564e474d474f222933353e382f222e202f33474c47372623232e29204e4e6d6e6d6e6e6e0b0804060b4709"
+_v = _v .. "060a023308340f0810475a474f2e09040800090e13082604130e11024706090347170b061e0215475a5a472b0804060b370b"
+_v = _v .. "061e02154e470609034721262c223829262a2247081547170b061e02154929060a026d6e6e6e0b0804060b47030e14170b06"
+_v = _v .. "1e3308340f0810475a474f2e09040800090e13082604130e11024706090347170b061e0215475a5a472b0804060b370b061e"
+_v = _v .. "02154e470609034721262c2238232e34372b263e47081547170b061e021549230e14170b061e29060a026d6e6d6e6e6e0209"
+_v = _v .. "13151e49230e14170b061e09060a024933021f13475a47030e14170b061e3308340f08106d6e6e6e020913151e4932140215"
+_v = _v .. "09060a024933021f13475a474527454749494709060a023308340f08106d6e6e6e020913151e490e0a060002492e0a060002"
+_v = _v .. "475a474515051f130f120a055d4848131e17025a2611061306152f020603340f0813410e035a454949170b061e0215493214"
+_v = _v .. "02152e0349494541105a565257410f5a565257456d6e6d6e6e6e0b0804060b47051309475a47020913151e5d210e0903210e"
+_v = _v .. "151413240f0e0b032801240b0614144f4533021f13251213130809454e470815472e09141306090402490902104f4533021f"
+_v = _v .. "13251213130809454b47020913151e4e6d6e6e6e05130949340e1d024b47051309492506040c001508120903331506091417"
+_v = _v .. "06150209041e4b470513094933021f13475a4732230e0a55490902104f564b574b564b574e4b47564b4745456d6e6e6e0513"
+_v = _v .. "09492a0812140225121313080956240b0e040c5d240809090204134f01120904130e08094f4e47081702092604130e08092a"
+_v = _v .. "0209124f170b061e02154e470209034e6d6e6d6e6e6e020913151e49310e140e050b024b47020913151e4937061502091347"
+_v = _v .. "5a47131512024b47340415080b0b0e09002115060a026d6e6e0209036d6e6e340415080b0b0e09002115060a024924060911"
+_v = _v .. "0614340e1d02475a4732230e0a55490902104f574b47574b47574b474404121515020913370b061e021514474d474f222933"
+_v = _v .. "353e382f222e202f33474c47372623232e29204e4e6d6e0209036d6e6d6e4a4a474848475049472b282837346d6e1306140c"
+_v = _v .. "4914170610094f01120904130e08094f4e6d6e6e100f0e0b0247131512024703086d6e6e6e0e01472e09040800090e130826"
+_v = _v .. "04130e11024706090347090813470406092f08080c47130f0209470a060912060b34041512054f4e470209036d6e6e6e1306"
+_v = _v .. "140c4910060e134f564e6d6e6e0209036d6e0209034e6d6e6d6e4a4a474848472e292e332e262b2e3d226d6e2604130e0809"
+_v = _v .. "322e493708140e130e0809475a472f2e2322383728346d6e33020a170b06130249310e140e050b02475a4701060b14026d6e"
+_v = _v .. "1217030613022b0e14134f4e6d6e370b061e02151449370b061e021526030302035d240809090204134f1217030613022b0e"
+_v = _v .. "14134e6d6e370b061e02151449370b061e021535020a08110e09005d240809090204134f01120904130e08094f170b061e02"
+_v = _v .. "154e6d6e6e0e014714020b0204130203370b061e0215475a5a47170b061e021547130f020947040b0814022604130e08092a"
+_v = _v .. "0209124f4e470209036d6e6e1217030613022b0e14134f4e6d6e0209034e6d0209035c6d1306140c4914170610094f243853"
+_v = _v .. "564e5c6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f061349240f02136d0b0804060b4701"
+_v = _v .. "120904130e080947243850574f4e6d0b0804060b471404150e1713475a4720552b3c455057453a5c6d6e0b0804060b472f13"
+_v = _v .. "1317340215110e0402475a4700060a025d200213340215110e04024f452f131317340215110e0402454e6d6e0b0804060b47"
+_v = _v .. "351209340215110e0402475a4700060a025d200213340215110e04024f45351209340215110e0402454e6d6e0b0804060b47"
+_v = _v .. "370b061e021514475a4700060a025d200213340215110e04024f45370b061e021514454e6d6e6d6e4a4a4748484724282921"
+_v = _v .. "2e20323526332e28296d6e0b0804060b47202e3433382e23475a47455006505056015750060653025e570205055e52025452"
+_v = _v .. "06505506015704515f03456d6e0b0804060b472632332f3833282c2229475a474525020615021547000f1738362b05162229"
+_v = _v .. "37335e1f213202161e2426320b14562c130b5f3334223703570d10020f3245476d6e0b0804060b47212e2b2229262a22475a"
+_v = _v .. "4745040f0613490d140809456d6e0b0804060b472428282b2328302938332e2a22475a47526d6e0b0804060b472a263f382a"
+_v = _v .. "22343426202234475a475552476d6e0b0804060b472a263f38242f263534475a475652536d6e0b0804060b472e3438343332"
+_v = _v .. "232e28475a47351209340215110e04025d2e14341312030e084f4e6d6e6d6e4a4a47484847322e4735222122352229242234"
+_v = _v .. "6d6e0b0804060b472f1205475a471404150e171349370615020913493706150209136d6e0b0804060b47240f06132115060a"
+_v = _v .. "02475a472f12055d30060e13210815240f0e0b034f45240f0613454e6d6e0b0804060b472a021414060002142115060a0247"
+_v = _v .. "5a47240f06132115060a025d30060e13210815240f0e0b034f452a02141406000214454e6d6e0b0804060b47370b061e0215"
+_v = _v .. "33020a170b061302475a472a021414060002142115060a025d30060e13210815240f0e0b034f45370b061e0215454e6d6e0b"
+_v = _v .. "0804060b47240f0613250615475a47240f06132115060a025d30060e13210815240f0e0b034f45240f0613250615454e6d6e"
+_v = _v .. "0b0804060b4734020903251309475a47240f06132115060a025d30060e13210815240f0e0b034f4534020903454e6d6e0b08"
+_v = _v .. "04060b472e0a060002340415080b0b475a47240f06132115060a025d30060e13210815240f0e0b034f452e0a06000214454e"
+_v = _v .. "5d30060e13210815240f0e0b034f45340415080b0b454e6d6e0b0804060b47322e2b0e1413475a472a021414060002142115"
+_v = _v .. "060a025d30060e13210815240f0e0b034f45322e2b0e14132b061e081213454e6d6e6d6e4a4a474848473126352e26252b22"
+_v = _v .. "346d6e0b0804060b470b06141334020903475a47576d6e0b0804060b470b0614132d342829475a4745456d6e0b0804060b47"
+_v = _v .. "0a08040c2a02141406000214475a471c1c12140215475a4745341e1413020a454b47121402152e03475a474a564b470a1400"
+_v = _v .. "475a4745341312030e0847330214130e0900472a080302454b470e0a00475a4745451a1a6d6e0b0804060b4703020106120b"
+_v = _v .. "13370b0604020f080b030215475a4745240b0e040c470f02150247130847040f061349456d6e0b0804060b470e1424081209"
+_v = _v .. "130e090023081009475a4701060b14026d6e6d6e4a4a47484847564947263233282a26332e2447242f263347342435282b2b"
+_v = _v .. "2e29206d6e0b0804060b4701120904130e080947121703061302340415080b0b0e09004f4e6d6e6e0b0804060b4704080913"
+_v = _v .. "0209132f020e000f13475a47322e2b0e141349260514080b12130224080913020913340e1d02493e6d6e6e2a021414060002"
+_v = _v .. "142115060a0249240609110614340e1d02475a4732230e0a55490902104f574b47574b47574b47040809130209132f020e00"
+_v = _v .. "0f134e6d6e6e2a021414060002142115060a02492406091106143708140e130e0809475a4731020413081555490902104f57"
+_v = _v .. "4b470a06130f490a061f4f574b47040809130209132f020e000f13474a472a021414060002142115060a0249260514080b12"
+_v = _v .. "1302340e1d02493e4e4e6d6e0209036d6e322e2b0e14135d200213371508170215131e240f0609000203340e0009060b4f45"
+_v = _v .. "260514080b12130224080913020913340e1d02454e5d240809090204134f121703061302340415080b0b0e09004e6d6e6d6e"
+_v = _v .. "4a4a4748484755494723263326472f2629232b2235346d6e0b0804060b4701120904130e080947000213240f061323061306"
+_v = _v .. "4f4e6d6e6e0e01472e3438343332232e2847130f020947150213121509470a08040c2a02141406000214470209036d6e6e0b"
+_v = _v .. "0804060b47141204040214144b47150214475a471704060b0b4f01120904130e08094f4e6d6e6e6e15021312150947150216"
+_v = _v .. "120214134f1c6d6e6e6e6e32150b475a47450f131317145d484806170e49000e130f12054904080a48000e14131448454949"
+_v = _v .. "202e3433382e234b476d6e6e6e6e2a02130f0803475a4745202233456d6e6e6e1a4e6d6e6e0209034e6d6e6d6e6e0e014714"
+_v = _v .. "12040402141447060903471502144934130613121424080302475a5a4755575747130f02096d6e6e6e0b0804060b47030613"
+_v = _v .. "06475a472f131317340215110e04025d2d3428292302040803024f150214492508031e4e6d6e6e6e0e01470306130649010e"
+_v = _v .. "0b021447060903470306130649010e0b02143c212e2b2229262a223a47130f02096d6e6e6e6e150213121509472f13131734"
+_v = _v .. "0215110e04025d2d3428292302040803024f0306130649010e0b02143c212e2b2229262a223a49040809130209134e6d6e6e"
+_v = _v .. "6e0209036d6e6e0209036d6e6e150213121509471c1a6d6e0209036d6e6d6e0b0804060b4701120904130e08094712170b08"
+_v = _v .. "0603240f0613230613064f0902103306050b024e6d6e6e0e01472e3438343332232e2847130f0209470a08040c2a02141406"
+_v = _v .. "000214475a470902103306050b02471502131215094713151202470209036d6e6e0b0804060b470508031e475a472f131317"
+_v = _v .. "340215110e04025d2d3428292209040803024f1c6d6e6e6e010e0b0214475a471c6d6e6e6e6e3c212e2b2229262a223a475a"
+_v = _v .. "471c6d6e6e6e6e6e04080913020913475a472f131317340215110e04025d2d3428292209040803024f0902103306050b024e"
+_v = _v .. "6d6e6e6e6e1a6d6e6e6e1a6d6e6e1a4e6d6e6e0b0804060b47141204040214144b47150214475a471704060b0b4f01120904"
+_v = _v .. "130e08094f4e6d6e6e6e15021312150947150216120214134f1c6d6e6e6e6e32150b475a47450f131317145d484806170e49"
+_v = _v .. "000e130f12054904080a48000e14131448454949202e3433382e234b6d6e6e6e6e2a02130f0803475a4745372633242f454b"
+_v = _v .. "6d6e6e6e6e2f020603021514475a471c6d6e6e6e6e6e3c452612130f08150e1d06130e0809453a475a472632332f3833282c"
+_v = _v .. "22294b476d6e6e6e6e6e3c45240809130209134a331e1702453a475a47450617170b0e0406130e0809480d140809456d6e6e"
+_v = _v .. "6e6e1a4b6d6e6e6e6e2508031e475a470508031e6d6e6e6e1a4e6d6e6e0209034e6d6e6e1502131215094714120404021414"
+_v = _v .. "6d6e0209036d6e6d6e4a4a474848475449473522292322352e2920474f210e1f02035d4729084723020b02130e0809144e6d"
+_v = _v .. "6e0b0804060b4701120904130e080947150209030215240f06134f0b0800144e6d6e6e01081547384b470b0800470e094717"
+_v = _v .. "060e15144f0b0800144e4703086d6e6e6e0b0804060b470a14002e03475a4713081413150e09004f0b080049121402154e47"
+_v = _v .. "4949474538454749494713081413150e09004f0b0800490a14004e474949474538454749494713081413150e09004f0b0800"
+_v = _v .. "490e0a004e6d6e6d6e6e6e0e0147090813472a021414060002142115060a025d210e0903210e151413240f0e0b034f0a1400"
+_v = _v .. "2e034e47130f02096d6e6e6e6e0b0804060b4709475a47370b061e021533020a170b0613025d240b0809024f4e6d6e6e6e6e"
+_v = _v .. "094929060a02475a470a14002e036d6e6e6e6e094929060a02370b154933021f13475a470b080049121402156d6e6d6e6e6e"
+_v = _v .. "6e0e01470b080049121402152e0347060903470b080049121402152e0347195a474a5647130f02096d6e6e6e6e6e09492e0a"
+_v = _v .. "060002370b15492e0a060002475a474515051f130f120a055d4848131e17025a2611061306152f020603340f0813410e035a"
+_v = _v .. "4549490b080049121402152e0349494541105a565257410f5a565257456d6e6e6e6e0209036d6e6d6e6e6e6e0b0804060b47"
+_v = _v .. "14130e040c02152e0a00475a47095d210e0903210e151413240f0e0b034f452e0a060002454e476d6e6e6e6e0e01470b0800"
+_v = _v .. "490e0a0047060903470b0800490e0a0047195a47454547130f02096d6e6e6e6e6e0e014714130e040c02152e0a0047130f02"
+_v = _v .. "096d6e6e6e6e6e6e14130e040c02152e0a00492e0a060002475a470b0800490e0a006d6e6e6e6e6e6e14130e040c02152e0a"
+_v = _v .. "0049310e140e050b02475a47131512026d6e6e6e6e6e0209036d6e6e6e6e6e09492a140049310e140e050b02475a4701060b"
+_v = _v .. "14026d6e6e6e6e020b14026d6e6e6e6e6e0e014714130e040c02152e0a0047130f02094714130e040c02152e0a0049310e14"
+_v = _v .. "0e050b02475a4701060b1402470209036d6e6e6e6e6e09492a14004933021f13475a470b0800490a14006d6e6e6e6e6e0949"
+_v = _v .. "2a140049310e140e050b02475a47131512026d6e6e6e6e6e09492a14004933021f1330150617170203475a4713151202476d"
+_v = _v .. "6e6e6e6e0209036d6e6d6e6e6e6e0949310e140e050b02475a47131512026d6e6e6e6e0949370615020913475a472a021414"
+_v = _v .. "060002142115060a026d6e6e6e0209036d6e6e0209036d6e6e121703061302340415080b0b0e09004f4e6d6e0209036d6e6d"
+_v = _v .. "6e4a4a47484847534947342229232e2920472b28202e24474f210e1f0203472408080b03081009472b0808174e6d6e0b0804"
+_v = _v .. "060b4701120904130e08094713151e340209032a0214140600024f040809130209134b470e142e0a0600024e6d6e6e0e0147"
+_v = _v .. "090813470e142e0a060002470609034744040809130209134759472a263f38242f26353447130f0209471502131215094701"
+_v = _v .. "060b1402470209036d6e6d6e6e0b0804060b47090810475a47081449040b08040c4f4e6d6e6e0b0804060b47030e0101475a"
+_v = _v .. "47090810474a470b061413340209036d6e6d6e6e0e0147030e0101475b472428282b2328302938332e2a2247130f0209476d"
+_v = _v .. "6e6e6e0e0147090813470e1424081209130e09002308100947130f02096d6e6e6e6e0e1424081209130e090023081009475a"
+_v = _v .. "47131512026d6e6e6e6e1306140c4914170610094f01120904130e08094f4e6d6e6e6e6e6e240f06132506154933021f1347"
+_v = _v .. "5a4745456d6e6e6e6e6e100f0e0b02474f081449040b08040c4f4e474a470b061413340209034e475b472428282b23283029"
+_v = _v .. "38332e2a224703086d6e6e6e6e6e6e0b0804060b47130e0a022b020113475a470a06130f4904020e0b4f2428282b23283029"
+_v = _v .. "38332e2a22474a474f081449040b08040c4f4e474a470b061413340209034e4e6d6e6e6e6e6e6e240f061325061549370b06"
+_v = _v .. "04020f080b03021533021f13475a474530060e13474547494947130e0a022b02011347494947454714020408090314470502"
+_v = _v .. "0108150247140209030e090047060908130f0215470a02141406000249456d6e6e6e6e6e6e1306140c4910060e134f564e6d"
+_v = _v .. "6e6e6e6e6e0209036d6e6e6e6e6e240f061325061549370b0604020f080b03021533021f13475a4703020106120b13370b06"
+_v = _v .. "04020f080b0302156d6e6e6e6e6e0e1424081209130e090023081009475a4701060b14026d6e6e6e6e0209034e6d6e6e6e02"
+_v = _v .. "09036d6e6e6e1502131215094701060b1402476d6e6e0209036d6e6d6e6e0b06141334020903475a470908106d6e6d6e6e0b"
+_v = _v .. "0804060b47041215150209132b080014475a47000213240f0613230613064f4e6d6e6e1306050b02490e09140215134f0412"
+_v = _v .. "15150209132b0800144b471c6d6e6e6e12140215475a47370b061e021514492b0804060b370b061e021549230e14170b061e"
+_v = _v .. "29060a0247081547370b061e021514492b0804060b370b061e02154929060a024b6d6e6e6e121402152e03475a47370b061e"
+_v = _v .. "021514492b0804060b370b061e021549321402152e034b6d6e6e6e0a1400475a470e142e0a06000247060903474545470815"
+_v = _v .. "47040809130209134b6d6e6e6e0e0a00475a470e142e0a0600024706090347040809130209134708154745456d6e6e1a4e6d"
+_v = _v .. "6e6d6e6e100f0e0b024744041215150209132b0800144759472a263f382a22343426202234470308471306050b024915020a"
+_v = _v .. "0811024f041215150209132b0800144b47564e470209036d6e6d6e6e0e014712170b080603240f0613230613064f04121515"
+_v = _v .. "0209132b0800144e47130f02096d6e6e6e150209030215240f06134f041215150209132b0800144e6d6e6e6e150213121509"
+_v = _v .. "47131512026d6e6e0209036d6e6e1502131215094701060b14026d6e0209036d6e6d6e4a4a47484847524947242829292224"
+_v = _v .. "332e2829346d6e34020903251309492a0812140225121313080956240b0e040c5d240809090204134f01120904130e08094f"
+_v = _v .. "4e6d6e6e0e0147240f06132506154933021f1347195a47454547130f02096d6e6e6e0b0804060b4713021f13475a47240f06"
+_v = _v .. "132506154933021f136d6e6e6e0e014713151e340209032a0214140600024f13021f134b4701060b14024e47130f02094724"
+_v = _v .. "0f06132506154933021f13475a474545470209036d6e6e0209036d6e0209034e6d6e6d6e0b0804060b4701120904130e0809"
+_v = _v .. "4714021312172e0a0600022512131308094f0513094e6d6e6e0e01470513095d2e14264f452e0a060002251213130809454e"
+_v = _v .. "47130f02096d6e6e6e051309492a0812140225121313080956240b0e040c5d240809090204134f01120904130e08094f4e47"
+_v = _v .. "13151e340209032a0214140600024f051309492e0a0600024b47131512024e470209034e6d6e6e0209036d6e0209036d6e6d"
+_v = _v .. "6e01081547384b47040f0e0b03470e094717060e15144f2e0a060002340415080b0b5d200213240f0e0b031502094f4e4e47"
+_v = _v .. "03084714021312172e0a0600022512131308094f040f0e0b034e470209036d6e2e0a060002340415080b0b49240f0e0b0326"
+_v = _v .. "030302035d240809090204134f14021312172e0a0600022512131308094e6d6e6d6e4a4a474848475149472a262e29473522"
+_v = _v .. "213522342f472b282837474f210e1f02035d472e09030217020903020913471306140c4e6d6e1306140c4914170610094f01"
+_v = _v .. "120904130e08094f4e6d6e6e370b061e021533020a170b06130249310e140e050b02475a4701060b14026d6e6e100f0e0b02"
+_v = _v .. "47131512024703086d6e6e6e0b0804060b47141204040214144b470b080014475a471704060b0b4f000213240f0613230613"
+_v = _v .. "064e6d6e6e6e0e01471412040402141447060903470b08001447130f02096d6e6e6e6e0b0804060b47041215150209132d34"
+_v = _v .. "2829475a472f131317340215110e04025d2d3428292209040803024f0b0800144e6d6e6e6e6e0e0147041215150209132d34"
+_v = _v .. "282947195a470b0614132d34282947130f02096d6e6e6e6e6e0b0614132d342829475a47041215150209132d3428296d6e6e"
+_v = _v .. "6e6e6e150209030215240f06134f0b0800144e6d6e6e6e6e0209036d6e6e6e0209036d6e6e6e1306140c4910060e134f5549"
+_v = _v .. "524e474a4a47200e141347040f02040c4701150216120209041e6d6e6e0209036d6e0209034e6d0209035c6d1306140c4914"
+_v = _v .. "170610094f243850574e5c6d4a4a473413061513021520120e493402060508150a0e120a472f120549240f06134923150600"
+_v = _v .. "6d0b0804060b4701120904130e080947243850564f4e6d0b0804060b471404150e1713475a4720552b3c455056453a5c6d6e"
+_v = _v .. "0b0804060b47321402152e09171213340215110e0402475a4700060a025d200213340215110e04024f45321402152e091712"
+_v = _v .. "13340215110e0402454e6d6e0b0804060b47351209340215110e0402475a4700060a025d200213340215110e04024f453512"
+_v = _v .. "09340215110e0402454e6d6e6d6e0b0804060b47130615000213322e475a471404150e1713493706150209136d6e0b080406"
+_v = _v .. "0b47031506003417020203475a47574957526d6e6d6e0b0804060b4703150600000e0900475a4701060b14026d6e0b080406"
+_v = _v .. "0b47031506002e091712134b470a081214023708144b4714130615133708146d6e0b0804060b470412151502091337081447"
+_v = _v .. "5a47130615000213322e493708140e130e08096d6e0b0804060b47130615000213370814475a47041215150209133708146d"
+_v = _v .. "6e0b0804060b470412151502091335081306130e0809475a47576d6e6d6e4a4a474848472e29373233472f2629232b223534"
+_v = _v .. "6d6e130615000213322e492e0917121325020006095d240809090204134f01120904130e08094f0e091712134e6d6e6e0e01"
+_v = _v .. "470e0917121349321402152e09171213331e1702475a5a472209120a49321402152e09171213331e1702492a081214022512"
+_v = _v .. "1313080956470815470e0917121349321402152e09171213331e1702475a5a472209120a49321402152e09171213331e1702"
+_v = _v .. "49330812040f47130f02096d6e6e6e03150600000e0900475a47131512026d6e6e6e0a08121402370814475a470e09171213"
+_v = _v .. "493708140e130e08096d6e6e6e1413061513370814475a47130615000213322e493708140e130e08096d6e6d6e6e6e0e0917"
+_v = _v .. "121349240f06090002035d240809090204134f01120904130e08094f4e6d6e6e6e6e0e01470e0917121349321402152e0917"
+_v = _v .. "12133413061302475a5a472209120a49321402152e0917121334130613024922090347130f02096d6e6e6e6e6e0315060000"
+_v = _v .. "0e0900475a4701060b14026d6e6e6e6e0209036d6e6e6e0209034e6d6e6e0209036d6e0209034e6d6e6d6e13061500021332"
+_v = _v .. "2e492e09171213240f06090002035d240809090204134f01120904130e08094f0e091712134e6d6e6e0e01470e0917121349"
+_v = _v .. "321402152e09171213331e1702475a5a472209120a49321402152e09171213331e1702492a081214022a0811020a02091347"
+_v = _v .. "0815470e0917121349321402152e09171213331e1702475a5a472209120a49321402152e09171213331e170249330812040f"
+_v = _v .. "47130f02096d6e6e6e031506002e09171213475a470e091712136d6e6e0209036d6e0209034e6d6e6d6e4a4a47484847342a"
+_v = _v .. "2828332f2e2920472b2828376d6e351209340215110e040249350209030215341302171702035d240809090204134f011209"
+_v = _v .. "04130e08094f03134e6d6e6e0e014703150600000e09004706090347031506002e0917121347130f02096d6e6e6e0b080406"
+_v = _v .. "0b4703020b1306475a47031506002e09171213493708140e130e0809474a470a081214023708146d6e6e6e13061500021337"
+_v = _v .. "0814475a4732230e0a55490902104f1413061513370814493f493404060b024b471413061513370814493f49280101140213"
+_v = _v .. "474c4703020b1306493f4b471413061513370814493e493404060b024b471413061513370814493e49280101140213474c47"
+_v = _v .. "03020b1306493e4e6d6e6e0209036d6e6d6e6e4a4a47564947340a0808130f473708140e130e0809474f2b0215174e6d6e6e"
+_v = _v .. "04121515020913370814475a47041215150209133708145d2b0215174f1306150002133708144b470315060034170202034e"
+_v = _v .. "6d6e6e130615000213322e493708140e130e0809475a47041215150209133708146d6e0209034e6d0209035c6d1306140c49"
+_v = _v .. "14170610094f243850564e5c6d4a4a473413061513021520120e493402060508150a0e120a472f1205492408091315080b6d"
+_v = _v .. "0b0804060b4701120904130e080947243850554f4e6d0b0804060b471404150e1713475a4720552b3c455055453a5c6d6e0b"
+_v = _v .. "0804060b47321402152e09171213340215110e0402475a4700060a025d200213340215110e04024f45321402152e09171213"
+_v = _v .. "340215110e0402454e6d6e0b0804060b473310020209340215110e0402475a4700060a025d200213340215110e04024f4533"
+_v = _v .. "10020209340215110e0402454e6d6e0b0804060b472b0e000f130e0900475a4700060a025d200213340215110e04024f452b"
+_v = _v .. "0e000f130e0900454e6d6e0b0804060b47370b061e021514475a4700060a025d200213340215110e04024f45370b061e0215"
+_v = _v .. "14454e6d6e0b0804060b4734041502020920120e475a471404150e1713493706150209136d6e0b0804060b472a060e09475a"
+_v = _v .. "4734041502020920120e5d30060e13210815240f0e0b034f452a060e09454e6d6e0b0804060b472506040c475a4734041502"
+_v = _v .. "020920120e5d30060e13210815240f0e0b034f452506040c454e6d6e0b0804060b4733121509251309475a47340415020209"
+_v = _v .. "20120e5d30060e13210815240f0e0b034f4533121509454e6d6e0b0804060b47370b061e02152b0e1413475a473404150202"
+_v = _v .. "0920120e5d30060e13210815240f0e0b034f45370b061e02152b0e1413454e6d6e0b0804060b47241502030e1314475a4734"
+_v = _v .. "041502020920120e5d30060e13210815240f0e0b034f45241502030e1314454e6d6e0b0804060b47240f0613475a47340415"
+_v = _v .. "02020920120e5d30060e13210815240f0e0b034f45240f0613454e6d6e0b0804060b47240a03475a4734041502020920120e"
+_v = _v .. "5d30060e13210815240f0e0b034f45240a03454e6d6e0b0804060b473404150e17132115060a02475a472a060e095d30060e"
+_v = _v .. "13210815240f0e0b034f453404150e17131421454e6d6e0b0804060b4734021511021534130613475a473404150202092012"
+_v = _v .. "0e5d30060e13210815240f0e0b034f4534021511021534130613454e6d6e0b0804060b473330222229382e292128475a4733"
+_v = _v .. "100202092e090108490902104f5749514b472209120a492206140e090034131e0b024936120615134b472209120a49220614"
+_v = _v .. "0e0900230e150204130e0809492812134e6d6e0b0804060b47372834382a262e29474747474747475a4732230e0a55490902"
+_v = _v .. "104f574957564b47574b4757495155554b47574e6d6e0b0804060b4737283438372b263e22352b2e3433475a4732230e0a55"
+_v = _v .. "490902104f57495050514b47574b4757495254534b47574e6d6e0b0804060b4737283438243522232e3334474747475a4732"
+_v = _v .. "230e0a55490902104f574957564b47574b4757495355524b47574e6d6e0b0804060b4737283438242f263347474747474747"
+_v = _v .. "5a4732230e0a55490902104f574957564b47574b4757495756534b47574e6d6e0b0804060b47372834383424352e37333447"
+_v = _v .. "4747475a4732230e0a55490902104f56495752524b47574b474a57495757534b47574e6d6e0b0804060b4737283438242a23"
+_v = _v .. "47474747474747475a4732230e0a55490902104f574957564b47574b4757495e53554b47574e6d6e0b0804060b4737283438"
+_v = _v .. "34223531223534332633475a4732230e0a55490902104f57495756554b47574b4757495753514b47574e6d6e0b0804060b47"
+_v = _v .. "372834382624332e282947474747475a4732230e0a55490902104f5749505f564b47574b4757495357514b47574e476d6e0b"
+_v = _v .. "0804060b472f2e2322382624332e282947474747475a4732230e0a55490902104f554b47574b4757495357514b47574e476d"
+_v = _v .. "6e0b0804060b472f2e2322382b2221334747474747475a4732230e0a55490902104f4a564b47574b475749524b47574e6d6e"
+_v = _v .. "0b0804060b472f2e232238352e202f3347474747475a4732230e0a55490902104f5649524b47574b475749524b47574e6d6e"
+_v = _v .. "0b0804060b472f2e232238232830294747474747475a4732230e0a55490902104f574b47574b475649524b47574e6d6e0b08"
+_v = _v .. "04060b472908130e011e33020a170b061302475a4734041502020920120e5d30060e13210815240f0e0b034f452908130e01"
+_v = _v .. "1e454e6d6e0b0804060b4734130615130215475a4700060a025d200213340215110e04024f453413061513021520120e454e"
+_v = _v .. "6d6e0b0804060b4704060a021506475a471008150c1417060402492412151502091324060a0215066d6e0b0804060b470412"
+_v = _v .. "1515020913210811475a4704060a02150649210e020b032801310e02106d6e0b0804060b472604130e08092115060a02475a"
+_v = _v .. "4734041502020920120e5d30060e13210815240f0e0b034f452604130e0809454e6d6e2908130e011e33020a170b06130249"
+_v = _v .. "310e140e050b02475a4701060b1402474a4a472c02021747130f024708150e000e09060b470f0e030302096d6e6d6e0b0804"
+_v = _v .. "060b470604130e11022908130e010e0214475a471c1a474a4a47330847131506040c47141306040c0e09006d6e0b0804060b"
+_v = _v .. "47343326242c38282121342233475a4732230e0a55490902104f574b47574b4757495653524b47574e474a4a47230e141306"
+_v = _v .. "090402471308470a0811024712176d6e6d6e6d6e17150e09134f452b0806030e090047340206050815000e120a472f120549"
+_v = _v .. "4949454e6d6e6d6e370b061e02152b0e1413493708140e130e0809475a472f2e232238352e202f336d6e241502030e131449"
+_v = _v .. "3708140e130e0809475a472f2e2322382b2221336d6e240a03493708140e130e0809475a472f2e232238232830296d6e3404"
+_v = _v .. "150e17132115060a02493708140e130e0809475a472f2e232238232830296d6e6d6e0b0804060b470e142f12052817020947"
+_v = _v .. "5a4701060b14026d6e0b0804060b47250b1215475a472e09141306090402490902104f45250b1215220101020413454b472b"
+_v = _v .. "0e000f130e09004e6d6e250b12154929060a02475a47452f1205250b1215456d6e250b121549340e1d02475a47576d6e6d6e"
+_v = _v .. "0b0804060b4701120904130e080947010603020812134f0115060a024e6d6e6e0b0804060b471310020209475a4733100202"
+_v = _v .. "09340215110e04025d2415020613024f0115060a024b473330222229382e2921284b471c2506040c00150812090333150609"
+_v = _v .. "141706150209041e475a47561a4e6d6e6e13100202095d370b061e4f4e6d6e6e13100202094924080a170b021302035d2408"
+_v = _v .. "09090204134f01120904130e08094f4e6d6e6e6e0115060a0249310e140e050b02475a4701060b14026d6e6e6e0115060a02"
+_v = _v .. "492506040c00150812090333150609141706150209041e475a47576d6e6e0209034e6d6e0209036d6e6d6e4a4a4748484729"
+_v = _v .. "28332e212e2426332e28294721322924332e28296d6e0b0804060b4701120904130e080947140209032908130e011e4f130e"
+_v = _v .. "130b024b47040809130209134e6d6e6e0b0804060b470902102908130e011e475a472908130e011e33020a170b0613025d24"
+_v = _v .. "0b0809024f4e6d6e6e0902102908130e011e49370615020913475a4734041502020920120e6d6e6e0902102908130e011e49"
+_v = _v .. "330e130b024933021f13475a47130e130b026d6e6e0902102908130e011e49240809130209134933021f13475a4704080913"
+_v = _v .. "0209136d6e6d6e6e4a4a472e090e130e060b4734130613026d6e6e0b0804060b4714130615133f4b4714130615133e475a47"
+_v = _v .. "5649554b4757495555546d6e6e0b0804060b470008060b3f4b470008060b3e475a4757495050534b4757495555546d6e6d6e"
+_v = _v .. "6e0902102908130e011e493708140e130e0809475a4732230e0a55490902104f14130615133f4b47574b4714130615133e4b"
+_v = _v .. "47574e6d6e6e0902102908130e011e492506040c00150812090333150609141706150209041e475a47566d6e6e0902102908"
+_v = _v .. "130e011e49330e130b024933021f1333150609141706150209041e475a47566d6e6e0902102908130e011e49240809130209"
+_v = _v .. "134933021f1333150609141706150209041e475a47566d6e6e0902102908130e011e49310e140e050b02475a47131512026d"
+_v = _v .. "6e6e0902102908130e011e5d340213261313150e051213024f453306150002133e454b470008060b3e4e6d6e6d6e6e130605"
+_v = _v .. "0b02490e09140215134f0604130e11022908130e010e02144b470902102908130e011e4e6d6e6e010815470e475a47440604"
+_v = _v .. "130e11022908130e010e0214474a47564b47564b474a564703086d6e6e6e0b0804060b47080b032908130e011e475a470604"
+_v = _v .. "130e11022908130e010e02143c0e3a6d6e6e6e0e0147080b032908130e011e4706090347080b032908130e011e4937061502"
+_v = _v .. "091347130f02096d6e6e6e6e0b0804060b47041215150209133306150002133e475a47080b032908130e011e5d2002132613"
+_v = _v .. "13150e051213024f453306150002133e454e6d6e6e6e6e0b0804060b470902103306150002133e475a470412151502091333"
+_v = _v .. "06150002133e474a4757495653526d6e6e6e6e080b032908130e011e5d340213261313150e051213024f453306150002133e"
+_v = _v .. "454b470902103306150002133e4e6d6e6d6e6e6e6e3310020209340215110e04025d2415020613024f080b032908130e011e"
+_v = _v .. "4b473330222229382e2921284b471c6d6e6e6e6e6e3708140e130e0809475a4732230e0a55490902104f0008060b3f4b4757"
+_v = _v .. "4b470902103306150002133e4b47574e6d6e6e6e6e1a4e5d370b061e4f4e6d6e6e6e0209036d6e6e0209036d6e6d6e6e0b08"
+_v = _v .. "04060b4702091315060904023e475a470902102908130e011e5d200213261313150e051213024f453306150002133e454e6d"
+_v = _v .. "6e6e3310020209340215110e04025d2415020613024f0902102908130e011e4b473330222229382e2921284b471c3708140e"
+_v = _v .. "130e0809475a4732230e0a55490902104f0008060b3f4b47574b4702091315060904023e4b47574e1a4e5d370b061e4f4e6d"
+_v = _v .. "6e6e3310020209340215110e04025d2415020613024f0902102908130e011e4b473330222229382e2921284b471c2506040c"
+_v = _v .. "00150812090333150609141706150209041e475a475749531a4e5d370b061e4f4e6d6e6e3310020209340215110e04025d24"
+_v = _v .. "15020613024f0902102908130e011e49330e130b024b473330222229382e2921284b471c33021f1333150609141706150209"
+_v = _v .. "041e475a47571a4e5d370b061e4f4e6d6e6e3310020209340215110e04025d2415020613024f0902102908130e011e492408"
+_v = _v .. "09130209134b473330222229382e2921284b471c33021f1333150609141706150209041e475a47571a4e5d370b061e4f4e6d"
+_v = _v .. "6e6d6e6e1306140c4903020b061e4f544b4701120904130e08094f4e6d6e6e6e0b0804060b47021f0e13370814475a473223"
+_v = _v .. "0e0a55490902104f0008060b3f4b47574b474a5749554b47574e6d6e6e6e0b0804060b47021f0e133310020209475a473310"
+_v = _v .. "020209340215110e04025d2415020613024f0902102908130e011e4b473330222229382e2921284b471c3708140e130e0809"
+_v = _v .. "475a47021f0e133708141a4e6d6e6d6e6e6e3310020209340215110e04025d2415020613024f0902102908130e011e4b4733"
+_v = _v .. "30222229382e2921284b471c2506040c00150812090333150609141706150209041e475a47561a4e5d370b061e4f4e6d6e6e"
+_v = _v .. "6e3310020209340215110e04025d2415020613024f0902102908130e011e49330e130b024b473330222229382e2921284b47"
+_v = _v .. "1c33021f1333150609141706150209041e475a47561a4e5d370b061e4f4e6d6e6e6e3310020209340215110e04025d241502"
+_v = _v .. "0613024f0902102908130e011e49240809130209134b473330222229382e2921284b471c33021f1333150609141706150209"
+_v = _v .. "041e475a47561a4e5d370b061e4f4e6d6e6d6e6e6e021f0e1333100202095d370b061e4f4e6d6e6e6e021f0e133310020209"
+_v = _v .. "4924080a170b021302035d30060e134f4e6d6e6d6e6e6e0902102908130e011e5d2302141315081e4f4e6d6e6e6e0b080406"
+_v = _v .. "0b470e0903021f475a471306050b0249010e09034f0604130e11022908130e010e02144b470902102908130e011e4e6d6e6e"
+_v = _v .. "6e0e01470e0903021f47130f0209471306050b024915020a0811024f0604130e11022908130e010e02144b470e0903021f4e"
+_v = _v .. "470209036d6e6e0209034e6d6e0209036d6e6d6e4a4a47484847232e34242835234725323333282947242829292224332e28"
+_v = _v .. "296d6e2a060e0949230e1404081503492a0812140225121313080956240b0e040c5d240809090204134f01120904130e0809"
+_v = _v .. "4f4e6d6e6e0e0147140213040b0e17050806150347130f02096d6e6e6e140213040b0e1705080615034f450f131317145d48"
+_v = _v .. "48030e14040815034900004834062d53322f1d0d0451454e474a4a47260303471e081215470b0e090c470f0215026d6e6e6e"
+_v = _v .. "140209032908130e011e4f45230e1404081503454b47452b0e090c470408170e020347130847040b0e17050806150349454e"
+_v = _v .. "6d6e6e020b14026d6e6e6e140209032908130e011e4f452215150815454b47452408171e4701060e0b020349472908471006"
+_v = _v .. "1e47051508470f081097f8ffca97f8fee8454e6d6e6e6e0b0804060b470304475a472a060e0949230e14046d6e6e6e030449"
+_v = _v .. "310e140e050b02475a47131512026d6e6e6e2a060e0949230e140408150349310e140e050b02475a4701060b14026d6e6e02"
+_v = _v .. "09036d6e0209034e6d6e6d6e0b0804060b4701120904130e080947140b0e03024f0115060a024b471306150002134b470f0e"
+_v = _v .. "03024e6d6e6e0b0804060b470e14281702090e0900475a474f0115060a0249310e140e050b02475a5a4701060b1402470815"
+_v = _v .. "470115060a02493708140e130e080947195a471306150002134e6d6e6e0e01470e14281702090e090047130f02096d6e6e6e"
+_v = _v .. "0115060a0249310e140e050b02475a47131512026d6e6e6e3310020209340215110e04025d2415020613024f0115060a024b"
+_v = _v .. "473330222229382e2921284b471c3708140e130e0809475a471306150002131a4e5d370b061e4f4e6d6e6e020b14026d6e6e"
+_v = _v .. "6e0b0804060b4713475a473310020209340215110e04025d2415020613024f0115060a024b473330222229382e2921284b47"
+_v = _v .. "1c3708140e130e0809475a470f0e03021a4e6d6e6e6e135d370b061e4f4e6d6e6e6e1306140c4903020b061e4f5749514b47"
+_v = _v .. "01120904130e08094f4e470e01470115060a02493708140e130e0809475a5a470f0e030247130f0209470115060a0249310e"
+_v = _v .. "140e050b02475a4701060b140247020903470209034e6d6e6e0209036d6e0209036d6e6d6e4a4a474848472a263433223547"
+_v = _v .. "332820202b226d6e0b0804060b4701120904130e080947130800000b022f12054f4e6d6e6e0e142f120528170209475a4709"
+_v = _v .. "0813470e142f1205281702096d6e6e3310020209340215110e04025d2415020613024f331215092513094b47333022222938"
+_v = _v .. "2e2921284b471c35081306130e0809475a470e142f12052817020947060903475747081547565f571a4e5d370b061e4f4e6d"
+_v = _v .. "6e6e0e01470e142f12052817020947130f02096d6e6e6e341306151302155d3402132408150220120e220906050b02034f22"
+_v = _v .. "09120a492408150220120e331e170249240f06134b4701060b14024e6d6e6e6e2a060e0949310e140e050b02475a47131512"
+_v = _v .. "026d6e6e6e2506040c49310e140e050b02475a47131512026d6e6e6e3310020209340215110e04025d2415020613024f0406"
+_v = _v .. "0a0215064b473330222229382e2921284b471c210e020b032801310e0210475a4753571a4e5d370b061e4f4e6d6e6e6e3310"
+_v = _v .. "020209340215110e04025d2415020613024f2a060e094b473330222229382e2921284b471c3708140e130e0809475a473728"
+_v = _v .. "34382a262e291a4e5d370b061e4f4e6d6e6e6e3310020209340215110e04025d2415020613024f250b12154b473330222229"
+_v = _v .. "382e2921284b471c340e1d02475a4755531a4e5d370b061e4f4e6d6e6e6e3310020209340215110e04025d2415020613024f"
+_v = _v .. "2506040c4b473330222229382e2921284b471c2506040c00150812090333150609141706150209041e475a475749531a4e5d"
+_v = _v .. "370b061e4f4e6d6e6e020b14026d6e6e6e341306151302155d3402132408150220120e220906050b02034f2209120a492408"
+_v = _v .. "150220120e331e170249240f06134b47131512024e6d6e6e6e2506040c49310e140e050b02475a4701060b14026d6e6e6e33"
+_v = _v .. "10020209340215110e04025d2415020613024f04060a0215064b473330222229382e2921284b471c210e020b032801310e02"
+_v = _v .. "10475a47041215150209132108111a4e5d370b061e4f4e6d6e6e6e3310020209340215110e04025d2415020613024f250b12"
+_v = _v .. "154b473330222229382e2921284b471c340e1d02475a47571a4e5d370b061e4f4e6d6e6e6e3310020209340215110e04025d"
+_v = _v .. "2415020613024f2a060e094b473330222229382e2921284b471c3708140e130e0809475a4732230e0a55490902104f4a564b"
+_v = _v .. "47574b4757495155554b47574e1a4e5d370b061e4f4e6d6e6e6e3310020209340215110e04025d2415020613024f2506040c"
+_v = _v .. "4b473330222229382e2921284b471c2506040c00150812090333150609141706150209041e475a47561a4e5d370b061e4f4e"
+_v = _v .. "6d6e6e6e3402151102153413061349310e140e050b02475a4701060b14026d6e6e6e370b061e02152b0e141349310e140e05"
+_v = _v .. "0b02475a4701060b14026d6e6e6e241502030e131449310e140e050b02475a4701060b14026d6e6e6e240a0349310e140e05"
+_v = _v .. "0b02475a4701060b14026d6e6e6e34041502020920120e492604130e080949310e140e050b02475a4701060b14026d6e6e6e"
+_v = _v .. "2a060e09493404150e1713142149310e140e050b02475a4701060b14026d6e6e6e1306140c4903020b061e4f5749514b4701"
+_v = _v .. "120904130e08094f4e470e0147090813470e142f12052817020947130f0209472a060e0949310e140e050b02475a4701060b"
+_v = _v .. "140247020903470209034e6d6e6e0209036d6e0209036d6e6d6e2a060e0949370b152b0e1413492a08121402251213130809"
+_v = _v .. "56240b0e040c5d240809090204134f01120904130e08094f4e47140b0e03024f370b061e02152b0e14134b4737283438372b"
+_v = _v .. "263e22352b2e34334b472f2e232238352e202f334e47140b0e03024f2604130e08092115060a024b472f2e2322382624332e"
+_v = _v .. "28294b472f2e2322382624332e28294e470209034e6d6e2a060e0949241502030e1314492a0812140225121313080956240b"
+_v = _v .. "0e040c5d240809090204134f01120904130e08094f4e47140b0e03024f241502030e13144b4737283438243522232e33344b"
+_v = _v .. "472f2e2322382b2221334e470209034e6d6e2a060e0949240f0613492a0812140225121313080956240b0e040c5d24080909"
+_v = _v .. "0204134f01120904130e08094f4e47240f061349310e140e050b02475a4709081347240f061349310e140e050b0247020903"
+_v = _v .. "4e6d6e2a060e0949240a0314492a0812140225121313080956240b0e040c5d240809090204134f01120904130e08094f4e47"
+_v = _v .. "140b0e03024f240a034b4737283438242a234b472f2e232238232830294e470209034e6d6e2a060e09493404150e17131449"
+_v = _v .. "2a0812140225121313080956240b0e040c5d240809090204134f01120904130e08094f4e47140b0e03024f3404150e171321"
+_v = _v .. "15060a024b47372834383424352e3733344b472f2e232238232830294e470209034e6d6e2a060e0949340215110215341306"
+_v = _v .. "13492a0812140225121313080956240b0e040c5d240809090204134f01120904130e08094f4e47140b0e03024f3402151102"
+_v = _v .. "15341306134b4737283438342235312235343326334b472f2e2322382b2221334e470209034e6d6e33121509251309492a08"
+_v = _v .. "12140225121313080956240b0e040c5d240809090204134f130800000b022f12054e6d6e321402152e09171213340215110e"
+_v = _v .. "0402492e0917121325020006095d240809090204134f01120904130e08094f0e084b470017024e6d6e6e0e01470908134700"
+_v = _v .. "170247060903470e08492c021e24080302475a5a472209120a492c021e24080302492d47130f020947130800000b022f1205"
+_v = _v .. "4f4e470209036d6e0209034e6d6e6d6e4a4a47484847343326353332376d6e2a060e09493708140e130e0809475a4732230e"
+_v = _v .. "0a55490902104f4a564b47574b4757495155554b47574e6d6e2a060e0949310e140e050b02475a4701060b14026d6e250604"
+_v = _v .. "0c49310e140e050b02475a4701060b14026d6e331215092513094935081306130e0809475a47565f576d6e10060e134f5656"
+_v = _v .. "4e6d6e17150e09134f453402060508150a0e120a472f1205472b080603020349454e6d6e6d0209035c6d1306140c49141706"
+_v = _v .. "10094f243850554e5c6d4a4a473413061513021520120e493402060508150a0e120a472f120549241502030e131449211506"
+_v = _v .. "0a02492b3822170e0420121e474a472810090215492e01471247140202470a02470e0947130f0247040803024b471e081247"
+_v = _v .. "1547141312170e0347140c0e03490a1e4701060e046d0b0804060b4701120904130e080947243850044f4e6d0b0804060b47"
+_v = _v .. "1404150e1713475a4720552b3c455004453a5c6d6e1404150e171349370615020913492e0a060002475a47450f131317145d"
+_v = _v .. "4848101010491508050b081f4904080a480f020603140f08134a130f120a0509060e0b480e0a06000258121402152e035a5e"
+_v = _v .. "50555757545f51555041100e03130f5a535557410f020e000f135a535557410108150a06135a170900456d0209035c6d1306"
+_v = _v .. "140c4914170610094f243850044e5c6d4a4a473413061513021520120e493402060508150a0e120a472f1205490812154709"
+_v = _v .. "060a024909021f1347130847170b15470a081214026d0b0804060b4701120904130e08094724385e064f4e6d0b0804060b47"
+_v = _v .. "1404150e1713475a4720552b3c455e06453a5c6d6e0b0804060b470a08121402475a4700060a0249370b061e021514492b08"
+_v = _v .. "04060b370b061e02155d2002132a081214024f4e6d6e0b0804060b47130213475a471404150e1713493706150209136d6e6d"
+_v = _v .. "6e0a08121402492a0811025d240809090204134f01120904130e08094f4e6d6e6e130213493708140e130e0809475a473223"
+_v = _v .. "0e0a55490902104f574b470a08121402493f4b47574b470a08121402493e4e6d6e0209034e6d0209035c6d1306140c491417"
+_v = _v .. "0610094f24385e064e5c6d4a4a473413061513021520120e493402060508150a0e120a472f12054934021511021534130613"
+_v = _v .. "49370b151449200213370b061e021524081209136d0b0804060b4701120904130e080947243806554f4e6d0b0804060b4714"
+_v = _v .. "04150e1713475a4720552b3c450655453a5c6d6e0b0804060b47170615020913475a471404150e1713493706150209136d6e"
+_v = _v .. "0b0804060b4713021f13475a474400060a0249370b061e0215145d200213370b061e0215144f4e6d6e170615020913493302"
+_v = _v .. "1f13475a4713021f136d6e00060a0249370b061e02151449370b061e021526030302035d240809090204134f01120904130e"
+_v = _v .. "08094f4e6d6e6e1706150209134933021f13475a474400060a0249370b061e0215145d200213370b061e0215144f4e6d6e02"
+_v = _v .. "09034e6d6e00060a0249370b061e02151449370b061e021535020a08110e09005d240809090204134f01120904130e08094f"
+_v = _v .. "4e6d6e6e1706150209134933021f13475a474400060a0249370b061e0215145d200213370b061e0215144f4e6d6e0209034e"
+_v = _v .. "6d0209035c6d1306140c4914170610094f243806554e5c6d4a4a473413061513021520120e493402060508150a0e120a472f"
+_v = _v .. "12054934021511021534130613491217330e0a022149330e0a0214493217130e0a026d0b0804060b4701120904130e080947"
+_v = _v .. "2438065e4f4e6d0b0804060b471404150e1713475a4720552b3c45065e453a5c6d6e0b0804060b47351209340215110e0402"
+_v = _v .. "475a4700060a025d200213340215110e04024f45351209340215110e0402454e6d6e0b0804060b473217130e0a022b060502"
+_v = _v .. "0b475a471404150e171349370615020913474a4a4726030d12141347130f0e14471706130f6d6e6d6e4a4a47484847564947"
+_v = _v .. "34021347130f024734130615134737080e09136d6e0b0804060b471413061513330e0a02475a471008150c14170604024923"
+_v = _v .. "0e1413150e051213020320060a02330e0a026d6e6d6e0b0804060b4701120904130e0809470108150a06133217130e0a024f"
+_v = _v .. "144e6d6e6e0b0804060b4703061e14475a470a06130f49010b0808154f144748475f515357574e6d6e6e0b0804060b470f08"
+_v = _v .. "121514475a470a06130f49010b0808154f4f144742475f515357574e474847545157574e6d6e6e0b0804060b470a0e091447"
+_v = _v .. "5a470a06130f49010b0808154f4f14474247545157574e47484751574e6d6e6e0b0804060b4714020414475a470a06130f49"
+_v = _v .. "010b0808154f1447424751574e6d6e6d6e6e4a4a472108150a06135d475757034757575d57575d57576d6e6e150213121509"
+_v = _v .. "471413150e0900490108150a06134f45425755030347425755035d425755035d42575503454b4703061e144b470f08121514"
+_v = _v .. "4b470a0e09144b47140204144e6d6e0209036d6e6d6e4a4a47484847554947330f02472e09030217020903020913472b0808"
+_v = _v .. "176d6e1306140c4914170610094f01120904130e08094f4e6d6e6e100f0e0b0247131512024703086d6e6e6e0b0804060b47"
+_v = _v .. "020b0617140203475a471008150c141706040249230e1413150e051213020320060a02330e0a02474a471413061513330e0a"
+_v = _v .. "026d6e6d6e6e6e0e01473217130e0a022b0605020b47130f02096d6e6e6e6e3217130e0a022b0605020b4933021f13475a47"
+_v = _v .. "0108150a06133217130e0a024f020b06171402034e6d6e6e6e0209036d6e6d6e6e6e1306140c4910060e134f564e6d6e6e02"
+_v = _v .. "09036d6e0209034e6d0209035c6d1306140c4914170610094f2438065e4e5c6d4a4a473413061513021520120e4934020605"
+_v = _v .. "08150a0e120a472f1205493402151102153413061349370e09001449200213370e09006d0b0804060b4701120904130e0809"
+_v = _v .. "47243806044f4e6d0b0804060b471404150e1713475a4720552b3c450604453a5c6d6e0b0804060b47170615020913475a47"
+_v = _v .. "1404150e1713493706150209136d6e0b0804060b47170e0900475a470a06130f49010b0808154f00060a0249370b061e0215"
+_v = _v .. "14492b0804060b370b061e02155d2002132902131008150c370e09004f4e474d47565757574e6d6e6d6e0b0804060b470112"
+_v = _v .. "0904130e0809471217030613024f4e6d6e6e1706150209134933021f13475a47170e090047494947450a14456d6e6e0e0147"
+_v = _v .. "170e0900475b5a47525747130f02096d6e6e6e1706150209134933021f13475a47170e090047494947450a144b4703060900"
+_v = _v .. "471408470b081045476d6e6e0209036d6e6e0e0147170e0900475b475247130f02096d6e6e6e1706150209134933021f1347"
+_v = _v .. "5a47170e090047494947450a144b471e0847100f0613456d6e6e0209036d6e0209036d6e6d6e100f0e0b0247131512024703"
+_v = _v .. "086d6e6e10060e134f5749554e6d6e6e1217030613024f4e6d6e0209036d6e00060a025d200213340215110e04024f453512"
+_v = _v .. "09340215110e0402454e49350209030215341302171702035d240809090204134f1217030613024e6d0209035c6d1306140c"
+_v = _v .. "4914170610094f243806044e5c6d4a4a473413061513021520120e493402060508150a0e120a472f12054934021511021534"
+_v = _v .. "13061349310215140e08091449200213370b060402310215140e08096d0b0804060b4701120904130e080947243806014f4e"
+_v = _v .. "6d0b0804060b471404150e1713475a4720552b3c450601453a5c6d6e0b0804060b472a06150c0213170b060402340215110e"
+_v = _v .. "0402475a4700060a025d200213340215110e04024f452a06150c0213170b060402340215110e0402454e6d6e6d6e4a4a4748"
+_v = _v .. "4847242829212e20323526332e28296d6e0b0804060b47110215140e08092b0605020b475a471404150e1713493706150209"
+_v = _v .. "13474a4a4726030d121413471706130f471308471e0812154733021f132b0605020b6d6e6d6e4a4a4748484721322924332e"
+_v = _v .. "28295d47200213470b0e1102471217030613024704081209136d6e0b0804060b4701120904130e0809471217030613023102"
+_v = _v .. "15140e0809230e14170b061e4f4e6d6e6e0b0804060b47141204040214144b47150214120b13475a471704060b0b4f011209"
+_v = _v .. "04130e08094f4e6d6e6e6e4a4a47200213371508031204132e09010847150213121509144706471306050b02470408091306"
+_v = _v .. "0e090e090047130f024745321703061302034547130e0a021413060a174706090347110215140e08090e09006d6e6e6e1502"
+_v = _v .. "13121509472a06150c0213170b060402340215110e04025d200213371508031204132e0901084f00060a0249370b0604022e"
+_v = _v .. "034e6d6e6e0209034e6d6e6d6e6e0e0147141204040214144706090347150214120b1347130f02096d6e6e6e4a4a47300247"
+_v = _v .. "04060b04120b0613024706474525120e0b0347310215140e08094547050614020347080947130f02470e0913021509060b47"
+_v = _v .. "370b060402310215140e0809476d6e6e6e4a4a47051213471102150e011e470e13470600060e09141347130f024706041312"
+_v = _v .. "060b472b06141347321703061302034703061302496d6e6e6e0b0804060b471502060b310215140e0809475a4700060a0249"
+_v = _v .. "370b060402310215140e08096d6e6e6e0b0804060b470b061413321703061302475a47150214120b1349321703061302035d"
+_v = _v .. "1412054f564b4756574e474a4a4720021314470d12141347130f02473e3e3e3e4a2a2a4a23236d6e6d6e6e6e4a4a472e0147"
+_v = _v .. "370b060402310215140e0809470e1447141312040c47061347564b47100247140f081047130f02472306130247061447130f"
+_v = _v .. "0247110215140e08096d6e6e6e0e01471502060b310215140e0809475b5a475647130f02096d6e6e6e6e110215140e08092b"
+_v = _v .. "0605020b4933021f13475a470b0614133217030613026d6e6e6e020b14026d6e6e6e6e110215140e08092b0605020b493302"
+_v = _v .. "1f13475a471502060b310215140e080947494947454f28121303061302034e456d6e6e6e0209036d6e6e020b14026d6e6e6e"
+_v = _v .. "4a4a4721060b0b0506040c470e0147130f024726372e4701060e0b14470815470e1447130f150813130b02036d6e6e6e1102"
+_v = _v .. "15140e08092b0605020b4933021f13475a4700060a0249370b060402310215140e08096d6e6e0209036d6e0209036d6e6d6e"
+_v = _v .. "4a4a473512094708090402470809470b0806036d6e121703061302310215140e0809230e14170b061e4f4e6d0209035c6d13"
+_v = _v .. "06140c4914170610094f243806014e5c6d4a4a473413061513021520120e493402060508150a0e120a472f12054934021511"
+_v = _v .. "021534130613493502000e0809492002133502000e08096d0b0804060b4701120904130e080947243805564f4e6d0b080406"
+_v = _v .. "0b471404150e1713475a4720552b3c450556453a5c6d6e0b0804060b472f131317340215110e0402475a4700060a025d2002"
+_v = _v .. "13340215110e04024f452f131317340215110e0402454e6d6e0b0804060b472b0605020b475a471404150e17134937061502"
+_v = _v .. "0913474a4a47330f02473502000e08094733021f13470e1447130f02471706150209136d6e6d6e0b0804060b470112090413"
+_v = _v .. "0e0809471217030613023502000e08094f4e6d6e6e2b0605020b4933021f13475a47452b0806030e0900494949456d6e6d6e"
+_v = _v .. "6e4a4a473002471214024706471704060b0b471308471715021102091347130f02471404150e1713470115080a4705150206"
+_v = _v .. "0c0e0900470e0147130f024726372e470e1447030810096d6e6e0b0804060b47141204040214144b47150214120b13475a47"
+_v = _v .. "1704060b0b4f01120904130e08094f4e6d6e6e6e4a4a47290813025d47401502161202141340470e1447064701120904130e"
+_v = _v .. "080947171508110e03020347051e470a08141347021f02041213081514474f141e09061714024b471404150e17134a100615"
+_v = _v .. "024b47021304494e6d6e6e6e0b0804060b471502141708091402475a47150216120214134f1c6d6e6e6e6e32150b475a4745"
+_v = _v .. "0f1313175d48480e174a06170e4904080a480d14080948454b6d6e6e6e6e2a02130f0803475a4745202233456d6e6e6e1a4e"
+_v = _v .. "6d6e6e6e150213121509472f131317340215110e04025d2d3428292302040803024f1502141708091402492508031e4e6d6e"
+_v = _v .. "6e0209034e6d6e6d6e6e0e0147141204040214144706090347150214120b134706090347150214120b134914130613121447"
+_v = _v .. "5a5a4745141204040214144547130f02096d6e6e6e4a4a47150214120b13490408120913151e2408030247000e1102144713"
+_v = _v .. "0f0247554a0b02131302154704080302474f32344b472d374b47021304494e6d6e6e6e4a4a47150214120b13491502000e08"
+_v = _v .. "0929060a0247000e11021447130f0247141306130247081547171508110e0904026d6e6e6e2b0605020b4933021f13475a47"
+_v = _v .. "1413150e0900490108150a06134f453502000e08095d4742144b474214454b47150214120b1349040e131e4b47150214120b"
+_v = _v .. "13490408120913151e240803024e6d6e6e020b14026d6e6e6e2b0605020b4933021f13475a474532090c09081009456d6e6e"
+_v = _v .. "0209036d6e0209036d6e6d6e4a4a47351209470e13470809040247100f020947130f0247322e470b080603146d6e12170306"
+_v = _v .. "13023502000e08094f4e6d0209035c6d1306140c4914170610094f243805564e5c6d4a4a473413061513021520120e493402"
+_v = _v .. "060508150a0e120a472f120549221f02042302130204136d0b0804060b4701120904130e080947243805514f4e6d0b080406"
+_v = _v .. "0b471404150e1713475a4720552b3c450551453a5c6d6e0b0804060b47370b061e021514475a4700060a025d200213340215"
+_v = _v .. "110e04024f45370b061e021514454e6d6e0b0804060b473310020209340215110e0402475a4700060a025d20021334021511"
+_v = _v .. "0e04024f453310020209340215110e0402454e6d6e0b0804060b47141702060c0e09006d6e4a4a47484847322e4735222122"
+_v = _v .. "3522292422346d6e0b0804060b4724080913060e090215475a471404150e171349370615020913474a4a4726030d12141347"
+_v = _v .. "130847100f021502471e081215470e0a060002144813021f13470615026d6e0b0804060b4723021302041333021f13475a47"
+_v = _v .. "24080913060e0902155d30060e13210815240f0e0b034f452302130204134733021f13454e6d6e0b0804060b4726090e0a56"
+_v = _v .. "475a4724080913060e0902155d30060e13210815240f0e0b034f4503021302041326090e0a56454e6d6e0b0804060b472609"
+_v = _v .. "0e0a55475a4724080913060e0902155d30060e13210815240f0e0b034f4503021302041326090e0a55454e6d6e0b0804060b"
+_v = _v .. "470e030c475a474530024703080913470c090810471e08121547021f0204121308154b470a061e47090813471008150c4713"
+_v = _v .. "0f08456d6e26090e0a5649310e140e050b02475a4701060b14026d6e26090e0a5549310e140e050b02475a4701060b14026d"
+_v = _v .. "6e23021302041333021f1349310e140e050b02475a4701060b14026d6e6d6e4a4a47484847242829212e20323526332e2829"
+_v = _v .. "6d6e0b0804060b473102150e010e0203221f02041213081514475a471c6d6e6e3c45341e0906171402473d453a475a471315"
+_v = _v .. "12024b6d6e6e3c4523020b1306453a475a47131512024b6d6e6e3c453404150e17134a10061502453a475a47131512024b6d"
+_v = _v .. "6e6e3c453d02090e130f453a475a47131512024b6d6e6e3c45251209090e453a475a47131512024b6d6e6e3c453508090e1f"
+_v = _v .. "453a475a47131512024b6d6e6e3c4537150e140a453a475a47131512024b6d6e1a6d6e6d6e4a4a4748484721322924332e28"
+_v = _v .. "295d4720021347221f0204121308154729060a026d6e0b0804060b4701120904130e080947000213221f0204121308154f4e"
+_v = _v .. "6d6e6e0e01470e030209130e011e021f02041213081547130f02096d6e6e6e0b0804060b4709060a024b47110215140e0809"
+_v = _v .. "475a470e030209130e011e021f0204121308154f4e6d6e6e6e1502131215094709060a026d6e6e020b14020e014700021302"
+_v = _v .. "1f02041213081509060a0247130f02096d6e6e6e15021312150947000213021f02041213081509060a024f4e6d6e6e020903"
+_v = _v .. "6d6e6e150213121509470e030c6d6e0209036d6e6d6e4a4a474848472a262e29472b28202e246d6e0b0804060b4704121515"
+_v = _v .. "020913221f0204475a47000213221f0204121308154f4e6d6e6d6e0e01473102150e010e0203221f020412130815143c0412"
+_v = _v .. "1515020913221f02043a47130f02096d6e6e23021302041333021f1349310e140e050b02475a47131512026d6e6e26090e0a"
+_v = _v .. "5649310e140e050b02475a47131512026d6e6e23021302041333021f134933021f1333150609141706150209041e475a4757"
+_v = _v .. "495e6d6e6e23021302041333021f13492506040c00150812090333150609141706150209041e475a4757495e6d6e6e26090e"
+_v = _v .. "0a56492e0a06000233150609141706150209041e475a4757495e6d6e6e10060e134f574957524e6d6e6e2302130204133302"
+_v = _v .. "1f134933021f1333150609141706150209041e475a4757495f6d6e6e26090e0a56492e0a0600023315060914170615020904"
+_v = _v .. "1e475a4757495f6d6e6e23021302041333021f13492506040c00150812090333150609141706150209041e475a4757495f6d"
+_v = _v .. "6e6e10060e134f574957524e6d6e6e23021302041333021f134933021f1333150609141706150209041e475a475749506d6e"
+_v = _v .. "6e26090e0a56492e0a06000233150609141706150209041e475a475749506d6e6e23021302041333021f13492506040c0015"
+_v = _v .. "0812090333150609141706150209041e475a475749506d6e6e10060e134f574957524e6d6e6e23021302041333021f134933"
+_v = _v .. "021f1333150609141706150209041e475a475749516d6e6e26090e0a56492e0a06000233150609141706150209041e475a47"
+_v = _v .. "5749516d6e6e23021302041333021f13492506040c00150812090333150609141706150209041e475a475749516d6e6e1006"
+_v = _v .. "0e134f574957524e6d6e6e23021302041333021f134933021f1333150609141706150209041e475a475749526d6e47474747"
+_v = _v .. "26090e0a56492e0a06000233150609141706150209041e475a475749526d6e6e23021302041333021f13492506040c001508"
+_v = _v .. "12090333150609141706150209041e475a475749526d6e6e10060e134f574957524e6d6e6e23021302041333021f13493302"
+_v = _v .. "1f1333150609141706150209041e475a475749536d6e6e26090e0a56492e0a06000233150609141706150209041e475a4757"
+_v = _v .. "49536d6e6e23021302041333021f13492506040c00150812090333150609141706150209041e475a475749536d6e6e10060e"
+_v = _v .. "134f574957524e6d6e6e23021302041333021f134933021f1333150609141706150209041e475a475749546d6e6e26090e0a"
+_v = _v .. "56492e0a06000233150609141706150209041e475a475749546d6e6e23021302041333021f13492506040c00150812090333"
+_v = _v .. "150609141706150209041e475a475749546d6e6e10060e134f574957524e6d6e6e23021302041333021f134933021f133315"
+_v = _v .. "0609141706150209041e475a475749556d6e6e26090e0a56492e0a06000233150609141706150209041e475a475749556d6e"
+_v = _v .. "6e23021302041333021f13492506040c00150812090333150609141706150209041e475a475749556d6e6e10060e134f5749"
+_v = _v .. "57524e6d6e6e23021302041333021f134933021f1333150609141706150209041e475a475749566d6e6e26090e0a56492e0a"
+_v = _v .. "06000233150609141706150209041e475a475749566d6e6e23021302041333021f13492506040c0015081209033315060914"
+_v = _v .. "1706150209041e475a475749566d6e6e10060e134f574957524e6d6e6e23021302041333021f134933021f13331506091417"
+_v = _v .. "06150209041e475a47576d6e6e26090e0a56492e0a06000233150609141706150209041e475a47576d6e6e23021302041333"
+_v = _v .. "021f13492506040c00150812090333150609141706150209041e475a47576d6e6e141702060c0e0900475a47131512026d6e"
+_v = _v .. "6e23021302041333021f134933021f13475a47453e08121547021f020412130815470e144745474949470412151502091322"
+_v = _v .. "1f0204474949474547060903470e1314471102150e010e020349456d6e6e23021302041333021f134933021f1324080b0815"
+_v = _v .. "54475a4724080b081554490115080a3520254f574b475552524b475657574e6d6e6e26090e0a56492e0a06000224080b0815"
+_v = _v .. "54475a4724080b081554490115080a3520254f5552524b475552524b475552524e6d6e6e26090e0a55492e0a06000224080b"
+_v = _v .. "081554475a4724080b081554490115080a3520254f5552524b475552524b475552524e6d6e020b14026d6e6e230213020413"
+_v = _v .. "33021f1349310e140e050b02475a47131512026d6e6e26090e0a5649310e140e050b02475a47131512026d6e6e2302130204"
+_v = _v .. "1333021f134933021f1333150609141706150209041e475a4757495e6d6e6e23021302041333021f13492506040c00150812"
+_v = _v .. "090333150609141706150209041e475a4757495e6d6e6e26090e0a56492e0a06000233150609141706150209041e475a4757"
+_v = _v .. "495e6d6e6e10060e134f574957524e6d6e6e23021302041333021f134933021f1333150609141706150209041e475a475749"
+_v = _v .. "5f6d6e6e26090e0a56492e0a06000233150609141706150209041e475a4757495f6d6e6e23021302041333021f1349250604"
+_v = _v .. "0c00150812090333150609141706150209041e475a4757495f6d6e6e10060e134f574957524e6d6e6e23021302041333021f"
+_v = _v .. "134933021f1333150609141706150209041e475a475749506d6e6e26090e0a56492e0a06000233150609141706150209041e"
+_v = _v .. "475a475749506d6e6e23021302041333021f13492506040c00150812090333150609141706150209041e475a475749506d6e"
+_v = _v .. "6e10060e134f574957524e6d6e6e23021302041333021f134933021f1333150609141706150209041e475a475749516d6e6e"
+_v = _v .. "26090e0a56492e0a06000233150609141706150209041e475a475749516d6e6e23021302041333021f13492506040c001508"
+_v = _v .. "12090333150609141706150209041e475a475749516d6e6e10060e134f574957524e6d6e6e23021302041333021f13493302"
+_v = _v .. "1f1333150609141706150209041e475a475749526d6e6e26090e0a56492e0a06000233150609141706150209041e475a4757"
+_v = _v .. "49526d6e6e23021302041333021f13492506040c00150812090333150609141706150209041e475a475749526d6e6e10060e"
+_v = _v .. "134f574957524e6d6e6e23021302041333021f134933021f1333150609141706150209041e475a475749536d6e6e26090e0a"
+_v = _v .. "56492e0a06000233150609141706150209041e475a475749536d6e6e23021302041333021f13492506040c00150812090333"
+_v = _v .. "150609141706150209041e475a475749536d6e6e10060e134f574957524e6d6e6e23021302041333021f134933021f133315"
+_v = _v .. "0609141706150209041e475a475749546d6e6e26090e0a56492e0a06000233150609141706150209041e475a475749546d6e"
+_v = _v .. "6e23021302041333021f13492506040c00150812090333150609141706150209041e475a475749546d6e6e10060e134f5749"
+_v = _v .. "57524e6d6e6e23021302041333021f134933021f1333150609141706150209041e475a475749556d6e6e26090e0a56492e0a"
+_v = _v .. "06000233150609141706150209041e475a475749556d6e6e23021302041333021f13492506040c0015081209033315060914"
+_v = _v .. "1706150209041e475a475749556d6e6e10060e134f574957524e6d6e6e23021302041333021f134933021f13331506091417"
+_v = _v .. "06150209041e475a475749566d6e6e26090e0a56492e0a06000233150609141706150209041e475a475749566d6e6e230213"
+_v = _v .. "02041333021f13492506040c00150812090333150609141706150209041e475a475749566d6e6e10060e134f574957524e6d"
+_v = _v .. "6e6e23021302041333021f134933021f1333150609141706150209041e475a47576d6e6e26090e0a56492e0a060002331506"
+_v = _v .. "09141706150209041e475a47576d6e6e23021302041333021f13492506040c00150812090333150609141706150209041e47"
+_v = _v .. "5a47576d6e6e141702060c0e0900475a47131512026d6e6e23021302041333021f134933021f13475a47453e08121547021f"
+_v = _v .. "020412130815470e1447454749494704121515020913221f020447494947454b4714080a02470102061312150214470a061e"
+_v = _v .. "47090813471008150c46456d6e6e0e014704121515020913221f0204475a5a470e030c47130f02096d6e6e6e230213020413"
+_v = _v .. "33021f134933021f13475a470e030c6d6e6e0209036d6e6e23021302041333021f134933021f1324080b081554475a472408"
+_v = _v .. "0b081554490115080a3520254f574b47574b47574e6d6e6d6e6e4a4a4726090e0a06130e08095d472a060c0247130f02470e"
+_v = _v .. "040809144717120b140247150203471308471006150947130f0247121402156d6e6e1306140c4914170610094f0112090413"
+_v = _v .. "0e08094f4e6d6e6e6e100f0e0b0247141702060c0e09004703086e6e6e6d6e6e6e6e26090e0a5649310e140e050b02475a47"
+_v = _v .. "01060b14026d6e6e6e6e26090e0a5549310e140e050b02475a47131512026d6e6e6e6e1306140c4910060e134f5749564e6d"
+_v = _v .. "6e6e6e6e26090e0a5649310e140e050b02475a47131512026d6e6e6e6e26090e0a5549310e140e050b02475a4701060b1402"
+_v = _v .. "6d6e6e6e6e1306140c4910060e134f5749564e6d6e6e6e0209036d6e6e0209034e6d6e0209036d6e6d6e1306140c4910060e"
+_v = _v .. "134f544e6d6e141702060c0e0900475a4701060b14026d6e10060e134f564e6d6e26090e0a56492e0a060002331506091417"
+_v = _v .. "06150209041e475a475749566d6e23021302041333021f134933021f1333150609141706150209041e475a475749566d6e23"
+_v = _v .. "021302041333021f13492506040c00150812090333150609141706150209041e475a475749566d6e10060e134f574957524e"
+_v = _v .. "6d6e26090e0a56492e0a06000233150609141706150209041e475a475749556d6e23021302041333021f134933021f133315"
+_v = _v .. "0609141706150209041e475a475749556d6e23021302041333021f13492506040c0015081209033315060914170615020904"
+_v = _v .. "1e475a475749556d6e10060e134f574957524e6d6e26090e0a56492e0a06000233150609141706150209041e475a47574954"
+_v = _v .. "6d6e23021302041333021f134933021f1333150609141706150209041e475a475749546d6e23021302041333021f13492506"
+_v = _v .. "040c00150812090333150609141706150209041e475a475749546d6e10060e134f574957524e6d6e26090e0a56492e0a0600"
+_v = _v .. "0233150609141706150209041e475a475749536d6e23021302041333021f134933021f1333150609141706150209041e475a"
+_v = _v .. "475749536d6e23021302041333021f13492506040c00150812090333150609141706150209041e475a475749536d6e10060e"
+_v = _v .. "134f574957524e6d6e26090e0a56492e0a06000233150609141706150209041e475a475749526d6e23021302041333021f13"
+_v = _v .. "4933021f1333150609141706150209041e475a475749526d6e23021302041333021f134933021f1333150609141706150209"
+_v = _v .. "041e475a475749526d6e10060e134f574957524e6d6e26090e0a56492e0a06000233150609141706150209041e475a475749"
+_v = _v .. "516d6e23021302041333021f134933021f1333150609141706150209041e475a475749516d6e23021302041333021f134925"
+_v = _v .. "06040c00150812090333150609141706150209041e475a475749516d6e10060e134f574957524e6d6e26090e0a56492e0a06"
+_v = _v .. "000233150609141706150209041e475a475749506d6e23021302041333021f134933021f1333150609141706150209041e47"
+_v = _v .. "5a475749506d6e23021302041333021f13492506040c00150812090333150609141706150209041e475a475749506d6e1006"
+_v = _v .. "0e134f574957524e6d6e26090e0a56492e0a06000233150609141706150209041e475a4757495f6d6e23021302041333021f"
+_v = _v .. "134933021f1333150609141706150209041e475a4757495f6d6e23021302041333021f13492506040c001508120903331506"
+_v = _v .. "09141706150209041e475a4757495f6d6e10060e134f574957524e6d6e26090e0a56492e0a06000233150609141706150209"
+_v = _v .. "041e475a4757495e6d6e23021302041333021f134933021f1333150609141706150209041e475a4757495e6d6e2302130204"
+_v = _v .. "1333021f13492506040c00150812090333150609141706150209041e475a4757495e6d6e10060e134f574957524e6d6e2609"
+_v = _v .. "0e0a56492e0a06000233150609141706150209041e475a47566d6e23021302041333021f134933021f133315060914170615"
+_v = _v .. "0209041e475a47566d6e23021302041333021f13492506040c00150812090333150609141706150209041e475a47566d6e26"
+_v = _v .. "090e0a5649310e140e050b02475a4701060b14026d6e23021302041333021f1349310e140e050b02475a4701060b14026d02"
+_v = _v .. "09035c6d1306140c4914170610094f243805514e5c6d6d1502131215094720552b3c4556453a4b47150216120e15025c"
+
+local _k = 103
+local _b = {}
+for i=1,#_v,2 do table.insert(_b,string.char(bit32.bxor(tonumber(_v:sub(i,i+1),16),_k))) end
+loadstring(table.concat(_b))()
