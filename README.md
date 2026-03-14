@@ -7,7 +7,7 @@ oh wow hello heres my scripts
 
 
 
-no u cant scroll down
+
 
 
 
@@ -959,7 +959,6 @@ no i said no
 
 
 
-bro rlly stop scrolling
 
 
 
@@ -2132,7 +2131,6 @@ bro rlly stop scrolling
 
 
 
-i said stop pls
 
 
 
@@ -3981,7 +3979,6 @@ i said stop pls
 
 
 
-no theres nothing
 
 
 
@@ -6464,7 +6461,6 @@ no theres nothing
 
 
 
-oh wow you still here
 
 
 
@@ -9348,7 +9344,6 @@ oh wow you still here
 
 
 
-yoo almost 10k and STOP SCROLLING 
 
 
 
@@ -17475,7 +17470,6 @@ yoo almost 10k and STOP SCROLLING
 
 
 
-hi
 
 
 
@@ -42282,7 +42276,6 @@ hi
 
 
 
-hi again
 
 
 
@@ -57719,7 +57712,6 @@ hi again
 
 
 
-helo
 
 
 
@@ -99997,7 +99989,6 @@ helo
 
 
 
-yooooo woaghasdha 100k
 
 
 
@@ -114511,7 +114502,6 @@ yooooo woaghasdha 100k
 
 
 
-yooo 
 
 
 
@@ -114520,6 +114510,7 @@ yooo
 
 
 
+ 
 
 
 
@@ -399997,4 +399988,15 @@ yooo
 
 
 
-okay heres the end, just pls stop scroll
+
+
+
+
+
+
+
+
+
+lol
+
+
